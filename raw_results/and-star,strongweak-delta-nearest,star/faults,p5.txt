@@ -1,0 +1,31 @@
+New f: 4
+New f: 5
+New f: 6
+New f: 7
+New f: 8
+New f: 9
+New f: 10
+New f: 11
+
+Termination: Solved.
+Final Memory Usage: 0.00711885
+Total Elapsed Time: 0.000902514
+Number of considered policies: 244
+Number of inserted policies: 244
+Number of removed policies: 126
+Number of expanded policies: 125
+Number of removed policies with f<f*: 124
+
+An Optimal-Size Policy:
+[var0 = NegatedAtom completed(o1), var1 = NegatedAtom completed(o2), var2 = NegatedAtom completed(o3), var3 = Atom fault(f1), var4 = NegatedAtom fault(f2), var5 = Atom not_fault(f1), var6 = Atom not_fault(f2), var7 = NegatedAtom last_fault(f1), var8 = NegatedAtom last_fault(f2), var9 = NegatedAtom made(), var10 = Atom not_completed(o1), var11 = Atom not_completed(o2), var12 = Atom not_completed(o3)] -> perform_operation_1_fault o1
+[var0 = Atom completed(o1), var1 = NegatedAtom completed(o2), var2 = NegatedAtom completed(o3), var3 = Atom fault(f1), var4 = NegatedAtom fault(f2), var5 = Atom faulted_op(o1, f1), var6 = Atom not_fault(f2), var7 = Atom last_fault(f1), var8 = NegatedAtom last_fault(f2), var9 = NegatedAtom made(), var10 = NegatedAtom not_completed(o1), var11 = Atom not_completed(o2), var12 = Atom not_completed(o3)] -> repair_fault_1 o1
+[var0 = Atom completed(o1), var1 = NegatedAtom completed(o2), var2 = NegatedAtom completed(o3), var3 = Atom fault(f1), var4 = NegatedAtom fault(f2), var5 = Atom not_fault(f1), var6 = Atom not_fault(f2), var7 = NegatedAtom last_fault(f1), var8 = NegatedAtom last_fault(f2), var9 = NegatedAtom made(), var10 = NegatedAtom not_completed(o1), var11 = Atom not_completed(o2), var12 = Atom not_completed(o3)] -> perform_operation_1_fault o2
+[var0 = Atom completed(o1), var1 = Atom completed(o2), var2 = NegatedAtom completed(o3), var3 = Atom fault(f1), var4 = NegatedAtom fault(f2), var5 = Atom faulted_op(o2, f1), var6 = Atom not_fault(f2), var7 = Atom last_fault(f1), var8 = NegatedAtom last_fault(f2), var9 = NegatedAtom made(), var10 = NegatedAtom not_completed(o1), var11 = NegatedAtom not_completed(o2), var12 = Atom not_completed(o3)] -> repair_fault_1 o2
+[var0 = Atom completed(o1), var1 = Atom completed(o2), var2 = Atom completed(o3), var3 = Atom fault(f1), var4 = NegatedAtom fault(f2), var5 = Atom faulted_op(o3, f1), var6 = Atom not_fault(f2), var7 = Atom last_fault(f1), var8 = NegatedAtom last_fault(f2), var9 = NegatedAtom made(), var10 = NegatedAtom not_completed(o1), var11 = NegatedAtom not_completed(o2), var12 = NegatedAtom not_completed(o3)] -> finish 
+[var0 = Atom completed(o1), var1 = Atom completed(o2), var2 = Atom completed(o3), var3 = NegatedAtom fault(f1), var4 = NegatedAtom fault(f2), var5 = Atom not_fault(f1), var6 = Atom not_fault(f2), var7 = NegatedAtom last_fault(f1), var8 = NegatedAtom last_fault(f2), var9 = NegatedAtom made(), var10 = NegatedAtom not_completed(o1), var11 = NegatedAtom not_completed(o2), var12 = NegatedAtom not_completed(o3)] -> finish 
+[var0 = Atom completed(o1), var1 = Atom completed(o2), var2 = NegatedAtom completed(o3), var3 = Atom fault(f1), var4 = NegatedAtom fault(f2), var5 = Atom not_fault(f1), var6 = Atom not_fault(f2), var7 = NegatedAtom last_fault(f1), var8 = NegatedAtom last_fault(f2), var9 = NegatedAtom made(), var10 = NegatedAtom not_completed(o1), var11 = NegatedAtom not_completed(o2), var12 = Atom not_completed(o3)] -> perform_operation_1_fault o3
+[var0 = Atom completed(o1), var1 = NegatedAtom completed(o2), var2 = NegatedAtom completed(o3), var3 = NegatedAtom fault(f1), var4 = NegatedAtom fault(f2), var5 = Atom not_fault(f1), var6 = Atom not_fault(f2), var7 = NegatedAtom last_fault(f1), var8 = NegatedAtom last_fault(f2), var9 = NegatedAtom made(), var10 = NegatedAtom not_completed(o1), var11 = Atom not_completed(o2), var12 = Atom not_completed(o3)] -> perform_operation_1_fault o2
+[var0 = Atom completed(o1), var1 = Atom completed(o2), var2 = Atom completed(o3), var3 = Atom fault(f1), var4 = NegatedAtom fault(f2), var5 = Atom not_fault(f1), var6 = Atom not_fault(f2), var7 = NegatedAtom last_fault(f1), var8 = NegatedAtom last_fault(f2), var9 = NegatedAtom made(), var10 = NegatedAtom not_completed(o1), var11 = NegatedAtom not_completed(o2), var12 = NegatedAtom not_completed(o3)] -> finish 
+[var0 = Atom completed(o1), var1 = Atom completed(o2), var2 = NegatedAtom completed(o3), var3 = NegatedAtom fault(f1), var4 = NegatedAtom fault(f2), var5 = Atom not_fault(f1), var6 = Atom not_fault(f2), var7 = NegatedAtom last_fault(f1), var8 = NegatedAtom last_fault(f2), var9 = NegatedAtom made(), var10 = NegatedAtom not_completed(o1), var11 = NegatedAtom not_completed(o2), var12 = Atom not_completed(o3)] -> perform_operation_1_fault o3
+[var0 = NegatedAtom completed(o1), var1 = NegatedAtom completed(o2), var2 = NegatedAtom completed(o3), var3 = NegatedAtom fault(f1), var4 = NegatedAtom fault(f2), var5 = Atom not_fault(f1), var6 = Atom not_fault(f2), var7 = NegatedAtom last_fault(f1), var8 = NegatedAtom last_fault(f2), var9 = NegatedAtom made(), var10 = Atom not_completed(o1), var11 = Atom not_completed(o2), var12 = Atom not_completed(o3)] -> perform_operation_1_fault o1
+Optimal Size: 11

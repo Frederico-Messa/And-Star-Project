@@ -1,0 +1,150 @@
+{'path_domain': './benchmarks/blocksworld-advanced/domain.pddl', 'path_instance': './benchmarks/blocksworld-advanced/p19_19.pddl', 'solver': 'minisat', 'time_limit': 1800, 'mem_limit': 8000, 'strong': False, 'start': 1, 'inc': 1, 'gen_info': False, 'show_policy': True, 'draw_policy': False, 'name_tmp': 'blocksworld-advanced,p19_19', 'tmp': False}
+Setting atoms
+# Atoms: 439
+Setting initial
+Setting goal
+Setting actions
+# Actions: 21299
+	Setting other actions
+0 / 21299
+1000 / 21299
+2000 / 21299
+3000 / 21299
+4000 / 21299
+5000 / 21299
+6000 / 21299
+7000 / 21299
+8000 / 21299
+9000 / 21299
+10000 / 21299
+11000 / 21299
+12000 / 21299
+13000 / 21299
+14000 / 21299
+15000 / 21299
+16000 / 21299
+17000 / 21299
+18000 / 21299
+19000 / 21299
+20000 / 21299
+21000 / 21299
+	Setting action card
+Setting mutexes
+Setting relevant actions
+Setting splitting
+Setting compatible actions
+0 / 21299
+1000 / 21299
+2000 / 21299
+3000 / 21299
+4000 / 21299
+5000 / 21299
+6000 / 21299
+7000 / 21299
+8000 / 21299
+9000 / 21299
+10000 / 21299
+11000 / 21299
+12000 / 21299
+13000 / 21299
+14000 / 21299
+15000 / 21299
+16000 / 21299
+17000 / 21299
+18000 / 21299
+19000 / 21299
+20000 / 21299
+21000 / 21299
+410.1546291895211
+#######################################################################################
+Trying with 3 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 439
+# Actions: 21299
+SAT formula generation time = 227.048244
+# Clauses = 117449833
+# Variables = 65367
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 932 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=932 /home/messa/And-Star-Project/tmp_blocksworld-advanced,p19_19/formula.txt /home/messa/And-Star-Project/tmp_blocksworld-advanced,p19_19/outsat.txt
+Done solver. Round time: 120.370096
+Cumulated solver time: 120.37009609676898
+UNSATISFIABLE
+#######################################################################################
+Trying with 4 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 439
+# Actions: 21299
+SAT formula generation time = 302.015013
+# Clauses = 156918883
+# Variables = 87224
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 481 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=481 /home/messa/And-Star-Project/tmp_blocksworld-advanced,p19_19/formula.txt /home/messa/And-Star-Project/tmp_blocksworld-advanced,p19_19/outsat.txt
+Done solver. Round time: 179.379447
+Cumulated solver time: 299.7495433539152
+UNSATISFIABLE
+#######################################################################################
+Trying with 5 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 439
+# Actions: 21299
+SAT formula generation time = 379.616045
+# Clauses = 196547697
+# Variables = 109125
+-> OUT OF TIME
+Creating formula...
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         65367                                         |
+|  Number of clauses:        78121474                                         |
+|  Parse time:                 119.69 s                                       |
+|                                                                             |
+===============================================================================
+Solved by unit propagation
+restarts              : 0
+conflicts             : 0              (0 /sec)
+decisions             : 0              (-nan % random) (0 /sec)
+propagations          : 42406          (354 /sec)
+conflict literals     : 0              (-nan % deleted)
+Memory used           : 3173.00 MB
+CPU time              : 119.688 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         87224                                         |
+|  Number of clauses:       117435393                                         |
+|  Parse time:                 161.37 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+===============================================================================
+restarts              : 1
+conflicts             : 8              (0 /sec)
+decisions             : 14             (0.00 % random) (0 /sec)
+propagations          : 121577         (682 /sec)
+conflict literals     : 20             (0.00 % deleted)
+Memory used           : 5474.00 MB
+CPU time              : 178.152 s
+
+UNSATISFIABLE
+Traceback (most recent call last):
+  File "./planner_fondsat/src/main.py", line 161, in <module>
+    name_final = cnf.generateInputSat(name_formula_file)
+  File "/home/messa/And-Star-Project/planner_fondsat/src/CNF.py", line 159, in generateInputSat
+    with open(nameFile, 'r') as formula:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/messa/And-Star-Project/tmp_blocksworld-advanced,p19_19/formula.txt'

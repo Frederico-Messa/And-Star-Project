@@ -1,0 +1,53 @@
+New f: 4
+New f: 5
+New f: 7
+New f: 8
+New f: 10
+New f: 11
+New f: 14
+New f: 18
+New f: 22
+New f: 26
+New f: 30
+
+Termination: Solved.
+Final Memory Usage: 0.00684851
+Total Elapsed Time: 0.000572778
+Number of considered policies: 35
+Number of inserted policies: 33
+Number of removed policies: 33
+Number of expanded policies: 32
+Number of removed policies with f<f*: 26
+
+An Optimal-Size Policy:
+[var0 = NegatedAtom closed(d2), var1 = NegatedAtom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = Atom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l2)] -> move-forward-door-open l2 l3 d3 d4
+[var0 = Atom closed(d2), var1 = Atom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = NegatedAtom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-open l4 l5 d5
+[var0 = Atom closed(d2), var1 = NegatedAtom closed(d3), var2 = Atom closed(d4), var3 = Atom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = Atom open(d3), var7 = NegatedAtom open(d4), var8 = NegatedAtom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-closed l4 l5 d5
+[var0 = NegatedAtom closed(d2), var1 = Atom closed(d3), var2 = Atom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = NegatedAtom open(d3), var7 = NegatedAtom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l3)] -> move-forward-door-closed l3 l4 d4 d5
+[var0 = Atom closed(d2), var1 = Atom closed(d3), var2 = NegatedAtom closed(d4), var3 = Atom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = NegatedAtom open(d3), var7 = Atom open(d4), var8 = NegatedAtom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-closed l4 l5 d5
+[var0 = Atom closed(d2), var1 = NegatedAtom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = Atom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-open l4 l5 d5
+[var0 = NegatedAtom closed(d2), var1 = NegatedAtom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = Atom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l3)] -> move-forward-door-open l3 l4 d4 d5
+[var0 = Atom closed(d2), var1 = NegatedAtom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = Atom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l3)] -> move-forward-door-open l3 l4 d4 d5
+[var0 = NegatedAtom closed(d2), var1 = Atom closed(d3), var2 = Atom closed(d4), var3 = Atom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = NegatedAtom open(d3), var7 = NegatedAtom open(d4), var8 = NegatedAtom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-closed l4 l5 d5
+[var0 = Atom closed(d2), var1 = Atom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = NegatedAtom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l2)] -> move-forward-door-closed l2 l3 d3 d4
+[var0 = NegatedAtom closed(d2), var1 = NegatedAtom closed(d3), var2 = Atom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = Atom open(d3), var7 = NegatedAtom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-open l4 l5 d5
+[var0 = Atom closed(d2), var1 = Atom closed(d3), var2 = Atom closed(d4), var3 = Atom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = NegatedAtom open(d3), var7 = NegatedAtom open(d4), var8 = NegatedAtom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-closed l4 l5 d5
+[var0 = Atom closed(d2), var1 = NegatedAtom closed(d3), var2 = Atom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = Atom open(d3), var7 = NegatedAtom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-open l4 l5 d5
+[var0 = NegatedAtom closed(d2), var1 = Atom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = NegatedAtom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l3)] -> move-forward-door-open l3 l4 d4 d5
+[var0 = NegatedAtom closed(d2), var1 = Atom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = NegatedAtom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-open l4 l5 d5
+[var0 = Atom closed(d2), var1 = NegatedAtom closed(d3), var2 = Atom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = Atom open(d3), var7 = NegatedAtom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l3)] -> move-forward-door-closed l3 l4 d4 d5
+[var0 = NegatedAtom closed(d2), var1 = Atom closed(d3), var2 = NegatedAtom closed(d4), var3 = Atom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = NegatedAtom open(d3), var7 = Atom open(d4), var8 = NegatedAtom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-closed l4 l5 d5
+[var0 = NegatedAtom closed(d2), var1 = NegatedAtom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = Atom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-open l4 l5 d5
+[var0 = Atom closed(d2), var1 = NegatedAtom closed(d3), var2 = NegatedAtom closed(d4), var3 = Atom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = Atom open(d3), var7 = Atom open(d4), var8 = NegatedAtom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-closed l4 l5 d5
+[var0 = NegatedAtom closed(d2), var1 = NegatedAtom closed(d3), var2 = Atom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = Atom open(d3), var7 = NegatedAtom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l3)] -> move-forward-door-closed l3 l4 d4 d5
+[var0 = Atom closed(d2), var1 = NegatedAtom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = Atom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l2)] -> move-forward-door-open l2 l3 d3 d4
+[var0 = Atom closed(d2), var1 = Atom closed(d3), var2 = Atom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = NegatedAtom open(d3), var7 = NegatedAtom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-open l4 l5 d5
+[var0 = Atom closed(d2), var1 = Atom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = NegatedAtom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l3)] -> move-forward-door-open l3 l4 d4 d5
+[var0 = Atom closed(d2), var1 = Atom closed(d3), var2 = Atom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = NegatedAtom open(d2), var6 = NegatedAtom open(d3), var7 = NegatedAtom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l3)] -> move-forward-door-closed l3 l4 d4 d5
+[var0 = NegatedAtom closed(d2), var1 = Atom closed(d3), var2 = Atom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = NegatedAtom open(d3), var7 = NegatedAtom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-open l4 l5 d5
+[var0 = NegatedAtom closed(d2), var1 = NegatedAtom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = NegatedAtom hold-key(), var5 = Atom open(d2), var6 = Atom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l1)] -> pick-key l1
+[var0 = NegatedAtom closed(d2), var1 = Atom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = NegatedAtom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l2)] -> move-forward-door-closed l2 l3 d3 d4
+[var0 = NegatedAtom closed(d2), var1 = NegatedAtom closed(d3), var2 = NegatedAtom closed(d4), var3 = Atom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = Atom open(d3), var7 = Atom open(d4), var8 = NegatedAtom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-closed l4 l5 d5
+[var0 = NegatedAtom closed(d2), var1 = NegatedAtom closed(d3), var2 = NegatedAtom closed(d4), var3 = NegatedAtom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = Atom open(d3), var7 = Atom open(d4), var8 = Atom open(d5), var9 = Atom player-at(l1)] -> move-forward-door-open l1 l2 d2 d3
+[var0 = NegatedAtom closed(d2), var1 = NegatedAtom closed(d3), var2 = Atom closed(d4), var3 = Atom closed(d5), var4 = Atom hold-key(), var5 = Atom open(d2), var6 = Atom open(d3), var7 = NegatedAtom open(d4), var8 = NegatedAtom open(d5), var9 = Atom player-at(l4)] -> move-forward-last-door-closed l4 l5 d5
+Optimal Size: 30

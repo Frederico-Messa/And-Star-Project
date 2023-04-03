@@ -1,0 +1,24 @@
+New f: 5
+New f: 6
+New f: 7
+New f: 8
+
+Termination: Solved.
+Final Memory Usage: 0.00790938
+Total Elapsed Time: 0.0792336
+Number of considered policies: 581
+Number of inserted policies: 553
+Number of removed policies: 131
+Number of expanded policies: 130
+Number of removed policies with f<f*: 123
+
+An Optimal-Size Policy:
+[var0 = Atom clear(b1), var1 = Atom clear(b2), var2 = Atom clear(b3), var3 = Atom clear(b4), var4 = NegatedAtom clear(b5), var5 = Atom emptyhand(), var6 = Atom on-table(b1), var7 = Atom on(b2, b5), var8 = Atom on-table(b3), var9 = Atom on-table(b4), var10 = Atom on-table(b5)] -> pick-up-from-table b1
+[var0 = NegatedAtom clear(b1), var1 = Atom clear(b2), var2 = Atom clear(b3), var3 = Atom clear(b4), var4 = NegatedAtom clear(b5), var5 = NegatedAtom emptyhand(), var6 = Atom holding(b1), var7 = Atom on(b2, b5), var8 = Atom on-table(b3), var9 = Atom on-table(b4), var10 = Atom on-table(b5)] -> put-on-block b1 b2
+[var0 = Atom clear(b1), var1 = Atom clear(b2), var2 = NegatedAtom clear(b3), var3 = NegatedAtom clear(b4), var4 = Atom clear(b5), var5 = Atom emptyhand(), var6 = Atom on(b1, b3), var7 = Atom on-table(b2), var8 = Atom on-table(b3), var9 = Atom on-table(b4), var10 = Atom on(b5, b4)] -> pick-up-from-table b2
+[var0 = Atom clear(b1), var1 = NegatedAtom clear(b2), var2 = NegatedAtom clear(b3), var3 = Atom clear(b4), var4 = NegatedAtom clear(b5), var5 = NegatedAtom emptyhand(), var6 = Atom on(b1, b3), var7 = Atom on(b2, b5), var8 = Atom on-table(b3), var9 = Atom on-table(b4), var10 = Atom holding(b5)] -> put-tower-down b2 b5
+[var0 = Atom clear(b1), var1 = Atom clear(b2), var2 = NegatedAtom clear(b3), var3 = Atom clear(b4), var4 = NegatedAtom clear(b5), var5 = Atom emptyhand(), var6 = Atom on(b1, b3), var7 = Atom on(b2, b5), var8 = Atom on-table(b3), var9 = Atom on-table(b4), var10 = Atom on-table(b5)] -> pick-up b1 b3
+[var0 = Atom clear(b1), var1 = NegatedAtom clear(b2), var2 = NegatedAtom clear(b3), var3 = NegatedAtom clear(b4), var4 = Atom clear(b5), var5 = NegatedAtom emptyhand(), var6 = Atom on(b1, b3), var7 = Atom holding(b2), var8 = Atom on-table(b3), var9 = Atom on-table(b4), var10 = Atom on(b5, b4)] -> put-on-block b2 b5
+[var0 = Atom clear(b1), var1 = Atom clear(b2), var2 = NegatedAtom clear(b3), var3 = NegatedAtom clear(b4), var4 = NegatedAtom clear(b5), var5 = Atom emptyhand(), var6 = Atom on(b1, b3), var7 = Atom on(b2, b5), var8 = Atom on-table(b3), var9 = Atom on-table(b4), var10 = Atom on(b5, b4)] -> pick-tower b2 b5 b4
+[var0 = NegatedAtom clear(b1), var1 = Atom clear(b2), var2 = NegatedAtom clear(b3), var3 = NegatedAtom clear(b4), var4 = Atom clear(b5), var5 = Atom emptyhand(), var6 = Atom on(b1, b3), var7 = Atom on(b2, b1), var8 = Atom on-table(b3), var9 = Atom on-table(b4), var10 = Atom on(b5, b4)] -> pick-up b2 b1
+Optimal Size: 8

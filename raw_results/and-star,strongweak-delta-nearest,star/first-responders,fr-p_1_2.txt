@@ -1,0 +1,17 @@
+New f: 4
+
+Termination: Solved.
+Final Memory Usage: 0.00684851
+Total Elapsed Time: 0.00037873
+Number of considered policies: 46
+Number of inserted policies: 34
+Number of removed policies: 9
+Number of expanded policies: 8
+Number of removed policies with f<f*: 0
+
+An Optimal-Size Policy:
+[var0 = Atom fire(l1), var1 = Atom victim-at(v1, l1), var2 = Atom victim-at(v2, l1), var3 = Atom have-water(f1), var4 = Atom victim-status(v1, dying), var5 = NegatedAtom victim-status(v1, healthy), var6 = Atom victim-status(v2, dying), var7 = NegatedAtom victim-status(v2, healthy)] -> unload-fire-unit f1 l1 l1
+[var0 = Atom nfire(l1), var1 = Atom victim-at(v1, l1), var2 = Atom victim-at(v2, l1), var3 = NegatedAtom have-water(f1), var4 = NegatedAtom victim-status(v1, dying), var5 = Atom victim-status(v1, healthy), var6 = Atom victim-status(v2, dying), var7 = NegatedAtom victim-status(v2, healthy)] -> treat-victim-at-hospital v2 l1
+[var0 = Atom nfire(l1), var1 = Atom victim-at(v1, l1), var2 = Atom victim-at(v2, l1), var3 = NegatedAtom have-water(f1), var4 = Atom victim-status(v1, dying), var5 = NegatedAtom victim-status(v1, healthy), var6 = Atom victim-status(v2, dying), var7 = NegatedAtom victim-status(v2, healthy)] -> treat-victim-at-hospital v1 l1
+[var0 = Atom fire(l1), var1 = Atom victim-at(v1, l1), var2 = Atom victim-at(v2, l1), var3 = NegatedAtom have-water(f1), var4 = Atom victim-status(v1, dying), var5 = NegatedAtom victim-status(v1, healthy), var6 = Atom victim-status(v2, dying), var7 = NegatedAtom victim-status(v2, healthy)] -> load-fire-unit f1 l1
+Optimal Size: 4

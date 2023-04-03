@@ -1,0 +1,21 @@
+New f: 2
+New f: 3
+New f: 4
+New f: 5
+
+Termination: Solved.
+Final Memory Usage: 0.00671334
+Total Elapsed Time: 0.000154663
+Number of considered policies: 6
+Number of inserted policies: 6
+Number of removed policies: 6
+Number of expanded policies: 5
+Number of removed policies with f<f*: 3
+
+An Optimal-Size Policy:
+[var0 = Atom completed(o1), var1 = Atom fault(f1), var2 = <none of those>, var3 = Atom not_fault(f1), var4 = NegatedAtom made()] -> finish_v1 
+[var0 = NegatedAtom completed(o1), var1 = Atom fault(f1), var2 = Atom not_completed(o1), var3 = Atom not_fault(f1), var4 = NegatedAtom made()] -> perform_operation_1_fault o1
+[var0 = Atom completed(o1), var1 = Atom fault(f1), var2 = Atom faulted_op(o1, f1), var3 = Atom last_fault(f1), var4 = NegatedAtom made()] -> repair_fault_1 o1
+[var0 = Atom completed(o1), var1 = NegatedAtom fault(f1), var2 = <none of those>, var3 = Atom not_fault(f1), var4 = NegatedAtom made()] -> finish_v1 
+[var0 = NegatedAtom completed(o1), var1 = NegatedAtom fault(f1), var2 = Atom not_completed(o1), var3 = Atom not_fault(f1), var4 = NegatedAtom made()] -> perform_operation_1_fault o1
+Optimal Size: 5

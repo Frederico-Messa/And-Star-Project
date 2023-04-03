@@ -1,0 +1,28 @@
+New f: 1
+New f: 2
+New f: 3
+New f: 4
+New f: 5
+Clearing cache... (4.77291)
+Cache cleared.
+Clearing cache... (6.32463)
+Cache cleared.
+Clearing cache... (6.41439)
+Cache cleared.
+
+Termination: Solved.
+Final Memory Usage: 6.91397
+Total Elapsed Time: 50.5287
+Number of considered policies: 13693455
+Number of inserted policies: 13220701
+Number of removed policies: 535993
+Number of expanded policies: 535992
+Number of removed policies with f<f*: 21937
+
+An Optimal-Size Policy:
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l11-1), var2 = Atom monkey-at(m2, l31-2), var3 = Atom monkey-at(m3, l11-2), var4 = Atom monkey-at(m4, l22-2), var5 = Atom monkey-at(m5, l31-2), var6 = Atom monkey-at(m6, l22-1), var7 = Atom monkey-at(m7, l22-1), var8 = Atom person-alive(), var9 = Atom person-at(l32-2)] -> move-person l32-2 l31-2
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l11-1), var2 = Atom monkey-at(m2, l31-2), var3 = Atom monkey-at(m3, l11-2), var4 = Atom monkey-at(m4, l22-2), var5 = Atom monkey-at(m5, l31-2), var6 = Atom monkey-at(m6, l22-1), var7 = Atom monkey-at(m7, l22-1), var8 = Atom person-alive(), var9 = Atom person-at(l33-2)] -> move-person l33-2 l32-2
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l11-1), var2 = Atom monkey-at(m2, l31-2), var3 = Atom monkey-at(m3, l11-2), var4 = Atom monkey-at(m4, l22-2), var5 = Atom monkey-at(m5, l31-2), var6 = Atom monkey-at(m6, l22-1), var7 = Atom monkey-at(m7, l22-1), var8 = Atom person-alive(), var9 = Atom person-at(l31-1)] -> walk-on-bridge l31-1 l33-2
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l11-1), var2 = Atom monkey-at(m2, l31-2), var3 = Atom monkey-at(m3, l11-2), var4 = Atom monkey-at(m4, l22-2), var5 = Atom monkey-at(m5, l31-2), var6 = Atom monkey-at(m6, l22-1), var7 = Atom monkey-at(m7, l22-1), var8 = Atom person-alive(), var9 = Atom person-at(l32-1)] -> move-person l32-1 l31-1
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l11-1), var2 = Atom monkey-at(m2, l31-2), var3 = Atom monkey-at(m3, l11-2), var4 = Atom monkey-at(m4, l22-2), var5 = Atom monkey-at(m5, l31-2), var6 = Atom monkey-at(m6, l22-1), var7 = Atom monkey-at(m7, l22-1), var8 = Atom person-alive(), var9 = Atom person-at(l33-1)] -> move-person l33-1 l32-1
+Optimal Size: 5

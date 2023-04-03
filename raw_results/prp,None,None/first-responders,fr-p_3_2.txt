@@ -1,0 +1,212 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.020s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
+Preparing model... [0.010s CPU, 0.001s wall-clock]
+Generated 70 rules.
+Computing model... [0.000s CPU, 0.002s wall-clock]
+161 relevant atoms
+195 auxiliary atoms
+356 final queue length
+404 total queue pushes
+Completing instantiation... [0.000s CPU, 0.001s wall-clock]
+Instantiating: [0.010s CPU, 0.006s wall-clock]
+Computing fact groups...
+Finding invariants...
+21 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+6 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.002s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.002s wall-clock]
+35 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+Removed false proposition: 0 = <none of those>
+Removed false proposition: 1 = <none of those>
+Removed false proposition: None = Atom fire(l3)
+Removed true proposition: None = Atom nfire(l3)
+Removed false proposition: None = <none of those>
+Removed false proposition: 2 = <none of those>
+Removed false proposition: 3 = <none of those>
+Removed false proposition: 4 = <none of those>
+Removed false proposition: 5 = <none of those>
+Removed false proposition: 8 = <none of those>
+0 operators removed
+10 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.000s wall-clock]
+Translator variables: 13
+Translator derived variables: 0
+Translator facts: 33
+Translator goal facts: 4
+Translator mutex groups: 7
+Translator total mutex groups size: 21
+Translator operators: 69
+Translator axioms: 0
+Translator task size: 391
+Translator peak memory: 19572 KB
+Writing output... [0.000s CPU, 0.000s wall-clock]
+Done! [0.010s CPU, 0.030s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+13 variables of 13 necessary
+0 of 7 mutex groups necessary.
+69 of 69 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 33
+Preprocessor derived variables: 0
+Preprocessor task size: 370
+Writing output...
+done
+
+
+3. Running search
+./planner_prp/src/search/downward ipc policy-repair --dump-policy 2
+This is a unit task.
+./planner_prp/src/search/downward-release --heuristic "h=ff(cost_type=1)" --search "lazy_greedy([h],preferred=[h])" --random-seed 814102613 --dump-policy 2 < output
+Simplifying transitions... done!
+Variables: 13
+Bytes per state: 4
+
+Total allotted time (s): 1800
+Max time for core JIC (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+ !! Warning: Disabling the simplification of unary operators !!
+ !!           to keep the non-deterministic planning sound.  !!
+Generated 111 state(s).
+Dead ends: 0 state(s). (0 recorded)
+load-fire-unit f1 l3 (1)
+treat-victim-at-hospital v2 l1 (1)
+unload-fire-unit_DETDUP_1 f1 l3 l1 (1)
+load-fire-unit f1 l3 (1)
+unload-fire-unit_DETDUP_1 f1 l3 l2 (1)
+drive-medical-unit m1 l3 l1 (1)
+drive-medical-unit m1 l1 l2 (1)
+load-medical-unit m1 l2 v1 (1)
+drive-medical-unit m1 l2 l1 (1)
+unload-medical-unit m1 l1 v1 (1)
+treat-victim-at-hospital v1 l1 (1)
+Plan length: 11 step(s).
+Plan cost: 11
+Initial search time: 0s
+Initial total time: 0s
+
+
+Creating the simulator...
+
+
+Regressing the plan...
+
+
+Generating an initial policy...
+
+
+Computing just-in-time repairs...
+
+Could not close 0 of 0 open leaf states.
+Investigated 9 states for the strong cyclic plan.
+Marking policy strong cyclic.
+Went through another policy of score 1
+
+
+Running a final SCD check...
+
+
+Running the simulation...
+...achieved the goal!
+
+
+
+                  -{ General Statistics }-
+
+        FSAP Combination Count: 0
+       Monotonicity violations: 0
+             Successful states: 18 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 18 +/- 0
+             Recorded Deadends: 0
+            State-Action Pairs: 12
+  Forbidden State-Action Pairs: 0
+               Strongly Cyclic: True
+                  Policy Score: 1
+                     Succeeded: 1 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0s
+                   Search Time: 0s
+           Policy Construction: 0s
+ Evaluating the policy quality: 0s
+              Using the policy: 0s
+          Just-in-case Repairs: 0s
+                Simulator time: 0s
+                    Total time: 0s
+
+
+
+Dumping the policy and fsaps...
+Strong cyclic plan found.
+Peak memory: 4560 KB
+
+If holds: var0:1 var1:1 var10:0 var11:0
+Execute: goal / SC / d=0
+
+If holds: var0:1 var1:1 var4:1 var11:0
+Execute: treat-victim-at-hospital v1 l1 / SC / d=1
+
+If holds: var0:1 var1:1 var8:0 var4:0 var11:0
+Execute: unload-medical-unit m1 l1 v1 / SC / d=2
+
+If holds: var0:1 var1:1 var8:1 var4:0 var11:0
+Execute: drive-medical-unit m1 l2 l1 / SC / d=3
+
+If holds: var0:1 var1:1 var8:1 var4:2 var11:0
+Execute: load-medical-unit m1 l2 v1 / SC / d=4
+
+If holds: var0:1 var1:1 var8:0 var4:2 var11:0
+Execute: drive-medical-unit m1 l1 l2 / SC / d=5
+
+If holds: var0:1 var1:1 var8:2 var4:2 var11:0
+Execute: drive-medical-unit m1 l3 l1 / SC / d=6
+
+If holds: var2:2 var6:0 var0:1 var1:0 var8:2 var4:2 var11:0
+Execute: unload-fire-unit f1 l3 l2 / SC / d=7
+
+If holds: var2:2 var0:1 var1:0 var8:2 var4:2 var11:0
+Execute: load-fire-unit f1 l3 / SC / d=8
+
+If holds: var2:2 var6:0 var0:0 var1:0 var8:2 var4:2 var11:0
+Execute: unload-fire-unit f1 l3 l1 / NSC / d=9
+
+If holds: var2:2 var6:0 var0:0 var1:0 var8:2 var5:1 var4:2
+Execute: treat-victim-at-hospital v2 l1 / NSC / d=10
+
+If holds: var2:2 var0:0 var1:0 var8:2 var5:1 var4:2
+Execute: load-fire-unit f1 l3 / NSC / d=11

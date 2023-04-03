@@ -1,0 +1,372 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Warning: Atom spare-in(l-11-1) is specified twice in initial state specification
+Parsing: [0.000s CPU, 0.001s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.000s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 14 rules.
+Computing model... [0.010s CPU, 0.006s wall-clock]
+869 relevant atoms
+651 auxiliary atoms
+1520 final queue length
+1734 total queue pushes
+Completing instantiation... [0.000s CPU, 0.004s wall-clock]
+Instantiating: [0.010s CPU, 0.013s wall-clock]
+Computing fact groups...
+Finding invariants...
+5 initial candidates
+Finding invariants: [0.010s CPU, 0.000s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+40 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.001s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.005s wall-clock]
+159 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+Removed false proposition: 40 = <none of those>
+0 operators removed
+1 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Translator variables: 41
+Translator derived variables: 0
+Translator facts: 146
+Translator goal facts: 1
+Translator mutex groups: 1
+Translator total mutex groups size: 66
+Translator operators: 279
+Translator axioms: 0
+Translator task size: 1529
+Translator peak memory: 20524 KB
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.020s CPU, 0.024s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+41 variables of 41 necessary
+0 of 1 mutex groups necessary.
+279 of 279 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 146
+Preprocessor derived variables: 0
+Preprocessor task size: 1463
+Writing output...
+done
+
+
+3. Running search
+./planner_prp/src/search/downward ipc policy-repair --dump-policy 2
+This is a unit task.
+./planner_prp/src/search/downward-release --heuristic "h=ff(cost_type=1)" --search "lazy_greedy([h],preferred=[h])" --random-seed 814102613 --dump-policy 2 < output
+Simplifying transitions... done!
+Variables: 41
+Bytes per state: 8
+
+Total allotted time (s): 1800
+Max time for core JIC (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+ !! Warning: Disabling the simplification of unary operators !!
+ !!           to keep the non-deterministic planning sound.  !!
+Generated 40 state(s).
+Dead ends: 0 state(s). (0 recorded)
+move-car_DETDUP_0 l-1-1 l-1-2 (1)
+move-car_DETDUP_0 l-1-2 l-1-3 (1)
+move-car_DETDUP_0 l-1-3 l-1-4 (1)
+move-car_DETDUP_0 l-1-4 l-1-5 (1)
+move-car_DETDUP_0 l-1-5 l-1-6 (1)
+move-car_DETDUP_0 l-1-6 l-1-7 (1)
+move-car_DETDUP_0 l-1-7 l-1-8 (1)
+move-car_DETDUP_0 l-1-8 l-1-9 (1)
+move-car_DETDUP_0 l-1-9 l-1-10 (1)
+move-car_DETDUP_0 l-1-10 l-1-11 (1)
+Plan length: 10 step(s).
+Plan cost: 10
+Initial search time: 0s
+Initial total time: 0s
+
+
+Creating the simulator...
+
+
+Regressing the plan...
+
+
+Generating an initial policy...
+
+
+Computing just-in-time repairs...
+Generated 52 state(s).
+Dead ends: 0 state(s).
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 45 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 35 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 25 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 14 state(s).
+Dead ends: 1 state(s). (1 recorded)
+
+Could not close 0 of 24 open leaf states.
+Investigated 58 states for the strong cyclic plan.
+Went through another policy of score 1
+Generated 59 state(s).
+Dead ends: 0 state(s).
+
+Could not close 0 of 20 open leaf states.
+Investigated 61 states for the strong cyclic plan.
+Went through another policy of score 1
+
+Could not close 0 of 0 open leaf states.
+Investigated 1 states for the strong cyclic plan.
+Marking policy strong cyclic.
+Found a better policy of score 1
+
+
+Running a final SCD check...
+
+
+Running the simulation...
+...achieved the goal!
+
+
+
+                  -{ General Statistics }-
+
+        FSAP Combination Count: 0
+       Monotonicity violations: 0
+             Successful states: 31 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 31 +/- 0
+             Recorded Deadends: 29
+            State-Action Pairs: 59
+  Forbidden State-Action Pairs: 93
+               Strongly Cyclic: True
+                  Policy Score: 1
+                     Succeeded: 1 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0s
+                   Search Time: 0s
+           Policy Construction: 0s
+ Evaluating the policy quality: 0.02s
+              Using the policy: 0.02s
+          Just-in-case Repairs: 0.04s
+                Simulator time: 0s
+                    Total time: 0.04s
+
+
+
+Dumping the policy and fsaps...
+Strong cyclic plan found.
+Peak memory: 6592 KB
+
+If holds: var40:2
+Execute: goal / SC / d=0
+
+If holds: var0:0 var40:15
+Execute: move-car l-2-10 l-1-11 / SC / d=1
+
+If holds: var5:0 var40:15
+Execute: changetire l-2-10 / SC / d=2
+
+If holds: var5:0 var0:0 var40:32
+Execute: move-car l-3-9 l-2-10 / SC / d=2
+
+If holds: var5:0 var15:0 var40:32
+Execute: changetire l-3-9 / SC / d=3
+
+If holds: var5:0 var15:0 var0:0 var40:40
+Execute: move-car l-4-8 l-3-9 / SC / d=3
+
+If holds: var5:0 var15:0 var23:0 var40:40
+Execute: changetire l-4-8 / SC / d=4
+
+If holds: var5:0 var15:0 var23:0 var0:0 var40:47
+Execute: move-car l-5-7 l-4-8 / SC / d=4
+
+If holds: var5:0 var15:0 var23:0 var25:0 var40:47
+Execute: changetire l-5-7 / SC / d=5
+
+If holds: var5:0 var15:0 var23:0 var25:0 var0:0 var40:53
+Execute: move-car l-6-6 l-5-7 / SC / d=5
+
+If holds: var5:0 var15:0 var23:0 var25:0 var31:0 var40:53
+Execute: changetire l-6-6 / SC / d=6
+
+If holds: var5:0 var15:0 var23:0 var25:0 var31:0 var0:0 var40:58
+Execute: move-car l-7-5 l-6-6 / SC / d=6
+
+If holds: var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var40:58
+Execute: changetire l-7-5 / SC / d=7
+
+If holds: var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var0:0 var40:62
+Execute: move-car l-8-4 l-7-5 / SC / d=7
+
+If holds: var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var37:0 var40:62
+Execute: changetire l-8-4 / SC / d=8
+
+If holds: var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var37:0 var0:0 var40:65
+Execute: move-car l-9-3 l-8-4 / SC / d=8
+
+If holds: var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var37:0 var39:0 var40:65
+Execute: changetire l-9-3 / SC / d=9
+
+If holds: var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var37:0 var39:0 var0:0 var40:12
+Execute: move-car l-10-2 l-9-3 / SC / d=9
+
+If holds: var2:0 var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var37:0 var39:0 var40:12
+Execute: changetire l-10-2 / SC / d=10
+
+If holds: var2:0 var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var37:0 var39:0 var0:0 var40:13
+Execute: move-car l-11-1 l-10-2 / SC / d=10
+
+If holds: var2:0 var3:0 var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var37:0 var39:0 var40:13
+Execute: changetire l-11-1 / SC / d=11
+
+If holds: var2:0 var3:0 var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var37:0 var39:0 var0:0 var40:11
+Execute: move-car l-10-1 l-11-1 / SC / d=11
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var37:0 var39:0 var40:11
+Execute: changetire l-10-1 / SC / d=12
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var37:0 var39:0 var0:0 var40:63
+Execute: move-car l-9-1 l-10-1 / SC / d=12
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var37:0 var38:0 var39:0 var40:63
+Execute: changetire l-9-1 / SC / d=13
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var37:0 var38:0 var39:0 var0:0 var40:59
+Execute: move-car l-8-1 l-9-1 / SC / d=13
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var34:0 var37:0 var38:0 var39:0 var40:59
+Execute: changetire l-8-1 / SC / d=14
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var23:0 var25:0 var31:0 var33:0 var34:0 var37:0 var38:0 var39:0 var0:0 var40:54
+Execute: move-car l-7-1 l-8-1 / SC / d=14
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var23:0 var25:0 var31:0 var32:0 var33:0 var34:0 var37:0 var38:0 var39:0 var40:54
+Execute: changetire l-7-1 / SC / d=15
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var23:0 var25:0 var31:0 var32:0 var33:0 var34:0 var37:0 var38:0 var39:0 var0:0 var40:48
+Execute: move-car l-6-1 l-7-1 / SC / d=15
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var23:0 var25:0 var26:0 var31:0 var32:0 var33:0 var34:0 var37:0 var38:0 var39:0 var40:48
+Execute: changetire l-6-1 / SC / d=16
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var23:0 var25:0 var26:0 var31:0 var32:0 var33:0 var34:0 var37:0 var38:0 var39:0 var0:0 var40:41
+Execute: move-car l-5-1 l-6-1 / SC / d=16
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var23:0 var24:0 var25:0 var26:0 var31:0 var32:0 var33:0 var34:0 var37:0 var38:0 var39:0 var40:41
+Execute: changetire l-5-1 / SC / d=17
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var23:0 var24:0 var25:0 var26:0 var31:0 var32:0 var33:0 var34:0 var37:0 var38:0 var39:0 var0:0 var40:33
+Execute: move-car l-4-1 l-5-1 / SC / d=17
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var16:0 var23:0 var24:0 var25:0 var26:0 var31:0 var32:0 var33:0 var34:0 var37:0 var38:0 var39:0 var40:33
+Execute: changetire l-4-1 / SC / d=18
+
+If holds: var1:0 var2:0 var3:0 var5:0 var15:0 var16:0 var23:0 var24:0 var25:0 var26:0 var31:0 var32:0 var33:0 var34:0 var37:0 var38:0 var39:0 var0:0 var40:24
+Execute: move-car l-3-1 l-4-1 / SC / d=18
+
+If holds: var1:0 var2:0 var3:0 var5:0 var14:0 var15:0 var16:0 var23:0 var24:0 var25:0 var26:0 var31:0 var32:0 var33:0 var34:0 var37:0 var38:0 var39:0 var40:24
+Execute: changetire l-3-1 / SC / d=19
+
+If holds: var1:0 var2:0 var3:0 var5:0 var14:0 var15:0 var16:0 var23:0 var24:0 var25:0 var26:0 var31:0 var32:0 var33:0 var34:0 var37:0 var38:0 var39:0 var0:0 var40:14
+Execute: move-car l-2-1 l-3-1 / SC / d=19
+
+If holds: var1:0 var2:0 var3:0 var4:0 var5:0 var14:0 var15:0 var16:0 var23:0 var24:0 var25:0 var26:0 var31:0 var32:0 var33:0 var34:0 var37:0 var38:0 var39:0 var40:14
+Execute: changetire l-2-1 / SC / d=20
+
+If holds: var1:0 var2:0 var3:0 var4:0 var5:0 var14:0 var15:0 var16:0 var23:0 var24:0 var25:0 var26:0 var31:0 var32:0 var33:0 var34:0 var37:0 var38:0 var39:0 var0:0 var40:0
+Execute: move-car l-1-1 l-2-1 / SC / d=20
+
+If holds: var0:0 var40:32
+Execute: move-car l-3-9 l-2-10 / NSC / d=2
+
+If holds: var0:0 var40:40
+Execute: move-car l-4-8 l-3-9 / NSC / d=3
+
+If holds: var0:0 var40:47
+Execute: move-car l-5-7 l-4-8 / NSC / d=4
+
+If holds: var0:0 var40:53
+Execute: move-car l-6-6 l-5-7 / NSC / d=5
+
+If holds: var0:0 var40:58
+Execute: move-car l-7-5 l-6-6 / NSC / d=6
+
+If holds: var0:0 var40:62
+Execute: move-car l-8-4 l-7-5 / NSC / d=7
+
+If holds: var0:0 var40:65
+Execute: move-car l-9-3 l-8-4 / NSC / d=8
+
+If holds: var0:0 var40:12
+Execute: move-car l-10-2 l-9-3 / NSC / d=9
+
+If holds: var0:0 var40:13
+Execute: move-car l-11-1 l-10-2 / NSC / d=10
+
+If holds: var0:0 var40:11
+Execute: move-car l-10-1 l-11-1 / NSC / d=11
+
+If holds: var0:0 var40:63
+Execute: move-car l-9-1 l-10-1 / NSC / d=12
+
+If holds: var0:0 var40:59
+Execute: move-car l-8-1 l-9-1 / NSC / d=13
+
+If holds: var0:0 var40:54
+Execute: move-car l-7-1 l-8-1 / NSC / d=14
+
+If holds: var0:0 var40:48
+Execute: move-car l-6-1 l-7-1 / NSC / d=15
+
+If holds: var0:0 var40:41
+Execute: move-car l-5-1 l-6-1 / NSC / d=16
+
+If holds: var0:0 var40:33
+Execute: move-car l-4-1 l-5-1 / NSC / d=17
+
+If holds: var0:0 var40:24
+Execute: move-car l-3-1 l-4-1 / NSC / d=18
+
+If holds: var0:0 var40:14
+Execute: move-car l-2-1 l-3-1 / NSC / d=19
+
+If holds: var0:0 var40:0
+Execute: move-car l-1-1 l-2-1 / NSC / d=20

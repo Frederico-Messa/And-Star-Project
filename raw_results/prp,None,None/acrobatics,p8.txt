@@ -1,0 +1,1838 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.002s wall-clock]
+Preparing model... [0.000s CPU, 0.004s wall-clock]
+Generated 67 rules.
+Computing model... [0.080s CPU, 0.079s wall-clock]
+4084 relevant atoms
+10460 auxiliary atoms
+14544 final queue length
+17340 total queue pushes
+Completing instantiation... [0.050s CPU, 0.046s wall-clock]
+Instantiating: [0.140s CPU, 0.134s wall-clock]
+Computing fact groups...
+Finding invariants...
+4 initial candidates
+Finding invariants: [0.000s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+2 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.003s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.003s wall-clock]
+Translating task: [0.070s CPU, 0.067s wall-clock]
+1526 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+Removed false proposition: 1 = <none of those>
+0 operators removed
+1 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.007s wall-clock]
+Translator variables: 3
+Translator derived variables: 0
+Translator facts: 260
+Translator goal facts: 2
+Translator mutex groups: 1
+Translator total mutex groups size: 256
+Translator operators: 2546
+Translator axioms: 0
+Translator task size: 15283
+Translator peak memory: 30592 KB
+Writing output... [0.010s CPU, 0.010s wall-clock]
+Done! [0.230s CPU, 0.226s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+3 variables of 3 necessary
+0 of 1 mutex groups necessary.
+2546 of 2546 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 260
+Preprocessor derived variables: 0
+Preprocessor task size: 15027
+Writing output...
+done
+
+
+3. Running search
+./planner_prp/src/search/downward ipc policy-repair --dump-policy 2
+This is a unit task.
+./planner_prp/src/search/downward-release --heuristic "h=ff(cost_type=1)" --search "lazy_greedy([h],preferred=[h])" --random-seed 814102613 --dump-policy 2 < output
+Simplifying transitions... done!
+Variables: 3
+Bytes per state: 4
+
+Total allotted time (s): 1800
+Max time for core JIC (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+ !! Warning: Disabling the simplification of unary operators !!
+ !!           to keep the non-deterministic planning sound.  !!
+Generated 1657 state(s).
+Dead ends: 255 state(s). (255 recorded)
+climb p0 (1)
+jump-over_DETDUP_5 p0 p1 p2 (1)
+jump-over_DETDUP_5 p2 p3 p4 (1)
+jump-over_DETDUP_5 p4 p5 p6 (1)
+jump-over_DETDUP_5 p6 p7 p8 (1)
+jump-over_DETDUP_5 p8 p9 p10 (1)
+jump-over_DETDUP_5 p10 p11 p12 (1)
+jump-over_DETDUP_5 p12 p13 p14 (1)
+jump-over_DETDUP_5 p14 p15 p16 (1)
+jump-over_DETDUP_5 p16 p17 p18 (1)
+jump-over_DETDUP_5 p18 p19 p20 (1)
+jump-over_DETDUP_5 p20 p21 p22 (1)
+jump-over_DETDUP_5 p22 p23 p24 (1)
+jump-over_DETDUP_5 p24 p25 p26 (1)
+jump-over_DETDUP_5 p26 p27 p28 (1)
+jump-over_DETDUP_5 p28 p29 p30 (1)
+jump-over_DETDUP_5 p30 p31 p32 (1)
+jump-over_DETDUP_5 p32 p33 p34 (1)
+jump-over_DETDUP_5 p34 p35 p36 (1)
+jump-over_DETDUP_5 p36 p37 p38 (1)
+jump-over_DETDUP_5 p38 p39 p40 (1)
+jump-over_DETDUP_5 p40 p41 p42 (1)
+jump-over_DETDUP_5 p42 p43 p44 (1)
+jump-over_DETDUP_5 p44 p45 p46 (1)
+jump-over_DETDUP_5 p46 p47 p48 (1)
+jump-over_DETDUP_5 p48 p49 p50 (1)
+jump-over_DETDUP_5 p50 p51 p52 (1)
+jump-over_DETDUP_5 p52 p53 p54 (1)
+jump-over_DETDUP_5 p54 p55 p56 (1)
+jump-over_DETDUP_5 p56 p57 p58 (1)
+jump-over_DETDUP_5 p58 p59 p60 (1)
+jump-over_DETDUP_5 p60 p61 p62 (1)
+jump-over_DETDUP_5 p62 p63 p64 (1)
+jump-over_DETDUP_5 p64 p65 p66 (1)
+jump-over_DETDUP_5 p66 p67 p68 (1)
+jump-over_DETDUP_5 p68 p69 p70 (1)
+jump-over_DETDUP_5 p70 p71 p72 (1)
+jump-over_DETDUP_5 p72 p73 p74 (1)
+jump-over_DETDUP_5 p74 p75 p76 (1)
+jump-over_DETDUP_5 p76 p77 p78 (1)
+jump-over_DETDUP_5 p78 p79 p80 (1)
+jump-over_DETDUP_5 p80 p81 p82 (1)
+jump-over_DETDUP_5 p82 p83 p84 (1)
+jump-over_DETDUP_5 p84 p85 p86 (1)
+jump-over_DETDUP_5 p86 p87 p88 (1)
+jump-over_DETDUP_5 p88 p89 p90 (1)
+jump-over_DETDUP_5 p90 p91 p92 (1)
+jump-over_DETDUP_5 p92 p93 p94 (1)
+jump-over_DETDUP_5 p94 p95 p96 (1)
+jump-over_DETDUP_5 p96 p97 p98 (1)
+jump-over_DETDUP_5 p98 p99 p100 (1)
+jump-over_DETDUP_5 p100 p101 p102 (1)
+jump-over_DETDUP_5 p102 p103 p104 (1)
+jump-over_DETDUP_5 p104 p105 p106 (1)
+jump-over_DETDUP_5 p106 p107 p108 (1)
+jump-over_DETDUP_5 p108 p109 p110 (1)
+jump-over_DETDUP_5 p110 p111 p112 (1)
+jump-over_DETDUP_5 p112 p113 p114 (1)
+jump-over_DETDUP_5 p114 p115 p116 (1)
+jump-over_DETDUP_5 p116 p117 p118 (1)
+jump-over_DETDUP_5 p118 p119 p120 (1)
+jump-over_DETDUP_5 p120 p121 p122 (1)
+jump-over_DETDUP_5 p122 p123 p124 (1)
+jump-over_DETDUP_5 p124 p125 p126 (1)
+jump-over_DETDUP_5 p126 p127 p128 (1)
+jump-over_DETDUP_5 p128 p129 p130 (1)
+jump-over_DETDUP_5 p130 p131 p132 (1)
+jump-over_DETDUP_5 p132 p133 p134 (1)
+jump-over_DETDUP_5 p134 p135 p136 (1)
+jump-over_DETDUP_5 p136 p137 p138 (1)
+jump-over_DETDUP_5 p138 p139 p140 (1)
+jump-over_DETDUP_5 p140 p141 p142 (1)
+jump-over_DETDUP_5 p142 p143 p144 (1)
+jump-over_DETDUP_5 p144 p145 p146 (1)
+jump-over_DETDUP_5 p146 p147 p148 (1)
+jump-over_DETDUP_5 p148 p149 p150 (1)
+jump-over_DETDUP_5 p150 p151 p152 (1)
+jump-over_DETDUP_5 p152 p153 p154 (1)
+jump-over_DETDUP_5 p154 p155 p156 (1)
+jump-over_DETDUP_5 p156 p157 p158 (1)
+jump-over_DETDUP_5 p158 p159 p160 (1)
+jump-over_DETDUP_5 p160 p161 p162 (1)
+jump-over_DETDUP_5 p162 p163 p164 (1)
+jump-over_DETDUP_5 p164 p165 p166 (1)
+jump-over_DETDUP_5 p166 p167 p168 (1)
+jump-over_DETDUP_5 p168 p169 p170 (1)
+jump-over_DETDUP_5 p170 p171 p172 (1)
+jump-over_DETDUP_5 p172 p173 p174 (1)
+jump-over_DETDUP_5 p174 p175 p176 (1)
+jump-over_DETDUP_5 p176 p177 p178 (1)
+jump-over_DETDUP_5 p178 p179 p180 (1)
+jump-over_DETDUP_5 p180 p181 p182 (1)
+jump-over_DETDUP_5 p182 p183 p184 (1)
+jump-over_DETDUP_5 p184 p185 p186 (1)
+jump-over_DETDUP_5 p186 p187 p188 (1)
+jump-over_DETDUP_5 p188 p189 p190 (1)
+jump-over_DETDUP_5 p190 p191 p192 (1)
+jump-over_DETDUP_5 p192 p193 p194 (1)
+jump-over_DETDUP_5 p194 p195 p196 (1)
+jump-over_DETDUP_5 p196 p197 p198 (1)
+jump-over_DETDUP_5 p198 p199 p200 (1)
+jump-over_DETDUP_5 p200 p201 p202 (1)
+jump-over_DETDUP_5 p202 p203 p204 (1)
+jump-over_DETDUP_5 p204 p205 p206 (1)
+jump-over_DETDUP_5 p206 p207 p208 (1)
+jump-over_DETDUP_5 p208 p209 p210 (1)
+jump-over_DETDUP_5 p210 p211 p212 (1)
+jump-over_DETDUP_5 p212 p213 p214 (1)
+jump-over_DETDUP_5 p214 p215 p216 (1)
+jump-over_DETDUP_5 p216 p217 p218 (1)
+jump-over_DETDUP_5 p218 p219 p220 (1)
+jump-over_DETDUP_5 p220 p221 p222 (1)
+jump-over_DETDUP_5 p222 p223 p224 (1)
+jump-over_DETDUP_5 p224 p225 p226 (1)
+jump-over_DETDUP_5 p226 p227 p228 (1)
+jump-over_DETDUP_5 p228 p229 p230 (1)
+jump-over_DETDUP_5 p230 p231 p232 (1)
+jump-over_DETDUP_5 p232 p233 p234 (1)
+jump-over_DETDUP_5 p234 p235 p236 (1)
+jump-over_DETDUP_5 p236 p237 p238 (1)
+jump-over_DETDUP_5 p238 p239 p240 (1)
+jump-over_DETDUP_5 p240 p241 p242 (1)
+jump-over_DETDUP_5 p242 p243 p244 (1)
+jump-over_DETDUP_5 p244 p245 p246 (1)
+jump-over_DETDUP_5 p246 p247 p248 (1)
+jump-over_DETDUP_5 p248 p249 p250 (1)
+jump-over_DETDUP_5 p250 p251 p252 (1)
+jump-over_DETDUP_5 p252 p253 p254 (1)
+walk-on-beam_DETDUP_0 p254 p255 (1)
+Plan length: 129 step(s).
+Plan cost: 129
+Initial search time: 0.03s
+Initial total time: 0.04s
+
+
+Creating the simulator...
+
+
+Regressing the plan...
+
+
+Generating an initial policy...
+
+
+Computing just-in-time repairs...
+Generated 8 state(s).
+Dead ends: 0 state(s).
+
+Could not close 0 of 1 open leaf states.
+Investigated 3 states for the strong cyclic plan.
+Went through another policy of score 0
+Generated 302 state(s).
+Dead ends: 0 state(s).
+Generated 767 state(s).
+Dead ends: 0 state(s). (0 recorded)
+Generated 201 state(s).
+Dead ends: 0 state(s).
+Generated 509 state(s).
+Dead ends: 0 state(s). (0 recorded)
+
+Could not close 0 of 2 open leaf states.
+Investigated 768 states for the strong cyclic plan.
+Found a better policy of score 0
+
+Could not close 0 of 0 open leaf states.
+Investigated 1 states for the strong cyclic plan.
+Marking policy strong cyclic.
+Went through another policy of score 1
+
+
+Running a final SCD check...
+
+
+Running the simulation...
+
+
+
+                  -{ General Statistics }-
+
+        FSAP Combination Count: 0
+       Monotonicity violations: 0
+             Successful states: 1000 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 1000 +/- 0
+             Recorded Deadends: 636
+            State-Action Pairs: 512
+  Forbidden State-Action Pairs: 2281
+               Strongly Cyclic: True
+                  Policy Score: 1
+                     Succeeded: 0 / 1
+ Depth limit (of 1000) reached: 1 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0s
+                   Search Time: 0.05s
+           Policy Construction: 0.01s
+ Evaluating the policy quality: 4.77s
+              Using the policy: 2.54s
+          Just-in-case Repairs: 4.97s
+                Simulator time: 0s
+                    Total time: 5.03s
+
+
+
+Dumping the policy and fsaps...
+Strong cyclic plan found.
+Peak memory: 10296 KB
+
+If holds: var2:0 var1:174
+Execute: goal / SC / d=0
+
+If holds: var0:1 var2:0 var1:173
+Execute: walk-on-beam p254 p255 / SC / d=1
+
+If holds: var0:1 var2:0 var1:172
+Execute: walk-on-beam p253 p254 / SC / d=2
+
+If holds: var0:1 var2:0 var1:171
+Execute: walk-on-beam p252 p253 / SC / d=3
+
+If holds: var0:1 var2:0 var1:170
+Execute: walk-on-beam p251 p252 / SC / d=4
+
+If holds: var0:1 var2:0 var1:169
+Execute: walk-on-beam p250 p251 / SC / d=5
+
+If holds: var0:1 var2:0 var1:167
+Execute: walk-on-beam p249 p250 / SC / d=6
+
+If holds: var0:1 var2:0 var1:166
+Execute: walk-on-beam p248 p249 / SC / d=7
+
+If holds: var0:1 var2:0 var1:165
+Execute: walk-on-beam p247 p248 / SC / d=8
+
+If holds: var0:1 var2:0 var1:164
+Execute: walk-on-beam p246 p247 / SC / d=9
+
+If holds: var0:1 var2:0 var1:163
+Execute: walk-on-beam p245 p246 / SC / d=10
+
+If holds: var0:1 var2:0 var1:162
+Execute: walk-on-beam p244 p245 / SC / d=11
+
+If holds: var0:1 var2:0 var1:161
+Execute: walk-on-beam p243 p244 / SC / d=12
+
+If holds: var0:1 var2:0 var1:160
+Execute: walk-on-beam p242 p243 / SC / d=13
+
+If holds: var0:1 var2:0 var1:159
+Execute: walk-on-beam p241 p242 / SC / d=14
+
+If holds: var0:1 var2:0 var1:158
+Execute: walk-on-beam p240 p241 / SC / d=15
+
+If holds: var0:1 var2:0 var1:156
+Execute: walk-on-beam p239 p240 / SC / d=16
+
+If holds: var0:1 var2:0 var1:155
+Execute: walk-on-beam p238 p239 / SC / d=17
+
+If holds: var0:1 var2:0 var1:154
+Execute: walk-on-beam p237 p238 / SC / d=18
+
+If holds: var0:1 var2:0 var1:153
+Execute: walk-on-beam p236 p237 / SC / d=19
+
+If holds: var0:1 var2:0 var1:152
+Execute: walk-on-beam p235 p236 / SC / d=20
+
+If holds: var0:1 var2:0 var1:151
+Execute: walk-on-beam p234 p235 / SC / d=21
+
+If holds: var0:1 var2:0 var1:150
+Execute: walk-on-beam p233 p234 / SC / d=22
+
+If holds: var0:1 var2:0 var1:149
+Execute: walk-on-beam p232 p233 / SC / d=23
+
+If holds: var0:1 var2:0 var1:148
+Execute: walk-on-beam p231 p232 / SC / d=24
+
+If holds: var0:1 var2:0 var1:147
+Execute: walk-on-beam p230 p231 / SC / d=25
+
+If holds: var0:1 var2:0 var1:145
+Execute: walk-on-beam p229 p230 / SC / d=26
+
+If holds: var0:1 var2:0 var1:144
+Execute: walk-on-beam p228 p229 / SC / d=27
+
+If holds: var0:1 var2:0 var1:143
+Execute: walk-on-beam p227 p228 / SC / d=28
+
+If holds: var0:1 var2:0 var1:142
+Execute: walk-on-beam p226 p227 / SC / d=29
+
+If holds: var0:1 var2:0 var1:141
+Execute: walk-on-beam p225 p226 / SC / d=30
+
+If holds: var0:1 var2:0 var1:140
+Execute: walk-on-beam p224 p225 / SC / d=31
+
+If holds: var0:1 var2:0 var1:139
+Execute: walk-on-beam p223 p224 / SC / d=32
+
+If holds: var0:1 var2:0 var1:138
+Execute: walk-on-beam p222 p223 / SC / d=33
+
+If holds: var0:1 var2:0 var1:137
+Execute: walk-on-beam p221 p222 / SC / d=34
+
+If holds: var0:1 var2:0 var1:136
+Execute: walk-on-beam p220 p221 / SC / d=35
+
+If holds: var0:1 var2:0 var1:134
+Execute: walk-on-beam p219 p220 / SC / d=36
+
+If holds: var0:1 var2:0 var1:133
+Execute: walk-on-beam p218 p219 / SC / d=37
+
+If holds: var0:1 var2:0 var1:132
+Execute: walk-on-beam p217 p218 / SC / d=38
+
+If holds: var0:1 var2:0 var1:131
+Execute: walk-on-beam p216 p217 / SC / d=39
+
+If holds: var0:1 var2:0 var1:130
+Execute: walk-on-beam p215 p216 / SC / d=40
+
+If holds: var0:1 var2:0 var1:129
+Execute: walk-on-beam p214 p215 / SC / d=41
+
+If holds: var0:1 var2:0 var1:128
+Execute: walk-on-beam p213 p214 / SC / d=42
+
+If holds: var0:1 var2:0 var1:127
+Execute: walk-on-beam p212 p213 / SC / d=43
+
+If holds: var0:1 var2:0 var1:126
+Execute: walk-on-beam p211 p212 / SC / d=44
+
+If holds: var0:1 var2:0 var1:125
+Execute: walk-on-beam p210 p211 / SC / d=45
+
+If holds: var0:1 var2:0 var1:123
+Execute: walk-on-beam p209 p210 / SC / d=46
+
+If holds: var0:1 var2:0 var1:122
+Execute: walk-on-beam p208 p209 / SC / d=47
+
+If holds: var0:1 var2:0 var1:121
+Execute: walk-on-beam p207 p208 / SC / d=48
+
+If holds: var0:1 var2:0 var1:120
+Execute: walk-on-beam p206 p207 / SC / d=49
+
+If holds: var0:1 var2:0 var1:119
+Execute: walk-on-beam p205 p206 / SC / d=50
+
+If holds: var0:1 var2:0 var1:118
+Execute: walk-on-beam p204 p205 / SC / d=51
+
+If holds: var0:1 var2:0 var1:117
+Execute: walk-on-beam p203 p204 / SC / d=52
+
+If holds: var0:1 var2:0 var1:116
+Execute: walk-on-beam p202 p203 / SC / d=53
+
+If holds: var0:1 var2:0 var1:115
+Execute: walk-on-beam p201 p202 / SC / d=54
+
+If holds: var0:1 var2:0 var1:114
+Execute: walk-on-beam p200 p201 / SC / d=55
+
+If holds: var0:1 var2:0 var1:111
+Execute: walk-on-beam p199 p200 / SC / d=56
+
+If holds: var0:1 var2:0 var1:110
+Execute: walk-on-beam p198 p199 / SC / d=57
+
+If holds: var0:1 var2:0 var1:109
+Execute: walk-on-beam p197 p198 / SC / d=58
+
+If holds: var0:1 var2:0 var1:108
+Execute: walk-on-beam p196 p197 / SC / d=59
+
+If holds: var0:1 var2:0 var1:107
+Execute: walk-on-beam p195 p196 / SC / d=60
+
+If holds: var0:1 var2:0 var1:106
+Execute: walk-on-beam p194 p195 / SC / d=61
+
+If holds: var0:1 var2:0 var1:105
+Execute: walk-on-beam p193 p194 / SC / d=62
+
+If holds: var0:1 var2:0 var1:104
+Execute: walk-on-beam p192 p193 / SC / d=63
+
+If holds: var0:1 var2:0 var1:103
+Execute: walk-on-beam p191 p192 / SC / d=64
+
+If holds: var0:1 var2:0 var1:102
+Execute: walk-on-beam p190 p191 / SC / d=65
+
+If holds: var0:1 var2:0 var1:100
+Execute: walk-on-beam p189 p190 / SC / d=66
+
+If holds: var0:1 var2:0 var1:99
+Execute: walk-on-beam p188 p189 / SC / d=67
+
+If holds: var0:1 var2:0 var1:98
+Execute: walk-on-beam p187 p188 / SC / d=68
+
+If holds: var0:1 var2:0 var1:97
+Execute: walk-on-beam p186 p187 / SC / d=69
+
+If holds: var0:1 var2:0 var1:96
+Execute: walk-on-beam p185 p186 / SC / d=70
+
+If holds: var0:1 var2:0 var1:95
+Execute: walk-on-beam p184 p185 / SC / d=71
+
+If holds: var0:1 var2:0 var1:94
+Execute: walk-on-beam p183 p184 / SC / d=72
+
+If holds: var0:1 var2:0 var1:93
+Execute: walk-on-beam p182 p183 / SC / d=73
+
+If holds: var0:1 var2:0 var1:92
+Execute: walk-on-beam p181 p182 / SC / d=74
+
+If holds: var0:1 var2:0 var1:91
+Execute: walk-on-beam p180 p181 / SC / d=75
+
+If holds: var0:1 var2:0 var1:89
+Execute: walk-on-beam p179 p180 / SC / d=76
+
+If holds: var0:1 var2:0 var1:88
+Execute: walk-on-beam p178 p179 / SC / d=77
+
+If holds: var0:1 var2:0 var1:87
+Execute: walk-on-beam p177 p178 / SC / d=78
+
+If holds: var0:1 var2:0 var1:86
+Execute: walk-on-beam p176 p177 / SC / d=79
+
+If holds: var0:1 var2:0 var1:85
+Execute: walk-on-beam p175 p176 / SC / d=80
+
+If holds: var0:1 var2:0 var1:84
+Execute: walk-on-beam p174 p175 / SC / d=81
+
+If holds: var0:1 var2:0 var1:83
+Execute: walk-on-beam p173 p174 / SC / d=82
+
+If holds: var0:1 var2:0 var1:82
+Execute: walk-on-beam p172 p173 / SC / d=83
+
+If holds: var0:1 var2:0 var1:81
+Execute: walk-on-beam p171 p172 / SC / d=84
+
+If holds: var0:1 var2:0 var1:80
+Execute: walk-on-beam p170 p171 / SC / d=85
+
+If holds: var0:1 var2:0 var1:78
+Execute: walk-on-beam p169 p170 / SC / d=86
+
+If holds: var0:1 var2:0 var1:77
+Execute: walk-on-beam p168 p169 / SC / d=87
+
+If holds: var0:1 var2:0 var1:76
+Execute: walk-on-beam p167 p168 / SC / d=88
+
+If holds: var0:1 var2:0 var1:75
+Execute: walk-on-beam p166 p167 / SC / d=89
+
+If holds: var0:1 var2:0 var1:74
+Execute: walk-on-beam p165 p166 / SC / d=90
+
+If holds: var0:1 var2:0 var1:73
+Execute: walk-on-beam p164 p165 / SC / d=91
+
+If holds: var0:1 var2:0 var1:72
+Execute: walk-on-beam p163 p164 / SC / d=92
+
+If holds: var0:1 var2:0 var1:71
+Execute: walk-on-beam p162 p163 / SC / d=93
+
+If holds: var0:1 var2:0 var1:70
+Execute: walk-on-beam p161 p162 / SC / d=94
+
+If holds: var0:1 var2:0 var1:69
+Execute: walk-on-beam p160 p161 / SC / d=95
+
+If holds: var0:1 var2:0 var1:67
+Execute: walk-on-beam p159 p160 / SC / d=96
+
+If holds: var0:1 var2:0 var1:66
+Execute: walk-on-beam p158 p159 / SC / d=97
+
+If holds: var0:1 var2:0 var1:65
+Execute: walk-on-beam p157 p158 / SC / d=98
+
+If holds: var0:1 var2:0 var1:64
+Execute: walk-on-beam p156 p157 / SC / d=99
+
+If holds: var0:1 var2:0 var1:63
+Execute: walk-on-beam p155 p156 / SC / d=100
+
+If holds: var0:1 var2:0 var1:62
+Execute: walk-on-beam p154 p155 / SC / d=101
+
+If holds: var0:1 var2:0 var1:61
+Execute: walk-on-beam p153 p154 / SC / d=102
+
+If holds: var0:1 var2:0 var1:60
+Execute: walk-on-beam p152 p153 / SC / d=103
+
+If holds: var0:1 var2:0 var1:59
+Execute: walk-on-beam p151 p152 / SC / d=104
+
+If holds: var0:1 var2:0 var1:58
+Execute: walk-on-beam p150 p151 / SC / d=105
+
+If holds: var0:1 var2:0 var1:56
+Execute: walk-on-beam p149 p150 / SC / d=106
+
+If holds: var0:1 var2:0 var1:55
+Execute: walk-on-beam p148 p149 / SC / d=107
+
+If holds: var0:1 var2:0 var1:54
+Execute: walk-on-beam p147 p148 / SC / d=108
+
+If holds: var0:1 var2:0 var1:53
+Execute: walk-on-beam p146 p147 / SC / d=109
+
+If holds: var0:1 var2:0 var1:52
+Execute: walk-on-beam p145 p146 / SC / d=110
+
+If holds: var0:1 var2:0 var1:51
+Execute: walk-on-beam p144 p145 / SC / d=111
+
+If holds: var0:1 var2:0 var1:50
+Execute: walk-on-beam p143 p144 / SC / d=112
+
+If holds: var0:1 var2:0 var1:49
+Execute: walk-on-beam p142 p143 / SC / d=113
+
+If holds: var0:1 var2:0 var1:48
+Execute: walk-on-beam p141 p142 / SC / d=114
+
+If holds: var0:1 var2:0 var1:47
+Execute: walk-on-beam p140 p141 / SC / d=115
+
+If holds: var0:1 var2:0 var1:45
+Execute: walk-on-beam p139 p140 / SC / d=116
+
+If holds: var0:1 var2:0 var1:44
+Execute: walk-on-beam p138 p139 / SC / d=117
+
+If holds: var0:1 var2:0 var1:43
+Execute: walk-on-beam p137 p138 / SC / d=118
+
+If holds: var0:1 var2:0 var1:42
+Execute: walk-on-beam p136 p137 / SC / d=119
+
+If holds: var0:1 var2:0 var1:41
+Execute: walk-on-beam p135 p136 / SC / d=120
+
+If holds: var0:1 var2:0 var1:40
+Execute: walk-on-beam p134 p135 / SC / d=121
+
+If holds: var0:1 var2:0 var1:39
+Execute: walk-on-beam p133 p134 / SC / d=122
+
+If holds: var0:1 var2:0 var1:38
+Execute: walk-on-beam p132 p133 / SC / d=123
+
+If holds: var0:1 var2:0 var1:37
+Execute: walk-on-beam p131 p132 / SC / d=124
+
+If holds: var0:1 var2:0 var1:36
+Execute: walk-on-beam p130 p131 / SC / d=125
+
+If holds: var0:1 var2:0 var1:34
+Execute: walk-on-beam p129 p130 / SC / d=126
+
+If holds: var0:1 var2:0 var1:33
+Execute: walk-on-beam p128 p129 / SC / d=127
+
+If holds: var0:1 var2:0 var1:32
+Execute: walk-on-beam p127 p128 / SC / d=128
+
+If holds: var0:1 var2:0 var1:31
+Execute: walk-on-beam p126 p127 / SC / d=129
+
+If holds: var0:1 var2:0 var1:30
+Execute: walk-on-beam p125 p126 / SC / d=130
+
+If holds: var0:1 var2:0 var1:29
+Execute: walk-on-beam p124 p125 / SC / d=131
+
+If holds: var0:1 var2:0 var1:28
+Execute: walk-on-beam p123 p124 / SC / d=132
+
+If holds: var0:1 var2:0 var1:27
+Execute: walk-on-beam p122 p123 / SC / d=133
+
+If holds: var0:1 var2:0 var1:26
+Execute: walk-on-beam p121 p122 / SC / d=134
+
+If holds: var0:1 var2:0 var1:25
+Execute: walk-on-beam p120 p121 / SC / d=135
+
+If holds: var0:1 var2:0 var1:23
+Execute: walk-on-beam p119 p120 / SC / d=136
+
+If holds: var0:1 var2:0 var1:22
+Execute: walk-on-beam p118 p119 / SC / d=137
+
+If holds: var0:1 var2:0 var1:21
+Execute: walk-on-beam p117 p118 / SC / d=138
+
+If holds: var0:1 var2:0 var1:20
+Execute: walk-on-beam p116 p117 / SC / d=139
+
+If holds: var0:1 var2:0 var1:19
+Execute: walk-on-beam p115 p116 / SC / d=140
+
+If holds: var0:1 var2:0 var1:18
+Execute: walk-on-beam p114 p115 / SC / d=141
+
+If holds: var0:1 var2:0 var1:17
+Execute: walk-on-beam p113 p114 / SC / d=142
+
+If holds: var0:1 var2:0 var1:16
+Execute: walk-on-beam p112 p113 / SC / d=143
+
+If holds: var0:1 var2:0 var1:15
+Execute: walk-on-beam p111 p112 / SC / d=144
+
+If holds: var0:1 var2:0 var1:14
+Execute: walk-on-beam p110 p111 / SC / d=145
+
+If holds: var0:1 var2:0 var1:12
+Execute: walk-on-beam p109 p110 / SC / d=146
+
+If holds: var0:1 var2:0 var1:11
+Execute: walk-on-beam p108 p109 / SC / d=147
+
+If holds: var0:1 var2:0 var1:10
+Execute: walk-on-beam p107 p108 / SC / d=148
+
+If holds: var0:1 var2:0 var1:9
+Execute: walk-on-beam p106 p107 / SC / d=149
+
+If holds: var0:1 var2:0 var1:8
+Execute: walk-on-beam p105 p106 / SC / d=150
+
+If holds: var0:1 var2:0 var1:7
+Execute: walk-on-beam p104 p105 / SC / d=151
+
+If holds: var0:1 var2:0 var1:6
+Execute: walk-on-beam p103 p104 / SC / d=152
+
+If holds: var0:1 var2:0 var1:5
+Execute: walk-on-beam p102 p103 / SC / d=153
+
+If holds: var0:1 var2:0 var1:4
+Execute: walk-on-beam p101 p102 / SC / d=154
+
+If holds: var0:1 var2:0 var1:3
+Execute: walk-on-beam p100 p101 / SC / d=155
+
+If holds: var0:1 var2:0 var1:255
+Execute: walk-on-beam p99 p100 / SC / d=156
+
+If holds: var0:1 var2:0 var1:254
+Execute: walk-on-beam p98 p99 / SC / d=157
+
+If holds: var0:1 var2:0 var1:253
+Execute: walk-on-beam p97 p98 / SC / d=158
+
+If holds: var0:1 var2:0 var1:252
+Execute: walk-on-beam p96 p97 / SC / d=159
+
+If holds: var0:1 var2:0 var1:251
+Execute: walk-on-beam p95 p96 / SC / d=160
+
+If holds: var0:1 var2:0 var1:250
+Execute: walk-on-beam p94 p95 / SC / d=161
+
+If holds: var0:1 var2:0 var1:249
+Execute: walk-on-beam p93 p94 / SC / d=162
+
+If holds: var0:1 var2:0 var1:248
+Execute: walk-on-beam p92 p93 / SC / d=163
+
+If holds: var0:1 var2:0 var1:247
+Execute: walk-on-beam p91 p92 / SC / d=164
+
+If holds: var0:1 var2:0 var1:246
+Execute: walk-on-beam p90 p91 / SC / d=165
+
+If holds: var0:1 var2:0 var1:244
+Execute: walk-on-beam p89 p90 / SC / d=166
+
+If holds: var0:1 var2:0 var1:243
+Execute: walk-on-beam p88 p89 / SC / d=167
+
+If holds: var0:1 var2:0 var1:242
+Execute: walk-on-beam p87 p88 / SC / d=168
+
+If holds: var0:1 var2:0 var1:241
+Execute: walk-on-beam p86 p87 / SC / d=169
+
+If holds: var0:1 var2:0 var1:240
+Execute: walk-on-beam p85 p86 / SC / d=170
+
+If holds: var0:1 var2:0 var1:239
+Execute: walk-on-beam p84 p85 / SC / d=171
+
+If holds: var0:1 var2:0 var1:238
+Execute: walk-on-beam p83 p84 / SC / d=172
+
+If holds: var0:1 var2:0 var1:237
+Execute: walk-on-beam p82 p83 / SC / d=173
+
+If holds: var0:1 var2:0 var1:236
+Execute: walk-on-beam p81 p82 / SC / d=174
+
+If holds: var0:1 var2:0 var1:235
+Execute: walk-on-beam p80 p81 / SC / d=175
+
+If holds: var0:1 var2:0 var1:233
+Execute: walk-on-beam p79 p80 / SC / d=176
+
+If holds: var0:1 var2:0 var1:232
+Execute: walk-on-beam p78 p79 / SC / d=177
+
+If holds: var0:1 var2:0 var1:231
+Execute: walk-on-beam p77 p78 / SC / d=178
+
+If holds: var0:1 var2:0 var1:230
+Execute: walk-on-beam p76 p77 / SC / d=179
+
+If holds: var0:1 var2:0 var1:229
+Execute: walk-on-beam p75 p76 / SC / d=180
+
+If holds: var0:1 var2:0 var1:228
+Execute: walk-on-beam p74 p75 / SC / d=181
+
+If holds: var0:1 var2:0 var1:227
+Execute: walk-on-beam p73 p74 / SC / d=182
+
+If holds: var0:1 var2:0 var1:226
+Execute: walk-on-beam p72 p73 / SC / d=183
+
+If holds: var0:1 var2:0 var1:225
+Execute: walk-on-beam p71 p72 / SC / d=184
+
+If holds: var0:1 var2:0 var1:224
+Execute: walk-on-beam p70 p71 / SC / d=185
+
+If holds: var0:1 var2:0 var1:222
+Execute: walk-on-beam p69 p70 / SC / d=186
+
+If holds: var0:1 var2:0 var1:221
+Execute: walk-on-beam p68 p69 / SC / d=187
+
+If holds: var0:1 var2:0 var1:220
+Execute: walk-on-beam p67 p68 / SC / d=188
+
+If holds: var0:1 var2:0 var1:219
+Execute: walk-on-beam p66 p67 / SC / d=189
+
+If holds: var0:1 var2:0 var1:218
+Execute: walk-on-beam p65 p66 / SC / d=190
+
+If holds: var0:1 var2:0 var1:217
+Execute: walk-on-beam p64 p65 / SC / d=191
+
+If holds: var0:1 var2:0 var1:216
+Execute: walk-on-beam p63 p64 / SC / d=192
+
+If holds: var0:1 var2:0 var1:215
+Execute: walk-on-beam p62 p63 / SC / d=193
+
+If holds: var0:1 var2:0 var1:214
+Execute: walk-on-beam p61 p62 / SC / d=194
+
+If holds: var0:1 var2:0 var1:213
+Execute: walk-on-beam p60 p61 / SC / d=195
+
+If holds: var0:1 var2:0 var1:211
+Execute: walk-on-beam p59 p60 / SC / d=196
+
+If holds: var0:1 var2:0 var1:210
+Execute: walk-on-beam p58 p59 / SC / d=197
+
+If holds: var0:1 var2:0 var1:209
+Execute: walk-on-beam p57 p58 / SC / d=198
+
+If holds: var0:1 var2:0 var1:208
+Execute: walk-on-beam p56 p57 / SC / d=199
+
+If holds: var0:1 var2:0 var1:207
+Execute: walk-on-beam p55 p56 / SC / d=200
+
+If holds: var0:1 var2:0 var1:206
+Execute: walk-on-beam p54 p55 / SC / d=201
+
+If holds: var0:1 var2:0 var1:205
+Execute: walk-on-beam p53 p54 / SC / d=202
+
+If holds: var0:1 var2:0 var1:204
+Execute: walk-on-beam p52 p53 / SC / d=203
+
+If holds: var0:1 var2:0 var1:203
+Execute: walk-on-beam p51 p52 / SC / d=204
+
+If holds: var0:1 var2:0 var1:202
+Execute: walk-on-beam p50 p51 / SC / d=205
+
+If holds: var0:1 var2:0 var1:200
+Execute: walk-on-beam p49 p50 / SC / d=206
+
+If holds: var0:1 var2:0 var1:199
+Execute: walk-on-beam p48 p49 / SC / d=207
+
+If holds: var0:1 var2:0 var1:198
+Execute: walk-on-beam p47 p48 / SC / d=208
+
+If holds: var0:1 var2:0 var1:197
+Execute: walk-on-beam p46 p47 / SC / d=209
+
+If holds: var0:1 var2:0 var1:196
+Execute: walk-on-beam p45 p46 / SC / d=210
+
+If holds: var0:1 var2:0 var1:195
+Execute: walk-on-beam p44 p45 / SC / d=211
+
+If holds: var0:1 var2:0 var1:194
+Execute: walk-on-beam p43 p44 / SC / d=212
+
+If holds: var0:1 var2:0 var1:193
+Execute: walk-on-beam p42 p43 / SC / d=213
+
+If holds: var0:1 var2:0 var1:192
+Execute: walk-on-beam p41 p42 / SC / d=214
+
+If holds: var0:1 var2:0 var1:191
+Execute: walk-on-beam p40 p41 / SC / d=215
+
+If holds: var0:1 var2:0 var1:189
+Execute: walk-on-beam p39 p40 / SC / d=216
+
+If holds: var0:1 var2:0 var1:188
+Execute: walk-on-beam p38 p39 / SC / d=217
+
+If holds: var0:1 var2:0 var1:187
+Execute: walk-on-beam p37 p38 / SC / d=218
+
+If holds: var0:1 var2:0 var1:186
+Execute: walk-on-beam p36 p37 / SC / d=219
+
+If holds: var0:1 var2:0 var1:185
+Execute: walk-on-beam p35 p36 / SC / d=220
+
+If holds: var0:1 var2:0 var1:184
+Execute: walk-on-beam p34 p35 / SC / d=221
+
+If holds: var0:1 var2:0 var1:183
+Execute: walk-on-beam p33 p34 / SC / d=222
+
+If holds: var0:1 var2:0 var1:182
+Execute: walk-on-beam p32 p33 / SC / d=223
+
+If holds: var0:1 var2:0 var1:181
+Execute: walk-on-beam p31 p32 / SC / d=224
+
+If holds: var0:1 var2:0 var1:180
+Execute: walk-on-beam p30 p31 / SC / d=225
+
+If holds: var0:1 var2:0 var1:178
+Execute: walk-on-beam p29 p30 / SC / d=226
+
+If holds: var0:1 var2:0 var1:177
+Execute: walk-on-beam p28 p29 / SC / d=227
+
+If holds: var0:1 var2:0 var1:176
+Execute: walk-on-beam p27 p28 / SC / d=228
+
+If holds: var0:1 var2:0 var1:175
+Execute: walk-on-beam p26 p27 / SC / d=229
+
+If holds: var0:1 var2:0 var1:168
+Execute: walk-on-beam p25 p26 / SC / d=230
+
+If holds: var0:1 var2:0 var1:157
+Execute: walk-on-beam p24 p25 / SC / d=231
+
+If holds: var0:1 var2:0 var1:146
+Execute: walk-on-beam p23 p24 / SC / d=232
+
+If holds: var0:1 var2:0 var1:135
+Execute: walk-on-beam p22 p23 / SC / d=233
+
+If holds: var0:1 var2:0 var1:124
+Execute: walk-on-beam p21 p22 / SC / d=234
+
+If holds: var0:1 var2:0 var1:113
+Execute: walk-on-beam p20 p21 / SC / d=235
+
+If holds: var0:1 var2:0 var1:101
+Execute: walk-on-beam p19 p20 / SC / d=236
+
+If holds: var0:1 var2:0 var1:90
+Execute: walk-on-beam p18 p19 / SC / d=237
+
+If holds: var0:1 var2:0 var1:79
+Execute: walk-on-beam p17 p18 / SC / d=238
+
+If holds: var0:1 var2:0 var1:68
+Execute: walk-on-beam p16 p17 / SC / d=239
+
+If holds: var0:1 var2:0 var1:57
+Execute: walk-on-beam p15 p16 / SC / d=240
+
+If holds: var0:1 var2:0 var1:46
+Execute: walk-on-beam p14 p15 / SC / d=241
+
+If holds: var0:1 var2:0 var1:35
+Execute: walk-on-beam p13 p14 / SC / d=242
+
+If holds: var0:1 var2:0 var1:24
+Execute: walk-on-beam p12 p13 / SC / d=243
+
+If holds: var0:1 var2:0 var1:13
+Execute: walk-on-beam p11 p12 / SC / d=244
+
+If holds: var0:1 var2:0 var1:2
+Execute: walk-on-beam p10 p11 / SC / d=245
+
+If holds: var0:1 var2:0 var1:245
+Execute: walk-on-beam p9 p10 / SC / d=246
+
+If holds: var0:1 var2:0 var1:234
+Execute: walk-on-beam p8 p9 / SC / d=247
+
+If holds: var0:1 var2:0 var1:223
+Execute: walk-on-beam p7 p8 / SC / d=248
+
+If holds: var0:1 var2:0 var1:212
+Execute: walk-on-beam p6 p7 / SC / d=249
+
+If holds: var0:1 var2:0 var1:201
+Execute: walk-on-beam p5 p6 / SC / d=250
+
+If holds: var0:1 var2:0 var1:190
+Execute: walk-on-beam p4 p5 / SC / d=251
+
+If holds: var0:1 var2:0 var1:179
+Execute: walk-on-beam p3 p4 / SC / d=252
+
+If holds: var0:1 var2:0 var1:112
+Execute: walk-on-beam p2 p3 / SC / d=253
+
+If holds: var0:1 var2:0 var1:1
+Execute: walk-on-beam p1 p2 / SC / d=254
+
+If holds: var0:1 var2:0 var1:0
+Execute: walk-on-beam p0 p1 / SC / d=255
+
+If holds: var0:1 var2:1 var1:0
+Execute: climb p0 / SC / d=256
+
+If holds: var0:1 var2:1 var1:1
+Execute: walk-left p1 p0 / SC / d=257
+
+If holds: var0:1 var2:1 var1:112
+Execute: walk-left p2 p1 / SC / d=258
+
+If holds: var0:1 var2:1 var1:179
+Execute: walk-left p3 p2 / SC / d=259
+
+If holds: var0:1 var2:1 var1:190
+Execute: walk-left p4 p3 / SC / d=260
+
+If holds: var0:1 var2:1 var1:201
+Execute: walk-left p5 p4 / SC / d=261
+
+If holds: var0:1 var2:1 var1:212
+Execute: walk-left p6 p5 / SC / d=262
+
+If holds: var0:1 var2:1 var1:223
+Execute: walk-left p7 p6 / SC / d=263
+
+If holds: var0:1 var2:1 var1:234
+Execute: walk-left p8 p7 / SC / d=264
+
+If holds: var0:1 var2:1 var1:245
+Execute: walk-left p9 p8 / SC / d=265
+
+If holds: var0:1 var2:1 var1:2
+Execute: walk-left p10 p9 / SC / d=266
+
+If holds: var0:1 var2:1 var1:13
+Execute: walk-left p11 p10 / SC / d=267
+
+If holds: var0:1 var2:1 var1:24
+Execute: walk-left p12 p11 / SC / d=268
+
+If holds: var0:1 var2:1 var1:35
+Execute: walk-left p13 p12 / SC / d=269
+
+If holds: var0:1 var2:1 var1:46
+Execute: walk-left p14 p13 / SC / d=270
+
+If holds: var0:1 var2:1 var1:57
+Execute: walk-left p15 p14 / SC / d=271
+
+If holds: var0:1 var2:1 var1:68
+Execute: walk-left p16 p15 / SC / d=272
+
+If holds: var0:1 var2:1 var1:79
+Execute: walk-left p17 p16 / SC / d=273
+
+If holds: var0:1 var2:1 var1:90
+Execute: walk-left p18 p17 / SC / d=274
+
+If holds: var0:1 var2:1 var1:101
+Execute: walk-left p19 p18 / SC / d=275
+
+If holds: var0:1 var2:1 var1:113
+Execute: walk-left p20 p19 / SC / d=276
+
+If holds: var0:1 var2:1 var1:124
+Execute: walk-left p21 p20 / SC / d=277
+
+If holds: var0:1 var2:1 var1:135
+Execute: walk-left p22 p21 / SC / d=278
+
+If holds: var0:1 var2:1 var1:146
+Execute: walk-left p23 p22 / SC / d=279
+
+If holds: var0:1 var2:1 var1:157
+Execute: walk-left p24 p23 / SC / d=280
+
+If holds: var0:1 var2:1 var1:168
+Execute: walk-left p25 p24 / SC / d=281
+
+If holds: var0:1 var2:1 var1:175
+Execute: walk-left p26 p25 / SC / d=282
+
+If holds: var0:1 var2:1 var1:176
+Execute: walk-left p27 p26 / SC / d=283
+
+If holds: var0:1 var2:1 var1:177
+Execute: walk-left p28 p27 / SC / d=284
+
+If holds: var0:1 var2:1 var1:178
+Execute: walk-left p29 p28 / SC / d=285
+
+If holds: var0:1 var2:1 var1:180
+Execute: walk-left p30 p29 / SC / d=286
+
+If holds: var0:1 var2:1 var1:181
+Execute: walk-left p31 p30 / SC / d=287
+
+If holds: var0:1 var2:1 var1:182
+Execute: walk-left p32 p31 / SC / d=288
+
+If holds: var0:1 var2:1 var1:183
+Execute: walk-left p33 p32 / SC / d=289
+
+If holds: var0:1 var2:1 var1:184
+Execute: walk-left p34 p33 / SC / d=290
+
+If holds: var0:1 var2:1 var1:185
+Execute: walk-left p35 p34 / SC / d=291
+
+If holds: var0:1 var2:1 var1:186
+Execute: walk-left p36 p35 / SC / d=292
+
+If holds: var0:1 var2:1 var1:187
+Execute: walk-left p37 p36 / SC / d=293
+
+If holds: var0:1 var2:1 var1:188
+Execute: walk-left p38 p37 / SC / d=294
+
+If holds: var0:1 var2:1 var1:189
+Execute: walk-left p39 p38 / SC / d=295
+
+If holds: var0:1 var2:1 var1:191
+Execute: walk-left p40 p39 / SC / d=296
+
+If holds: var0:1 var2:1 var1:192
+Execute: walk-left p41 p40 / SC / d=297
+
+If holds: var0:1 var2:1 var1:193
+Execute: walk-left p42 p41 / SC / d=298
+
+If holds: var0:1 var2:1 var1:194
+Execute: walk-left p43 p42 / SC / d=299
+
+If holds: var0:1 var2:1 var1:195
+Execute: walk-left p44 p43 / SC / d=300
+
+If holds: var0:1 var2:1 var1:196
+Execute: walk-left p45 p44 / SC / d=301
+
+If holds: var0:1 var2:1 var1:197
+Execute: walk-left p46 p45 / SC / d=302
+
+If holds: var0:1 var2:1 var1:198
+Execute: walk-left p47 p46 / SC / d=303
+
+If holds: var0:1 var2:1 var1:199
+Execute: walk-left p48 p47 / SC / d=304
+
+If holds: var0:1 var2:1 var1:200
+Execute: walk-left p49 p48 / SC / d=305
+
+If holds: var0:1 var2:1 var1:202
+Execute: walk-left p50 p49 / SC / d=306
+
+If holds: var0:1 var2:1 var1:203
+Execute: walk-left p51 p50 / SC / d=307
+
+If holds: var0:1 var2:1 var1:204
+Execute: walk-left p52 p51 / SC / d=308
+
+If holds: var0:1 var2:1 var1:205
+Execute: walk-left p53 p52 / SC / d=309
+
+If holds: var0:1 var2:1 var1:206
+Execute: walk-left p54 p53 / SC / d=310
+
+If holds: var0:1 var2:1 var1:207
+Execute: walk-left p55 p54 / SC / d=311
+
+If holds: var0:1 var2:1 var1:208
+Execute: walk-left p56 p55 / SC / d=312
+
+If holds: var0:1 var2:1 var1:209
+Execute: walk-left p57 p56 / SC / d=313
+
+If holds: var0:1 var2:1 var1:210
+Execute: walk-left p58 p57 / SC / d=314
+
+If holds: var0:1 var2:1 var1:211
+Execute: walk-left p59 p58 / SC / d=315
+
+If holds: var0:1 var2:1 var1:213
+Execute: walk-left p60 p59 / SC / d=316
+
+If holds: var0:1 var2:1 var1:214
+Execute: walk-left p61 p60 / SC / d=317
+
+If holds: var0:1 var2:1 var1:215
+Execute: walk-left p62 p61 / SC / d=318
+
+If holds: var0:1 var2:1 var1:216
+Execute: walk-left p63 p62 / SC / d=319
+
+If holds: var0:1 var2:1 var1:217
+Execute: walk-left p64 p63 / SC / d=320
+
+If holds: var0:1 var2:1 var1:218
+Execute: walk-left p65 p64 / SC / d=321
+
+If holds: var0:1 var2:1 var1:219
+Execute: walk-left p66 p65 / SC / d=322
+
+If holds: var0:1 var2:1 var1:220
+Execute: walk-left p67 p66 / SC / d=323
+
+If holds: var0:1 var2:1 var1:221
+Execute: walk-left p68 p67 / SC / d=324
+
+If holds: var0:1 var2:1 var1:222
+Execute: walk-left p69 p68 / SC / d=325
+
+If holds: var0:1 var2:1 var1:224
+Execute: walk-left p70 p69 / SC / d=326
+
+If holds: var0:1 var2:1 var1:225
+Execute: walk-left p71 p70 / SC / d=327
+
+If holds: var0:1 var2:1 var1:226
+Execute: walk-left p72 p71 / SC / d=328
+
+If holds: var0:1 var2:1 var1:227
+Execute: walk-left p73 p72 / SC / d=329
+
+If holds: var0:1 var2:1 var1:228
+Execute: walk-left p74 p73 / SC / d=330
+
+If holds: var0:1 var2:1 var1:229
+Execute: walk-left p75 p74 / SC / d=331
+
+If holds: var0:1 var2:1 var1:230
+Execute: walk-left p76 p75 / SC / d=332
+
+If holds: var0:1 var2:1 var1:231
+Execute: walk-left p77 p76 / SC / d=333
+
+If holds: var0:1 var2:1 var1:232
+Execute: walk-left p78 p77 / SC / d=334
+
+If holds: var0:1 var2:1 var1:233
+Execute: walk-left p79 p78 / SC / d=335
+
+If holds: var0:1 var2:1 var1:235
+Execute: walk-left p80 p79 / SC / d=336
+
+If holds: var0:1 var2:1 var1:236
+Execute: walk-left p81 p80 / SC / d=337
+
+If holds: var0:1 var2:1 var1:237
+Execute: walk-left p82 p81 / SC / d=338
+
+If holds: var0:1 var2:1 var1:238
+Execute: walk-left p83 p82 / SC / d=339
+
+If holds: var0:1 var2:1 var1:239
+Execute: walk-left p84 p83 / SC / d=340
+
+If holds: var0:1 var2:1 var1:240
+Execute: walk-left p85 p84 / SC / d=341
+
+If holds: var0:1 var2:1 var1:241
+Execute: walk-left p86 p85 / SC / d=342
+
+If holds: var0:1 var2:1 var1:242
+Execute: walk-left p87 p86 / SC / d=343
+
+If holds: var0:1 var2:1 var1:243
+Execute: walk-left p88 p87 / SC / d=344
+
+If holds: var0:1 var2:1 var1:244
+Execute: walk-left p89 p88 / SC / d=345
+
+If holds: var0:1 var2:1 var1:246
+Execute: walk-left p90 p89 / SC / d=346
+
+If holds: var0:1 var2:1 var1:247
+Execute: walk-left p91 p90 / SC / d=347
+
+If holds: var0:1 var2:1 var1:248
+Execute: walk-left p92 p91 / SC / d=348
+
+If holds: var0:1 var2:1 var1:249
+Execute: walk-left p93 p92 / SC / d=349
+
+If holds: var0:1 var2:1 var1:250
+Execute: walk-left p94 p93 / SC / d=350
+
+If holds: var0:1 var2:1 var1:251
+Execute: walk-left p95 p94 / SC / d=351
+
+If holds: var0:1 var2:1 var1:252
+Execute: walk-left p96 p95 / SC / d=352
+
+If holds: var0:1 var2:1 var1:253
+Execute: walk-left p97 p96 / SC / d=353
+
+If holds: var0:1 var2:1 var1:254
+Execute: walk-left p98 p97 / SC / d=354
+
+If holds: var0:1 var2:1 var1:255
+Execute: walk-left p99 p98 / SC / d=355
+
+If holds: var0:1 var2:1 var1:3
+Execute: walk-left p100 p99 / SC / d=356
+
+If holds: var0:1 var2:1 var1:4
+Execute: walk-left p101 p100 / SC / d=357
+
+If holds: var0:1 var2:1 var1:5
+Execute: walk-left p102 p101 / SC / d=358
+
+If holds: var0:1 var2:1 var1:6
+Execute: walk-left p103 p102 / SC / d=359
+
+If holds: var0:1 var2:1 var1:7
+Execute: walk-left p104 p103 / SC / d=360
+
+If holds: var0:1 var2:1 var1:8
+Execute: walk-left p105 p104 / SC / d=361
+
+If holds: var0:1 var2:1 var1:9
+Execute: walk-left p106 p105 / SC / d=362
+
+If holds: var0:1 var2:1 var1:10
+Execute: walk-left p107 p106 / SC / d=363
+
+If holds: var0:1 var2:1 var1:11
+Execute: walk-left p108 p107 / SC / d=364
+
+If holds: var0:1 var2:1 var1:12
+Execute: walk-left p109 p108 / SC / d=365
+
+If holds: var0:1 var2:1 var1:14
+Execute: walk-left p110 p109 / SC / d=366
+
+If holds: var0:1 var2:1 var1:15
+Execute: walk-left p111 p110 / SC / d=367
+
+If holds: var0:1 var2:1 var1:16
+Execute: walk-left p112 p111 / SC / d=368
+
+If holds: var0:1 var2:1 var1:17
+Execute: walk-left p113 p112 / SC / d=369
+
+If holds: var0:1 var2:1 var1:18
+Execute: walk-left p114 p113 / SC / d=370
+
+If holds: var0:1 var2:1 var1:19
+Execute: walk-left p115 p114 / SC / d=371
+
+If holds: var0:1 var2:1 var1:20
+Execute: walk-left p116 p115 / SC / d=372
+
+If holds: var0:1 var2:1 var1:21
+Execute: walk-left p117 p116 / SC / d=373
+
+If holds: var0:1 var2:1 var1:22
+Execute: walk-left p118 p117 / SC / d=374
+
+If holds: var0:1 var2:1 var1:23
+Execute: walk-left p119 p118 / SC / d=375
+
+If holds: var0:1 var2:1 var1:25
+Execute: walk-left p120 p119 / SC / d=376
+
+If holds: var0:1 var2:1 var1:26
+Execute: walk-left p121 p120 / SC / d=377
+
+If holds: var0:1 var2:1 var1:27
+Execute: walk-left p122 p121 / SC / d=378
+
+If holds: var0:1 var2:1 var1:28
+Execute: walk-left p123 p122 / SC / d=379
+
+If holds: var0:1 var2:1 var1:29
+Execute: walk-left p124 p123 / SC / d=380
+
+If holds: var0:1 var2:1 var1:30
+Execute: walk-left p125 p124 / SC / d=381
+
+If holds: var0:1 var2:1 var1:31
+Execute: walk-left p126 p125 / SC / d=382
+
+If holds: var0:1 var2:1 var1:32
+Execute: walk-left p127 p126 / SC / d=383
+
+If holds: var0:1 var2:1 var1:33
+Execute: walk-left p128 p127 / SC / d=384
+
+If holds: var0:1 var2:1 var1:34
+Execute: walk-left p129 p128 / SC / d=385
+
+If holds: var0:1 var2:1 var1:36
+Execute: walk-left p130 p129 / SC / d=386
+
+If holds: var0:1 var2:1 var1:37
+Execute: walk-left p131 p130 / SC / d=387
+
+If holds: var0:1 var2:1 var1:38
+Execute: walk-left p132 p131 / SC / d=388
+
+If holds: var0:1 var2:1 var1:39
+Execute: walk-left p133 p132 / SC / d=389
+
+If holds: var0:1 var2:1 var1:40
+Execute: walk-left p134 p133 / SC / d=390
+
+If holds: var0:1 var2:1 var1:41
+Execute: walk-left p135 p134 / SC / d=391
+
+If holds: var0:1 var2:1 var1:42
+Execute: walk-left p136 p135 / SC / d=392
+
+If holds: var0:1 var2:1 var1:43
+Execute: walk-left p137 p136 / SC / d=393
+
+If holds: var0:1 var2:1 var1:44
+Execute: walk-left p138 p137 / SC / d=394
+
+If holds: var0:1 var2:1 var1:45
+Execute: walk-left p139 p138 / SC / d=395
+
+If holds: var0:1 var2:1 var1:47
+Execute: walk-left p140 p139 / SC / d=396
+
+If holds: var0:1 var2:1 var1:48
+Execute: walk-left p141 p140 / SC / d=397
+
+If holds: var0:1 var2:1 var1:49
+Execute: walk-left p142 p141 / SC / d=398
+
+If holds: var0:1 var2:1 var1:50
+Execute: walk-left p143 p142 / SC / d=399
+
+If holds: var0:1 var2:1 var1:51
+Execute: walk-left p144 p143 / SC / d=400
+
+If holds: var0:1 var2:1 var1:52
+Execute: walk-left p145 p144 / SC / d=401
+
+If holds: var0:1 var2:1 var1:53
+Execute: walk-left p146 p145 / SC / d=402
+
+If holds: var0:1 var2:1 var1:54
+Execute: walk-left p147 p146 / SC / d=403
+
+If holds: var0:1 var2:1 var1:55
+Execute: walk-left p148 p147 / SC / d=404
+
+If holds: var0:1 var2:1 var1:56
+Execute: walk-left p149 p148 / SC / d=405
+
+If holds: var0:1 var2:1 var1:58
+Execute: walk-left p150 p149 / SC / d=406
+
+If holds: var0:1 var2:1 var1:59
+Execute: walk-left p151 p150 / SC / d=407
+
+If holds: var0:1 var2:1 var1:60
+Execute: walk-left p152 p151 / SC / d=408
+
+If holds: var0:1 var2:1 var1:61
+Execute: walk-left p153 p152 / SC / d=409
+
+If holds: var0:1 var2:1 var1:62
+Execute: walk-left p154 p153 / SC / d=410
+
+If holds: var0:1 var2:1 var1:63
+Execute: walk-left p155 p154 / SC / d=411
+
+If holds: var0:1 var2:1 var1:64
+Execute: walk-left p156 p155 / SC / d=412
+
+If holds: var0:1 var2:1 var1:65
+Execute: walk-left p157 p156 / SC / d=413
+
+If holds: var0:1 var2:1 var1:66
+Execute: walk-left p158 p157 / SC / d=414
+
+If holds: var0:1 var2:1 var1:67
+Execute: walk-left p159 p158 / SC / d=415
+
+If holds: var0:1 var2:1 var1:69
+Execute: walk-left p160 p159 / SC / d=416
+
+If holds: var0:1 var2:1 var1:70
+Execute: walk-left p161 p160 / SC / d=417
+
+If holds: var0:1 var2:1 var1:71
+Execute: walk-left p162 p161 / SC / d=418
+
+If holds: var0:1 var2:1 var1:72
+Execute: walk-left p163 p162 / SC / d=419
+
+If holds: var0:1 var2:1 var1:73
+Execute: walk-left p164 p163 / SC / d=420
+
+If holds: var0:1 var2:1 var1:74
+Execute: walk-left p165 p164 / SC / d=421
+
+If holds: var0:1 var2:1 var1:75
+Execute: walk-left p166 p165 / SC / d=422
+
+If holds: var0:1 var2:1 var1:76
+Execute: walk-left p167 p166 / SC / d=423
+
+If holds: var0:1 var2:1 var1:77
+Execute: walk-left p168 p167 / SC / d=424
+
+If holds: var0:1 var2:1 var1:78
+Execute: walk-left p169 p168 / SC / d=425
+
+If holds: var0:1 var2:1 var1:80
+Execute: walk-left p170 p169 / SC / d=426
+
+If holds: var0:1 var2:1 var1:81
+Execute: walk-left p171 p170 / SC / d=427
+
+If holds: var0:1 var2:1 var1:82
+Execute: walk-left p172 p171 / SC / d=428
+
+If holds: var0:1 var2:1 var1:83
+Execute: walk-left p173 p172 / SC / d=429
+
+If holds: var0:1 var2:1 var1:84
+Execute: walk-left p174 p173 / SC / d=430
+
+If holds: var0:1 var2:1 var1:85
+Execute: walk-left p175 p174 / SC / d=431
+
+If holds: var0:1 var2:1 var1:86
+Execute: walk-left p176 p175 / SC / d=432
+
+If holds: var0:1 var2:1 var1:87
+Execute: walk-left p177 p176 / SC / d=433
+
+If holds: var0:1 var2:1 var1:88
+Execute: walk-left p178 p177 / SC / d=434
+
+If holds: var0:1 var2:1 var1:89
+Execute: walk-left p179 p178 / SC / d=435
+
+If holds: var0:1 var2:1 var1:91
+Execute: walk-left p180 p179 / SC / d=436
+
+If holds: var0:1 var2:1 var1:92
+Execute: walk-left p181 p180 / SC / d=437
+
+If holds: var0:1 var2:1 var1:93
+Execute: walk-left p182 p181 / SC / d=438
+
+If holds: var0:1 var2:1 var1:94
+Execute: walk-left p183 p182 / SC / d=439
+
+If holds: var0:1 var2:1 var1:95
+Execute: walk-left p184 p183 / SC / d=440
+
+If holds: var0:1 var2:1 var1:96
+Execute: walk-left p185 p184 / SC / d=441
+
+If holds: var0:1 var2:1 var1:97
+Execute: walk-left p186 p185 / SC / d=442
+
+If holds: var0:1 var2:1 var1:98
+Execute: walk-left p187 p186 / SC / d=443
+
+If holds: var0:1 var2:1 var1:99
+Execute: walk-left p188 p187 / SC / d=444
+
+If holds: var0:1 var2:1 var1:100
+Execute: walk-left p189 p188 / SC / d=445
+
+If holds: var0:1 var2:1 var1:102
+Execute: walk-left p190 p189 / SC / d=446
+
+If holds: var0:1 var2:1 var1:103
+Execute: walk-left p191 p190 / SC / d=447
+
+If holds: var0:1 var2:1 var1:104
+Execute: walk-left p192 p191 / SC / d=448
+
+If holds: var0:1 var2:1 var1:105
+Execute: walk-left p193 p192 / SC / d=449
+
+If holds: var0:1 var2:1 var1:106
+Execute: walk-left p194 p193 / SC / d=450
+
+If holds: var0:1 var2:1 var1:107
+Execute: walk-left p195 p194 / SC / d=451
+
+If holds: var0:1 var2:1 var1:108
+Execute: walk-left p196 p195 / SC / d=452
+
+If holds: var0:1 var2:1 var1:109
+Execute: walk-left p197 p196 / SC / d=453
+
+If holds: var0:1 var2:1 var1:110
+Execute: walk-left p198 p197 / SC / d=454
+
+If holds: var0:1 var2:1 var1:111
+Execute: walk-left p199 p198 / SC / d=455
+
+If holds: var0:1 var2:1 var1:114
+Execute: walk-left p200 p199 / SC / d=456
+
+If holds: var0:1 var2:1 var1:115
+Execute: walk-left p201 p200 / SC / d=457
+
+If holds: var0:1 var2:1 var1:116
+Execute: walk-left p202 p201 / SC / d=458
+
+If holds: var0:1 var2:1 var1:117
+Execute: walk-left p203 p202 / SC / d=459
+
+If holds: var0:1 var2:1 var1:118
+Execute: walk-left p204 p203 / SC / d=460
+
+If holds: var0:1 var2:1 var1:119
+Execute: walk-left p205 p204 / SC / d=461
+
+If holds: var0:1 var2:1 var1:120
+Execute: walk-left p206 p205 / SC / d=462
+
+If holds: var0:1 var2:1 var1:121
+Execute: walk-left p207 p206 / SC / d=463
+
+If holds: var0:1 var2:1 var1:122
+Execute: walk-left p208 p207 / SC / d=464
+
+If holds: var0:1 var2:1 var1:123
+Execute: walk-left p209 p208 / SC / d=465
+
+If holds: var0:1 var2:1 var1:125
+Execute: walk-left p210 p209 / SC / d=466
+
+If holds: var0:1 var2:1 var1:126
+Execute: walk-left p211 p210 / SC / d=467
+
+If holds: var0:1 var2:1 var1:127
+Execute: walk-left p212 p211 / SC / d=468
+
+If holds: var0:1 var2:1 var1:128
+Execute: walk-left p213 p212 / SC / d=469
+
+If holds: var0:1 var2:1 var1:129
+Execute: walk-left p214 p213 / SC / d=470
+
+If holds: var0:1 var2:1 var1:130
+Execute: walk-left p215 p214 / SC / d=471
+
+If holds: var0:1 var2:1 var1:131
+Execute: walk-left p216 p215 / SC / d=472
+
+If holds: var0:1 var2:1 var1:132
+Execute: walk-left p217 p216 / SC / d=473
+
+If holds: var0:1 var2:1 var1:133
+Execute: walk-left p218 p217 / SC / d=474
+
+If holds: var0:1 var2:1 var1:134
+Execute: walk-left p219 p218 / SC / d=475
+
+If holds: var0:1 var2:1 var1:136
+Execute: walk-left p220 p219 / SC / d=476
+
+If holds: var0:1 var2:1 var1:137
+Execute: walk-left p221 p220 / SC / d=477
+
+If holds: var0:1 var2:1 var1:138
+Execute: walk-left p222 p221 / SC / d=478
+
+If holds: var0:1 var2:1 var1:139
+Execute: walk-left p223 p222 / SC / d=479
+
+If holds: var0:1 var2:1 var1:140
+Execute: walk-left p224 p223 / SC / d=480
+
+If holds: var0:1 var2:1 var1:141
+Execute: walk-left p225 p224 / SC / d=481
+
+If holds: var0:1 var2:1 var1:142
+Execute: walk-left p226 p225 / SC / d=482
+
+If holds: var0:1 var2:1 var1:143
+Execute: walk-left p227 p226 / SC / d=483
+
+If holds: var0:1 var2:1 var1:144
+Execute: walk-left p228 p227 / SC / d=484
+
+If holds: var0:1 var2:1 var1:145
+Execute: walk-left p229 p228 / SC / d=485
+
+If holds: var0:1 var2:1 var1:147
+Execute: walk-left p230 p229 / SC / d=486
+
+If holds: var0:1 var2:1 var1:148
+Execute: walk-left p231 p230 / SC / d=487
+
+If holds: var0:1 var2:1 var1:149
+Execute: walk-left p232 p231 / SC / d=488
+
+If holds: var0:1 var2:1 var1:150
+Execute: walk-left p233 p232 / SC / d=489
+
+If holds: var0:1 var2:1 var1:151
+Execute: walk-left p234 p233 / SC / d=490
+
+If holds: var0:1 var2:1 var1:152
+Execute: walk-left p235 p234 / SC / d=491
+
+If holds: var0:1 var2:1 var1:153
+Execute: walk-left p236 p235 / SC / d=492
+
+If holds: var0:1 var2:1 var1:154
+Execute: walk-left p237 p236 / SC / d=493
+
+If holds: var0:1 var2:1 var1:155
+Execute: walk-left p238 p237 / SC / d=494
+
+If holds: var0:1 var2:1 var1:156
+Execute: walk-left p239 p238 / SC / d=495
+
+If holds: var0:1 var2:1 var1:158
+Execute: walk-left p240 p239 / SC / d=496
+
+If holds: var0:1 var2:1 var1:159
+Execute: walk-left p241 p240 / SC / d=497
+
+If holds: var0:1 var2:1 var1:160
+Execute: walk-left p242 p241 / SC / d=498
+
+If holds: var0:1 var2:1 var1:161
+Execute: walk-left p243 p242 / SC / d=499
+
+If holds: var0:1 var2:1 var1:162
+Execute: walk-left p244 p243 / SC / d=500
+
+If holds: var0:1 var2:1 var1:163
+Execute: walk-left p245 p244 / SC / d=501
+
+If holds: var0:1 var2:1 var1:164
+Execute: walk-left p246 p245 / SC / d=502
+
+If holds: var0:1 var2:1 var1:165
+Execute: walk-left p247 p246 / SC / d=503
+
+If holds: var0:1 var2:1 var1:166
+Execute: walk-left p248 p247 / SC / d=504
+
+If holds: var0:1 var2:1 var1:167
+Execute: walk-left p249 p248 / SC / d=505
+
+If holds: var0:1 var2:1 var1:169
+Execute: walk-left p250 p249 / SC / d=506
+
+If holds: var0:1 var2:1 var1:170
+Execute: walk-left p251 p250 / SC / d=507
+
+If holds: var0:1 var2:1 var1:171
+Execute: walk-left p252 p251 / SC / d=508
+
+If holds: var0:1 var2:1 var1:172
+Execute: walk-left p253 p252 / SC / d=509
+
+If holds: var0:1 var2:1 var1:173
+Execute: walk-left p254 p253 / SC / d=510
+
+If holds: var0:1 var2:1 var1:174
+Execute: walk-left p255 p254 / SC / d=511

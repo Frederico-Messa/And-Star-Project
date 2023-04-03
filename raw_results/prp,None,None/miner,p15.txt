@@ -1,0 +1,258 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 54 rules.
+Computing model... [0.020s CPU, 0.017s wall-clock]
+2389 relevant atoms
+1720 auxiliary atoms
+4109 final queue length
+4843 total queue pushes
+Completing instantiation... [0.020s CPU, 0.018s wall-clock]
+Instantiating: [0.040s CPU, 0.038s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.000s CPU, 0.003s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+9 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.007s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.001s wall-clock]
+Translating task: [0.030s CPU, 0.021s wall-clock]
+30 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+Removed false proposition: 8 = <none of those>
+Removed false proposition: 9 = <none of those>
+Removed false proposition: 10 = <none of those>
+Removed false proposition: 11 = <none of those>
+Removed false proposition: 12 = <none of those>
+Removed false proposition: 13 = <none of those>
+Removed false proposition: 14 = <none of those>
+Removed false proposition: 15 = <none of those>
+Removed false proposition: 16 = <none of those>
+Removed false proposition: 17 = <none of those>
+Removed false proposition: 18 = <none of those>
+Removed false proposition: 19 = <none of those>
+Removed false proposition: 20 = <none of those>
+Removed false proposition: 22 = <none of those>
+0 operators removed
+14 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.004s wall-clock]
+Translator variables: 23
+Translator derived variables: 0
+Translator facts: 684
+Translator goal facts: 2
+Translator mutex groups: 16
+Translator total mutex groups size: 671
+Translator operators: 1384
+Translator axioms: 0
+Translator task size: 8233
+Translator peak memory: 24628 KB
+Writing output... [0.010s CPU, 0.005s wall-clock]
+Done! [0.080s CPU, 0.080s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+23 variables of 23 necessary
+0 of 16 mutex groups necessary.
+1384 of 1384 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 684
+Preprocessor derived variables: 0
+Preprocessor task size: 7562
+Writing output...
+done
+
+
+3. Running search
+./planner_prp/src/search/downward ipc policy-repair --dump-policy 2
+This is a unit task.
+./planner_prp/src/search/downward-release --heuristic "h=ff(cost_type=1)" --search "lazy_greedy([h],preferred=[h])" --random-seed 814102613 --dump-policy 2 < output
+Simplifying transitions... done!
+Variables: 23
+Bytes per state: 12
+
+Total allotted time (s): 1800
+Max time for core JIC (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+ !! Warning: Disabling the simplification of unary operators !!
+ !!           to keep the non-deterministic planning sound.  !!
+Generated 45 state(s).
+Dead ends: 0 state(s). (0 recorded)
+move-person l11 l21 (1)
+pick-bad-gold-1_DETDUP_0 l21 (1)
+move-person l21 l31 (1)
+move-person l31 l41 (1)
+move-person l41 l42 (1)
+pick-bad-gold-2_DETDUP_0 l42 (1)
+move-person l42 l43 (1)
+move-person l43 l44 (1)
+pick-bad-gold-3_DETDUP_0 l44 (1)
+Plan length: 9 step(s).
+Plan cost: 9
+Initial search time: 0s
+Initial total time: 0.02s
+
+
+Creating the simulator...
+
+
+Regressing the plan...
+
+
+Generating an initial policy...
+
+
+Computing just-in-time repairs...
+Generated 8 state(s).
+Dead ends: 0 state(s).
+
+Could not close 0 of 1 open leaf states.
+Investigated 3 states for the strong cyclic plan.
+Went through another policy of score 0
+Generated 554 state(s).
+Dead ends: 0 state(s).
+Generated 161726779 state(s).
+Dead ends: 894371 state(s). (5 recorded)
+
+Could not close 0 of 1 open leaf states.
+Investigated 43 states for the strong cyclic plan.
+Found a better policy of score 1
+
+Could not close 0 of 0 open leaf states.
+Investigated 1 states for the strong cyclic plan.
+Marking policy strong cyclic.
+Went through another policy of score 1
+
+
+Running a final SCD check...
+
+
+Running the simulation...
+...achieved the goal!
+
+
+
+                  -{ General Statistics }-
+
+        FSAP Combination Count: 0
+       Monotonicity violations: 0
+             Successful states: 22 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 22 +/- 0
+             Recorded Deadends: 8
+            State-Action Pairs: 22
+  Forbidden State-Action Pairs: 155
+               Strongly Cyclic: True
+                  Policy Score: 1
+                     Succeeded: 1 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0s
+                   Search Time: 667.4s
+           Policy Construction: 0s
+ Evaluating the policy quality: 2.94s
+              Using the policy: 1.6s
+          Just-in-case Repairs: 670.35s
+                Simulator time: 0s
+                    Total time: 670.36s
+
+
+
+Dumping the policy and fsaps...
+Strong cyclic plan found.
+Peak memory: 4644104 KB
+
+If holds: var21:0 var8:3
+Execute: goal / SC / d=0
+
+If holds: var7:0 var0:0 var22:47 var21:0 var8:2
+Execute: pick-good-gold-3 l93 / SC / d=1
+
+If holds: var7:0 var0:0 var22:46 var21:0 var8:2
+Execute: move-person l92 l93 / SC / d=2
+
+If holds: var6:0 var7:0 var0:0 var22:46 var21:0 var8:1
+Execute: pick-good-gold-2 l92 / SC / d=3
+
+If holds: var6:0 var7:0 var0:0 var22:41 var21:0 var8:1
+Execute: move-person l82 l92 / SC / d=4
+
+If holds: var5:0 var6:0 var7:0 var0:0 var22:41 var21:0 var8:0
+Execute: pick-good-gold-1 l82 / SC / d=5
+
+If holds: var5:0 var6:0 var7:0 var0:0 var22:40 var21:0 var8:0
+Execute: move-person l81 l82 / SC / d=6
+
+If holds: var5:0 var6:0 var7:0 var0:0 var22:35 var21:0 var8:0
+Execute: move-person l71 l81 / SC / d=7
+
+If holds: var5:0 var6:0 var7:0 var0:0 var22:30 var21:0 var8:0
+Execute: move-person l61 l71 / SC / d=8
+
+If holds: var5:0 var6:0 var7:0 var0:0 var22:25 var21:0 var8:0
+Execute: move-person l51 l61 / SC / d=9
+
+If holds: var5:0 var6:0 var7:0 var0:0 var22:20 var21:0 var8:0
+Execute: move-person l41 l51 / SC / d=10
+
+If holds: var5:0 var6:0 var7:0 var0:0 var22:15 var21:0 var8:0
+Execute: move-person l31 l41 / SC / d=11
+
+If holds: var5:0 var6:0 var7:0 var0:0 var22:10 var21:0 var8:0
+Execute: move-person l21 l31 / SC / d=12
+
+If holds: var5:0 var6:0 var7:0 var0:0 var22:5 var21:0 var8:0
+Execute: move-person l11 l21 / SC / d=13
+
+If holds: var5:0 var6:0 var7:0 var22:5 var9:0 var21:0 var8:0
+Execute: drop-rock-press l11 r1 / SC / d=14
+
+If holds: var5:0 var6:0 var7:0 var22:6 var9:0 var21:0 var8:0
+Execute: move-person l12 l11 / SC / d=15
+
+If holds: var5:0 var6:0 var7:0 var22:11 var9:0 var21:0 var8:0
+Execute: move-person l22 l12 / SC / d=16
+
+If holds: var5:0 var6:0 var7:0 var22:16 var9:0 var21:0 var8:0
+Execute: move-person l32 l22 / SC / d=17
+
+If holds: var5:0 var6:0 var7:0 var22:15 var9:0 var21:0 var8:0
+Execute: move-person l31 l32 / SC / d=18
+
+If holds: var5:0 var6:0 var7:0 var22:15 var9:16 var21:0 var8:0
+Execute: pick-rock l31 r1 / SC / d=19
+
+If holds: var5:0 var6:0 var7:0 var22:10 var9:16 var21:0 var8:0
+Execute: move-person l21 l31 / SC / d=20
+
+If holds: var5:0 var6:0 var7:0 var22:5 var9:16 var21:0 var8:0
+Execute: move-person l11 l21 / SC / d=21

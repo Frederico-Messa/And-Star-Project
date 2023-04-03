@@ -1,0 +1,1170 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Warning: Atom spare-in(l-49-1) is specified twice in initial state specification
+Parsing: [0.010s CPU, 0.015s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.010s CPU, 0.010s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.000s wall-clock]
+Preparing model... [0.020s CPU, 0.029s wall-clock]
+Generated 14 rules.
+Computing model... [0.120s CPU, 0.122s wall-clock]
+16924 relevant atoms
+12697 auxiliary atoms
+29621 final queue length
+33844 total queue pushes
+Completing instantiation... [0.100s CPU, 0.098s wall-clock]
+Instantiating: [0.250s CPU, 0.264s wall-clock]
+Computing fact groups...
+Finding invariants...
+5 initial candidates
+Finding invariants: [0.000s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.010s CPU, 0.003s wall-clock]
+Instantiating groups... [0.000s CPU, 0.003s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.001s wall-clock]
+Choosing groups...
+648 uncovered facts
+Choosing groups: [0.010s CPU, 0.002s wall-clock]
+Building translation key... [0.000s CPU, 0.002s wall-clock]
+Computing fact groups: [0.020s CPU, 0.023s wall-clock]
+Building STRIPS to SAS dictionary... [0.010s CPU, 0.001s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.005s wall-clock]
+Translating task: [0.110s CPU, 0.118s wall-clock]
+3047 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+Removed false proposition: 648 = <none of those>
+0 operators removed
+1 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.016s wall-clock]
+Translator variables: 649
+Translator derived variables: 0
+Translator facts: 2521
+Translator goal facts: 1
+Translator mutex groups: 1
+Translator total mutex groups size: 1225
+Translator operators: 5447
+Translator axioms: 0
+Translator task size: 29231
+Translator peak memory: 41324 KB
+Writing output... [0.020s CPU, 0.020s wall-clock]
+Done! [0.450s CPU, 0.467s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+649 variables of 649 necessary
+0 of 1 mutex groups necessary.
+5447 of 5447 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 2521
+Preprocessor derived variables: 0
+Preprocessor task size: 28006
+Writing output...
+done
+
+
+3. Running search
+./planner_prp/src/search/downward ipc policy-repair --dump-policy 2
+This is a unit task.
+./planner_prp/src/search/downward-release --heuristic "h=ff(cost_type=1)" --search "lazy_greedy([h],preferred=[h])" --random-seed 814102613 --dump-policy 2 < output
+Simplifying transitions... done!
+Variables: 649
+Bytes per state: 84
+
+Total allotted time (s): 1800
+Max time for core JIC (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+ !! Warning: Disabling the simplification of unary operators !!
+ !!           to keep the non-deterministic planning sound.  !!
+Generated 192 state(s).
+Dead ends: 0 state(s). (0 recorded)
+move-car_DETDUP_0 l-1-1 l-1-2 (1)
+move-car_DETDUP_0 l-1-2 l-1-3 (1)
+move-car_DETDUP_0 l-1-3 l-1-4 (1)
+move-car_DETDUP_0 l-1-4 l-1-5 (1)
+move-car_DETDUP_0 l-1-5 l-1-6 (1)
+move-car_DETDUP_0 l-1-6 l-1-7 (1)
+move-car_DETDUP_0 l-1-7 l-1-8 (1)
+move-car_DETDUP_0 l-1-8 l-1-9 (1)
+move-car_DETDUP_0 l-1-9 l-1-10 (1)
+move-car_DETDUP_0 l-1-10 l-1-11 (1)
+move-car_DETDUP_0 l-1-11 l-1-12 (1)
+move-car_DETDUP_0 l-1-12 l-1-13 (1)
+move-car_DETDUP_0 l-1-13 l-1-14 (1)
+move-car_DETDUP_0 l-1-14 l-1-15 (1)
+move-car_DETDUP_0 l-1-15 l-1-16 (1)
+move-car_DETDUP_0 l-1-16 l-1-17 (1)
+move-car_DETDUP_0 l-1-17 l-1-18 (1)
+move-car_DETDUP_0 l-1-18 l-1-19 (1)
+move-car_DETDUP_0 l-1-19 l-1-20 (1)
+move-car_DETDUP_0 l-1-20 l-1-21 (1)
+move-car_DETDUP_0 l-1-21 l-1-22 (1)
+move-car_DETDUP_0 l-1-22 l-1-23 (1)
+move-car_DETDUP_0 l-1-23 l-1-24 (1)
+move-car_DETDUP_0 l-1-24 l-1-25 (1)
+move-car_DETDUP_0 l-1-25 l-1-26 (1)
+move-car_DETDUP_0 l-1-26 l-1-27 (1)
+move-car_DETDUP_0 l-1-27 l-1-28 (1)
+move-car_DETDUP_0 l-1-28 l-1-29 (1)
+move-car_DETDUP_0 l-1-29 l-1-30 (1)
+move-car_DETDUP_0 l-1-30 l-1-31 (1)
+move-car_DETDUP_0 l-1-31 l-1-32 (1)
+move-car_DETDUP_0 l-1-32 l-1-33 (1)
+move-car_DETDUP_0 l-1-33 l-1-34 (1)
+move-car_DETDUP_0 l-1-34 l-1-35 (1)
+move-car_DETDUP_0 l-1-35 l-1-36 (1)
+move-car_DETDUP_0 l-1-36 l-1-37 (1)
+move-car_DETDUP_0 l-1-37 l-1-38 (1)
+move-car_DETDUP_0 l-1-38 l-1-39 (1)
+move-car_DETDUP_0 l-1-39 l-1-40 (1)
+move-car_DETDUP_0 l-1-40 l-1-41 (1)
+move-car_DETDUP_0 l-1-41 l-1-42 (1)
+move-car_DETDUP_0 l-1-42 l-1-43 (1)
+move-car_DETDUP_0 l-1-43 l-1-44 (1)
+move-car_DETDUP_0 l-1-44 l-1-45 (1)
+move-car_DETDUP_0 l-1-45 l-1-46 (1)
+move-car_DETDUP_0 l-1-46 l-1-47 (1)
+move-car_DETDUP_0 l-1-47 l-1-48 (1)
+move-car_DETDUP_0 l-1-48 l-1-49 (1)
+Plan length: 48 step(s).
+Plan cost: 48
+Initial search time: 0.01s
+Initial total time: 0.26s
+
+
+Creating the simulator...
+
+
+Regressing the plan...
+
+
+Generating an initial policy...
+
+
+Computing just-in-time repairs...
+Generated 242 state(s).
+Dead ends: 0 state(s).
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 235 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 225 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 215 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 205 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 195 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 185 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 175 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 165 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 155 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 145 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 135 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 125 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 115 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 105 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 95 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 85 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 75 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 65 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 55 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 45 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 35 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 25 state(s).
+Dead ends: 1 state(s). (1 recorded)
+Generated 5 state(s).
+Dead ends: 5 state(s).
+Generated 14 state(s).
+Dead ends: 1 state(s). (1 recorded)
+
+Could not close 0 of 119 open leaf states.
+Investigated 286 states for the strong cyclic plan.
+Went through another policy of score 1
+Generated 287 state(s).
+Dead ends: 0 state(s).
+
+Could not close 0 of 96 open leaf states.
+Investigated 289 states for the strong cyclic plan.
+Went through another policy of score 1
+
+Could not close 0 of 0 open leaf states.
+Investigated 1 states for the strong cyclic plan.
+Marking policy strong cyclic.
+Found a better policy of score 1
+
+
+Running a final SCD check...
+
+
+Running the simulation...
+...achieved the goal!
+
+
+
+                  -{ General Statistics }-
+
+        FSAP Combination Count: 0
+       Monotonicity violations: 0
+             Successful states: 142 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 142 +/- 0
+             Recorded Deadends: 599
+            State-Action Pairs: 287
+  Forbidden State-Action Pairs: 2050
+               Strongly Cyclic: True
+                  Policy Score: 1
+                     Succeeded: 1 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0.01s
+         Engine Initialization: 0s
+                   Search Time: 1.01s
+           Policy Construction: 0.38s
+ Evaluating the policy quality: 0.43s
+              Using the policy: 0.93s
+          Just-in-case Repairs: 14.56s
+                Simulator time: 0s
+                    Total time: 14.82s
+
+
+
+Dumping the policy and fsaps...
+Strong cyclic plan found.
+Peak memory: 152724 KB
+
+If holds: var648:43
+Execute: goal / SC / d=0
+
+If holds: var0:0 var648:446
+Execute: move-car l-2-48 l-1-49 / SC / d=1
+
+If holds: var233:0 var648:446
+Execute: changetire l-2-48 / SC / d=2
+
+If holds: var233:0 var0:0 var648:748
+Execute: move-car l-3-47 l-2-48 / SC / d=2
+
+If holds: var233:0 var380:0 var648:748
+Execute: changetire l-3-47 / SC / d=3
+
+If holds: var233:0 var380:0 var0:0 var648:949
+Execute: move-car l-4-46 l-3-47 / SC / d=3
+
+If holds: var233:0 var380:0 var511:0 var648:949
+Execute: changetire l-4-46 / SC / d=4
+
+If holds: var233:0 var380:0 var511:0 var0:0 var648:1049
+Execute: move-car l-5-45 l-4-46 / SC / d=4
+
+If holds: var233:0 var380:0 var511:0 var557:0 var648:1049
+Execute: changetire l-5-45 / SC / d=5
+
+If holds: var233:0 var380:0 var511:0 var557:0 var0:0 var648:1093
+Execute: move-car l-6-44 l-5-45 / SC / d=5
+
+If holds: var233:0 var380:0 var511:0 var557:0 var596:0 var648:1093
+Execute: changetire l-6-44 / SC / d=6
+
+If holds: var233:0 var380:0 var511:0 var557:0 var596:0 var0:0 var648:1136
+Execute: move-car l-7-43 l-6-44 / SC / d=6
+
+If holds: var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var648:1136
+Execute: changetire l-7-43 / SC / d=7
+
+If holds: var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var0:0 var648:1178
+Execute: move-car l-8-42 l-7-43 / SC / d=7
+
+If holds: var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var648:1178
+Execute: changetire l-8-42 / SC / d=8
+
+If holds: var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var0:0 var648:1219
+Execute: move-car l-9-41 l-8-42 / SC / d=8
+
+If holds: var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:1219
+Execute: changetire l-9-41 / SC / d=9
+
+If holds: var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:83
+Execute: move-car l-10-40 l-9-41 / SC / d=9
+
+If holds: var35:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:83
+Execute: changetire l-10-40 / SC / d=10
+
+If holds: var35:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:121
+Execute: move-car l-11-39 l-10-40 / SC / d=10
+
+If holds: var35:0 var42:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:121
+Execute: changetire l-11-39 / SC / d=11
+
+If holds: var35:0 var42:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:159
+Execute: move-car l-12-38 l-11-39 / SC / d=11
+
+If holds: var35:0 var42:0 var74:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:159
+Execute: changetire l-12-38 / SC / d=12
+
+If holds: var35:0 var42:0 var74:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:196
+Execute: move-car l-13-37 l-12-38 / SC / d=12
+
+If holds: var35:0 var42:0 var74:0 var82:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:196
+Execute: changetire l-13-37 / SC / d=13
+
+If holds: var35:0 var42:0 var74:0 var82:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:232
+Execute: move-car l-14-36 l-13-37 / SC / d=13
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:232
+Execute: changetire l-14-36 / SC / d=14
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:267
+Execute: move-car l-15-35 l-14-36 / SC / d=14
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:267
+Execute: changetire l-15-35 / SC / d=15
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:301
+Execute: move-car l-16-34 l-15-35 / SC / d=15
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:301
+Execute: changetire l-16-34 / SC / d=16
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:334
+Execute: move-car l-17-33 l-16-34 / SC / d=16
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:334
+Execute: changetire l-17-33 / SC / d=17
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:366
+Execute: move-car l-18-32 l-17-33 / SC / d=17
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:366
+Execute: changetire l-18-32 / SC / d=18
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:397
+Execute: move-car l-19-31 l-18-32 / SC / d=18
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:397
+Execute: changetire l-19-31 / SC / d=19
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:475
+Execute: move-car l-20-30 l-19-31 / SC / d=19
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:475
+Execute: changetire l-20-30 / SC / d=20
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:503
+Execute: move-car l-21-29 l-20-30 / SC / d=20
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:503
+Execute: changetire l-21-29 / SC / d=21
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:531
+Execute: move-car l-22-28 l-21-29 / SC / d=21
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:531
+Execute: changetire l-22-28 / SC / d=22
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:558
+Execute: move-car l-23-27 l-22-28 / SC / d=22
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:558
+Execute: changetire l-23-27 / SC / d=23
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:584
+Execute: move-car l-24-26 l-23-27 / SC / d=23
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:584
+Execute: changetire l-24-26 / SC / d=24
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:609
+Execute: move-car l-25-25 l-24-26 / SC / d=24
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:609
+Execute: changetire l-25-25 / SC / d=25
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:633
+Execute: move-car l-26-24 l-25-25 / SC / d=25
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:633
+Execute: changetire l-26-24 / SC / d=26
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:656
+Execute: move-car l-27-23 l-26-24 / SC / d=26
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:656
+Execute: changetire l-27-23 / SC / d=27
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:678
+Execute: move-car l-28-22 l-27-23 / SC / d=27
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:678
+Execute: changetire l-28-22 / SC / d=28
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:699
+Execute: move-car l-29-21 l-28-22 / SC / d=28
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:699
+Execute: changetire l-29-21 / SC / d=29
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:766
+Execute: move-car l-30-20 l-29-21 / SC / d=29
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:766
+Execute: changetire l-30-20 / SC / d=30
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:784
+Execute: move-car l-31-19 l-30-20 / SC / d=30
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:784
+Execute: changetire l-31-19 / SC / d=31
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:802
+Execute: move-car l-32-18 l-31-19 / SC / d=31
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:802
+Execute: changetire l-32-18 / SC / d=32
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:819
+Execute: move-car l-33-17 l-32-18 / SC / d=32
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:819
+Execute: changetire l-33-17 / SC / d=33
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:835
+Execute: move-car l-34-16 l-33-17 / SC / d=33
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:835
+Execute: changetire l-34-16 / SC / d=34
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:850
+Execute: move-car l-35-15 l-34-16 / SC / d=34
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:850
+Execute: changetire l-35-15 / SC / d=35
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:864
+Execute: move-car l-36-14 l-35-15 / SC / d=35
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:864
+Execute: changetire l-36-14 / SC / d=36
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:877
+Execute: move-car l-37-13 l-36-14 / SC / d=36
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:877
+Execute: changetire l-37-13 / SC / d=37
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:889
+Execute: move-car l-38-12 l-37-13 / SC / d=37
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:889
+Execute: changetire l-38-12 / SC / d=38
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:900
+Execute: move-car l-39-11 l-38-12 / SC / d=38
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:900
+Execute: changetire l-39-11 / SC / d=39
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:956
+Execute: move-car l-40-10 l-39-11 / SC / d=39
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:956
+Execute: changetire l-40-10 / SC / d=40
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:973
+Execute: move-car l-41-9 l-40-10 / SC / d=40
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:973
+Execute: changetire l-41-9 / SC / d=41
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:981
+Execute: move-car l-42-8 l-41-9 / SC / d=41
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:981
+Execute: changetire l-42-8 / SC / d=42
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:988
+Execute: move-car l-43-7 l-42-8 / SC / d=42
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:988
+Execute: changetire l-43-7 / SC / d=43
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:994
+Execute: move-car l-44-6 l-43-7 / SC / d=43
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:994
+Execute: changetire l-44-6 / SC / d=44
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:999
+Execute: move-car l-45-5 l-44-6 / SC / d=44
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:999
+Execute: changetire l-45-5 / SC / d=45
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:1003
+Execute: move-car l-46-4 l-45-5 / SC / d=45
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var550:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:1003
+Execute: changetire l-46-4 / SC / d=46
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var550:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:1006
+Execute: move-car l-47-3 l-46-4 / SC / d=46
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var550:0 var552:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:1006
+Execute: changetire l-47-3 / SC / d=47
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var550:0 var552:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:1008
+Execute: move-car l-48-2 l-47-3 / SC / d=47
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var550:0 var552:0 var554:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:1008
+Execute: changetire l-48-2 / SC / d=48
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var550:0 var552:0 var554:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:1009
+Execute: move-car l-49-1 l-48-2 / SC / d=48
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var550:0 var552:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:1009
+Execute: changetire l-49-1 / SC / d=49
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var550:0 var552:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:1007
+Execute: move-car l-48-1 l-49-1 / SC / d=49
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var550:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:1007
+Execute: changetire l-48-1 / SC / d=50
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var550:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:1004
+Execute: move-car l-47-1 l-48-1 / SC / d=50
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:1004
+Execute: changetire l-47-1 / SC / d=51
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:1000
+Execute: move-car l-46-1 l-47-1 / SC / d=51
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:1000
+Execute: changetire l-46-1 / SC / d=52
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:995
+Execute: move-car l-45-1 l-46-1 / SC / d=52
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:995
+Execute: changetire l-45-1 / SC / d=53
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:989
+Execute: move-car l-44-1 l-45-1 / SC / d=53
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:989
+Execute: changetire l-44-1 / SC / d=54
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:982
+Execute: move-car l-43-1 l-44-1 / SC / d=54
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:982
+Execute: changetire l-43-1 / SC / d=55
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:974
+Execute: move-car l-42-1 l-43-1 / SC / d=55
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:974
+Execute: changetire l-42-1 / SC / d=56
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:965
+Execute: move-car l-41-1 l-42-1 / SC / d=56
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:965
+Execute: changetire l-41-1 / SC / d=57
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:955
+Execute: move-car l-40-1 l-41-1 / SC / d=57
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:955
+Execute: changetire l-40-1 / SC / d=58
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:898
+Execute: move-car l-39-1 l-40-1 / SC / d=58
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:898
+Execute: changetire l-39-1 / SC / d=59
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:886
+Execute: move-car l-38-1 l-39-1 / SC / d=59
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:886
+Execute: changetire l-38-1 / SC / d=60
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:873
+Execute: move-car l-37-1 l-38-1 / SC / d=60
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:873
+Execute: changetire l-37-1 / SC / d=61
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:859
+Execute: move-car l-36-1 l-37-1 / SC / d=61
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:859
+Execute: changetire l-36-1 / SC / d=62
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:844
+Execute: move-car l-35-1 l-36-1 / SC / d=62
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:844
+Execute: changetire l-35-1 / SC / d=63
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:828
+Execute: move-car l-34-1 l-35-1 / SC / d=63
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:828
+Execute: changetire l-34-1 / SC / d=64
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:811
+Execute: move-car l-33-1 l-34-1 / SC / d=64
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:811
+Execute: changetire l-33-1 / SC / d=65
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:793
+Execute: move-car l-32-1 l-33-1 / SC / d=65
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:793
+Execute: changetire l-32-1 / SC / d=66
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:774
+Execute: move-car l-31-1 l-32-1 / SC / d=66
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:774
+Execute: changetire l-31-1 / SC / d=67
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:754
+Execute: move-car l-30-1 l-31-1 / SC / d=67
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:754
+Execute: changetire l-30-1 / SC / d=68
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:686
+Execute: move-car l-29-1 l-30-1 / SC / d=68
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:686
+Execute: changetire l-29-1 / SC / d=69
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:664
+Execute: move-car l-28-1 l-29-1 / SC / d=69
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:664
+Execute: changetire l-28-1 / SC / d=70
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:641
+Execute: move-car l-27-1 l-28-1 / SC / d=70
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:641
+Execute: changetire l-27-1 / SC / d=71
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:617
+Execute: move-car l-26-1 l-27-1 / SC / d=71
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:617
+Execute: changetire l-26-1 / SC / d=72
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:592
+Execute: move-car l-25-1 l-26-1 / SC / d=72
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:592
+Execute: changetire l-25-1 / SC / d=73
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:566
+Execute: move-car l-24-1 l-25-1 / SC / d=73
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:566
+Execute: changetire l-24-1 / SC / d=74
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:539
+Execute: move-car l-23-1 l-24-1 / SC / d=74
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:539
+Execute: changetire l-23-1 / SC / d=75
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:511
+Execute: move-car l-22-1 l-23-1 / SC / d=75
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:511
+Execute: changetire l-22-1 / SC / d=76
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:482
+Execute: move-car l-21-1 l-22-1 / SC / d=76
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:482
+Execute: changetire l-21-1 / SC / d=77
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:452
+Execute: move-car l-20-1 l-21-1 / SC / d=77
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:452
+Execute: changetire l-20-1 / SC / d=78
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:373
+Execute: move-car l-19-1 l-20-1 / SC / d=78
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:373
+Execute: changetire l-19-1 / SC / d=79
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:341
+Execute: move-car l-18-1 l-19-1 / SC / d=79
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:341
+Execute: changetire l-18-1 / SC / d=80
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:308
+Execute: move-car l-17-1 l-18-1 / SC / d=80
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:308
+Execute: changetire l-17-1 / SC / d=81
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:274
+Execute: move-car l-16-1 l-17-1 / SC / d=81
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:274
+Execute: changetire l-16-1 / SC / d=82
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:239
+Execute: move-car l-15-1 l-16-1 / SC / d=82
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:239
+Execute: changetire l-15-1 / SC / d=83
+
+If holds: var35:0 var42:0 var74:0 var82:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:203
+Execute: move-car l-14-1 l-15-1 / SC / d=83
+
+If holds: var35:0 var42:0 var74:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:203
+Execute: changetire l-14-1 / SC / d=84
+
+If holds: var35:0 var42:0 var74:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:166
+Execute: move-car l-13-1 l-14-1 / SC / d=84
+
+If holds: var35:0 var42:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:166
+Execute: changetire l-13-1 / SC / d=85
+
+If holds: var35:0 var42:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:128
+Execute: move-car l-12-1 l-13-1 / SC / d=85
+
+If holds: var35:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:128
+Execute: changetire l-12-1 / SC / d=86
+
+If holds: var35:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:89
+Execute: move-car l-11-1 l-12-1 / SC / d=86
+
+If holds: var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:89
+Execute: changetire l-11-1 / SC / d=87
+
+If holds: var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:49
+Execute: move-car l-10-1 l-11-1 / SC / d=87
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var648:49
+Execute: changetire l-10-1 / SC / d=88
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var647:0 var0:0 var648:1184
+Execute: move-car l-9-1 l-10-1 / SC / d=88
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var646:0 var647:0 var648:1184
+Execute: changetire l-9-1 / SC / d=89
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var640:0 var646:0 var647:0 var0:0 var648:1142
+Execute: move-car l-8-1 l-9-1 / SC / d=89
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var604:0 var640:0 var646:0 var647:0 var648:1142
+Execute: changetire l-8-1 / SC / d=90
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var603:0 var604:0 var640:0 var646:0 var647:0 var0:0 var648:1099
+Execute: move-car l-7-1 l-8-1 / SC / d=90
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var602:0 var603:0 var604:0 var640:0 var646:0 var647:0 var648:1099
+Execute: changetire l-7-1 / SC / d=91
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var596:0 var602:0 var603:0 var604:0 var640:0 var646:0 var647:0 var0:0 var648:1055
+Execute: move-car l-6-1 l-7-1 / SC / d=91
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var558:0 var596:0 var602:0 var603:0 var604:0 var640:0 var646:0 var647:0 var648:1055
+Execute: changetire l-6-1 / SC / d=92
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var557:0 var558:0 var596:0 var602:0 var603:0 var604:0 var640:0 var646:0 var647:0 var0:0 var648:1010
+Execute: move-car l-5-1 l-6-1 / SC / d=92
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var556:0 var557:0 var558:0 var596:0 var602:0 var603:0 var604:0 var640:0 var646:0 var647:0 var648:1010
+Execute: changetire l-5-1 / SC / d=93
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var556:0 var557:0 var558:0 var596:0 var602:0 var603:0 var604:0 var640:0 var646:0 var647:0 var0:0 var648:909
+Execute: move-car l-4-1 l-5-1 / SC / d=93
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var471:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var556:0 var557:0 var558:0 var596:0 var602:0 var603:0 var604:0 var640:0 var646:0 var647:0 var648:909
+Execute: changetire l-4-1 / SC / d=94
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var471:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var556:0 var557:0 var558:0 var596:0 var602:0 var603:0 var604:0 var640:0 var646:0 var647:0 var0:0 var648:707
+Execute: move-car l-3-1 l-4-1 / SC / d=94
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var379:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var471:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var556:0 var557:0 var558:0 var596:0 var602:0 var603:0 var604:0 var640:0 var646:0 var647:0 var648:707
+Execute: changetire l-3-1 / SC / d=95
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var379:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var471:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var556:0 var557:0 var558:0 var596:0 var602:0 var603:0 var604:0 var640:0 var646:0 var647:0 var0:0 var648:404
+Execute: move-car l-2-1 l-3-1 / SC / d=95
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var191:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var379:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var471:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var556:0 var557:0 var558:0 var596:0 var602:0 var603:0 var604:0 var640:0 var646:0 var647:0 var648:404
+Execute: changetire l-2-1 / SC / d=96
+
+If holds: var1:0 var35:0 var41:0 var42:0 var43:0 var74:0 var81:0 var82:0 var83:0 var112:0 var119:0 var120:0 var121:0 var148:0 var155:0 var156:0 var157:0 var182:0 var189:0 var190:0 var191:0 var233:0 var239:0 var262:0 var269:0 var270:0 var271:0 var291:0 var299:0 var300:0 var301:0 var319:0 var327:0 var328:0 var329:0 var345:0 var353:0 var354:0 var355:0 var369:0 var377:0 var378:0 var379:0 var380:0 var381:0 var393:0 var401:0 var402:0 var403:0 var412:0 var421:0 var422:0 var423:0 var430:0 var439:0 var440:0 var441:0 var446:0 var455:0 var456:0 var457:0 var460:0 var469:0 var470:0 var471:0 var511:0 var517:0 var518:0 var527:0 var528:0 var529:0 var536:0 var537:0 var538:0 var539:0 var544:0 var545:0 var546:0 var547:0 var550:0 var551:0 var552:0 var553:0 var554:0 var555:0 var556:0 var557:0 var558:0 var596:0 var602:0 var603:0 var604:0 var640:0 var646:0 var647:0 var0:0 var648:0
+Execute: move-car l-1-1 l-2-1 / SC / d=96
+
+If holds: var0:0 var648:748
+Execute: move-car l-3-47 l-2-48 / NSC / d=2
+
+If holds: var0:0 var648:949
+Execute: move-car l-4-46 l-3-47 / NSC / d=3
+
+If holds: var0:0 var648:1049
+Execute: move-car l-5-45 l-4-46 / NSC / d=4
+
+If holds: var0:0 var648:1093
+Execute: move-car l-6-44 l-5-45 / NSC / d=5
+
+If holds: var0:0 var648:1136
+Execute: move-car l-7-43 l-6-44 / NSC / d=6
+
+If holds: var0:0 var648:1178
+Execute: move-car l-8-42 l-7-43 / NSC / d=7
+
+If holds: var0:0 var648:1219
+Execute: move-car l-9-41 l-8-42 / NSC / d=8
+
+If holds: var0:0 var648:83
+Execute: move-car l-10-40 l-9-41 / NSC / d=9
+
+If holds: var0:0 var648:121
+Execute: move-car l-11-39 l-10-40 / NSC / d=10
+
+If holds: var0:0 var648:159
+Execute: move-car l-12-38 l-11-39 / NSC / d=11
+
+If holds: var0:0 var648:196
+Execute: move-car l-13-37 l-12-38 / NSC / d=12
+
+If holds: var0:0 var648:232
+Execute: move-car l-14-36 l-13-37 / NSC / d=13
+
+If holds: var0:0 var648:267
+Execute: move-car l-15-35 l-14-36 / NSC / d=14
+
+If holds: var0:0 var648:301
+Execute: move-car l-16-34 l-15-35 / NSC / d=15
+
+If holds: var0:0 var648:334
+Execute: move-car l-17-33 l-16-34 / NSC / d=16
+
+If holds: var0:0 var648:366
+Execute: move-car l-18-32 l-17-33 / NSC / d=17
+
+If holds: var0:0 var648:397
+Execute: move-car l-19-31 l-18-32 / NSC / d=18
+
+If holds: var0:0 var648:475
+Execute: move-car l-20-30 l-19-31 / NSC / d=19
+
+If holds: var0:0 var648:503
+Execute: move-car l-21-29 l-20-30 / NSC / d=20
+
+If holds: var0:0 var648:531
+Execute: move-car l-22-28 l-21-29 / NSC / d=21
+
+If holds: var0:0 var648:558
+Execute: move-car l-23-27 l-22-28 / NSC / d=22
+
+If holds: var0:0 var648:584
+Execute: move-car l-24-26 l-23-27 / NSC / d=23
+
+If holds: var0:0 var648:609
+Execute: move-car l-25-25 l-24-26 / NSC / d=24
+
+If holds: var0:0 var648:633
+Execute: move-car l-26-24 l-25-25 / NSC / d=25
+
+If holds: var0:0 var648:656
+Execute: move-car l-27-23 l-26-24 / NSC / d=26
+
+If holds: var0:0 var648:678
+Execute: move-car l-28-22 l-27-23 / NSC / d=27
+
+If holds: var0:0 var648:699
+Execute: move-car l-29-21 l-28-22 / NSC / d=28
+
+If holds: var0:0 var648:766
+Execute: move-car l-30-20 l-29-21 / NSC / d=29
+
+If holds: var0:0 var648:784
+Execute: move-car l-31-19 l-30-20 / NSC / d=30
+
+If holds: var0:0 var648:802
+Execute: move-car l-32-18 l-31-19 / NSC / d=31
+
+If holds: var0:0 var648:819
+Execute: move-car l-33-17 l-32-18 / NSC / d=32
+
+If holds: var0:0 var648:835
+Execute: move-car l-34-16 l-33-17 / NSC / d=33
+
+If holds: var0:0 var648:850
+Execute: move-car l-35-15 l-34-16 / NSC / d=34
+
+If holds: var0:0 var648:864
+Execute: move-car l-36-14 l-35-15 / NSC / d=35
+
+If holds: var0:0 var648:877
+Execute: move-car l-37-13 l-36-14 / NSC / d=36
+
+If holds: var0:0 var648:889
+Execute: move-car l-38-12 l-37-13 / NSC / d=37
+
+If holds: var0:0 var648:900
+Execute: move-car l-39-11 l-38-12 / NSC / d=38
+
+If holds: var0:0 var648:956
+Execute: move-car l-40-10 l-39-11 / NSC / d=39
+
+If holds: var0:0 var648:973
+Execute: move-car l-41-9 l-40-10 / NSC / d=40
+
+If holds: var0:0 var648:981
+Execute: move-car l-42-8 l-41-9 / NSC / d=41
+
+If holds: var0:0 var648:988
+Execute: move-car l-43-7 l-42-8 / NSC / d=42
+
+If holds: var0:0 var648:994
+Execute: move-car l-44-6 l-43-7 / NSC / d=43
+
+If holds: var0:0 var648:999
+Execute: move-car l-45-5 l-44-6 / NSC / d=44
+
+If holds: var0:0 var648:1003
+Execute: move-car l-46-4 l-45-5 / NSC / d=45
+
+If holds: var0:0 var648:1006
+Execute: move-car l-47-3 l-46-4 / NSC / d=46
+
+If holds: var0:0 var648:1008
+Execute: move-car l-48-2 l-47-3 / NSC / d=47
+
+If holds: var0:0 var648:1009
+Execute: move-car l-49-1 l-48-2 / NSC / d=48
+
+If holds: var0:0 var648:1007
+Execute: move-car l-48-1 l-49-1 / NSC / d=49
+
+If holds: var0:0 var648:1004
+Execute: move-car l-47-1 l-48-1 / NSC / d=50
+
+If holds: var0:0 var648:1000
+Execute: move-car l-46-1 l-47-1 / NSC / d=51
+
+If holds: var0:0 var648:995
+Execute: move-car l-45-1 l-46-1 / NSC / d=52
+
+If holds: var0:0 var648:989
+Execute: move-car l-44-1 l-45-1 / NSC / d=53
+
+If holds: var0:0 var648:982
+Execute: move-car l-43-1 l-44-1 / NSC / d=54
+
+If holds: var0:0 var648:974
+Execute: move-car l-42-1 l-43-1 / NSC / d=55
+
+If holds: var0:0 var648:965
+Execute: move-car l-41-1 l-42-1 / NSC / d=56
+
+If holds: var0:0 var648:955
+Execute: move-car l-40-1 l-41-1 / NSC / d=57
+
+If holds: var0:0 var648:898
+Execute: move-car l-39-1 l-40-1 / NSC / d=58
+
+If holds: var0:0 var648:886
+Execute: move-car l-38-1 l-39-1 / NSC / d=59
+
+If holds: var0:0 var648:873
+Execute: move-car l-37-1 l-38-1 / NSC / d=60
+
+If holds: var0:0 var648:859
+Execute: move-car l-36-1 l-37-1 / NSC / d=61
+
+If holds: var0:0 var648:844
+Execute: move-car l-35-1 l-36-1 / NSC / d=62
+
+If holds: var0:0 var648:828
+Execute: move-car l-34-1 l-35-1 / NSC / d=63
+
+If holds: var0:0 var648:811
+Execute: move-car l-33-1 l-34-1 / NSC / d=64
+
+If holds: var0:0 var648:793
+Execute: move-car l-32-1 l-33-1 / NSC / d=65
+
+If holds: var0:0 var648:774
+Execute: move-car l-31-1 l-32-1 / NSC / d=66
+
+If holds: var0:0 var648:754
+Execute: move-car l-30-1 l-31-1 / NSC / d=67
+
+If holds: var0:0 var648:686
+Execute: move-car l-29-1 l-30-1 / NSC / d=68
+
+If holds: var0:0 var648:664
+Execute: move-car l-28-1 l-29-1 / NSC / d=69
+
+If holds: var0:0 var648:641
+Execute: move-car l-27-1 l-28-1 / NSC / d=70
+
+If holds: var0:0 var648:617
+Execute: move-car l-26-1 l-27-1 / NSC / d=71
+
+If holds: var0:0 var648:592
+Execute: move-car l-25-1 l-26-1 / NSC / d=72
+
+If holds: var0:0 var648:566
+Execute: move-car l-24-1 l-25-1 / NSC / d=73
+
+If holds: var0:0 var648:539
+Execute: move-car l-23-1 l-24-1 / NSC / d=74
+
+If holds: var0:0 var648:511
+Execute: move-car l-22-1 l-23-1 / NSC / d=75
+
+If holds: var0:0 var648:482
+Execute: move-car l-21-1 l-22-1 / NSC / d=76
+
+If holds: var0:0 var648:452
+Execute: move-car l-20-1 l-21-1 / NSC / d=77
+
+If holds: var0:0 var648:373
+Execute: move-car l-19-1 l-20-1 / NSC / d=78
+
+If holds: var0:0 var648:341
+Execute: move-car l-18-1 l-19-1 / NSC / d=79
+
+If holds: var0:0 var648:308
+Execute: move-car l-17-1 l-18-1 / NSC / d=80
+
+If holds: var0:0 var648:274
+Execute: move-car l-16-1 l-17-1 / NSC / d=81
+
+If holds: var0:0 var648:239
+Execute: move-car l-15-1 l-16-1 / NSC / d=82
+
+If holds: var0:0 var648:203
+Execute: move-car l-14-1 l-15-1 / NSC / d=83
+
+If holds: var0:0 var648:166
+Execute: move-car l-13-1 l-14-1 / NSC / d=84
+
+If holds: var0:0 var648:128
+Execute: move-car l-12-1 l-13-1 / NSC / d=85
+
+If holds: var0:0 var648:89
+Execute: move-car l-11-1 l-12-1 / NSC / d=86
+
+If holds: var0:0 var648:49
+Execute: move-car l-10-1 l-11-1 / NSC / d=87
+
+If holds: var0:0 var648:1184
+Execute: move-car l-9-1 l-10-1 / NSC / d=88
+
+If holds: var0:0 var648:1142
+Execute: move-car l-8-1 l-9-1 / NSC / d=89
+
+If holds: var0:0 var648:1099
+Execute: move-car l-7-1 l-8-1 / NSC / d=90
+
+If holds: var0:0 var648:1055
+Execute: move-car l-6-1 l-7-1 / NSC / d=91
+
+If holds: var0:0 var648:1010
+Execute: move-car l-5-1 l-6-1 / NSC / d=92
+
+If holds: var0:0 var648:909
+Execute: move-car l-4-1 l-5-1 / NSC / d=93
+
+If holds: var0:0 var648:707
+Execute: move-car l-3-1 l-4-1 / NSC / d=94
+
+If holds: var0:0 var648:404
+Execute: move-car l-2-1 l-3-1 / NSC / d=95
+
+If holds: var0:0 var648:0
+Execute: move-car l-1-1 l-2-1 / NSC / d=96

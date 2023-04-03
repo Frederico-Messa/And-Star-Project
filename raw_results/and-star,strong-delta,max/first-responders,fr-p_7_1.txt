@@ -1,0 +1,17 @@
+New f: 2
+New f: 3
+
+Termination: Solved.
+Final Memory Usage: 0.00915866
+Total Elapsed Time: 0.0179662
+Number of considered policies: 1492
+Number of inserted policies: 1428
+Number of removed policies: 40
+Number of expanded policies: 39
+Number of removed policies with f<f*: 2
+
+An Optimal-Size Policy:
+[var0 = Atom nfire(l2), var1 = Atom fire-unit-at(f1, l1), var2 = Atom fire-unit-at(f2, l7), var3 = Atom fire-unit-at(f3, l5), var4 = Atom fire-unit-at(f4, l4), var5 = Atom fire-unit-at(f5, l2), var6 = Atom fire-unit-at(f6, l1), var7 = Atom victim-at(v1, l1), var8 = NegatedAtom have-water(f1), var9 = NegatedAtom have-water(f2), var10 = NegatedAtom have-water(f3), var11 = NegatedAtom have-water(f4), var12 = NegatedAtom have-water(f5), var13 = NegatedAtom have-water(f6), var14 = Atom medical-unit-at(m1, l7), var15 = Atom medical-unit-at(m2, l5), var16 = Atom medical-unit-at(m3, l4), var17 = Atom victim-status(v1, dying), var18 = NegatedAtom victim-status(v1, healthy)] -> treat-victim-at-hospital v1 l1
+[var0 = Atom fire(l2), var1 = Atom fire-unit-at(f1, l1), var2 = Atom fire-unit-at(f2, l7), var3 = Atom fire-unit-at(f3, l5), var4 = Atom fire-unit-at(f4, l4), var5 = Atom fire-unit-at(f5, l2), var6 = Atom fire-unit-at(f6, l1), var7 = Atom victim-at(v1, l1), var8 = NegatedAtom have-water(f1), var9 = NegatedAtom have-water(f2), var10 = NegatedAtom have-water(f3), var11 = Atom have-water(f4), var12 = NegatedAtom have-water(f5), var13 = NegatedAtom have-water(f6), var14 = Atom medical-unit-at(m1, l7), var15 = Atom medical-unit-at(m2, l5), var16 = Atom medical-unit-at(m3, l4), var17 = Atom victim-status(v1, dying), var18 = NegatedAtom victim-status(v1, healthy)] -> unload-fire-unit f4 l4 l2
+[var0 = Atom fire(l2), var1 = Atom fire-unit-at(f1, l1), var2 = Atom fire-unit-at(f2, l7), var3 = Atom fire-unit-at(f3, l5), var4 = Atom fire-unit-at(f4, l4), var5 = Atom fire-unit-at(f5, l2), var6 = Atom fire-unit-at(f6, l1), var7 = Atom victim-at(v1, l1), var8 = NegatedAtom have-water(f1), var9 = NegatedAtom have-water(f2), var10 = NegatedAtom have-water(f3), var11 = NegatedAtom have-water(f4), var12 = NegatedAtom have-water(f5), var13 = NegatedAtom have-water(f6), var14 = Atom medical-unit-at(m1, l7), var15 = Atom medical-unit-at(m2, l5), var16 = Atom medical-unit-at(m3, l4), var17 = Atom victim-status(v1, dying), var18 = NegatedAtom victim-status(v1, healthy)] -> load-fire-unit f4 l4
+Optimal Size: 3

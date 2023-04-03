@@ -1,0 +1,141 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.467s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 54 rules.
+Computing model... [0.020s CPU, 0.024s wall-clock]
+3308 relevant atoms
+2395 auxiliary atoms
+5703 final queue length
+6729 total queue pushes
+Completing instantiation... [0.030s CPU, 0.026s wall-clock]
+Instantiating: [0.060s CPU, 0.053s wall-clock]
+Computing fact groups...
+Finding invariants...
+17 initial candidates
+Finding invariants: [0.000s CPU, 0.003s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+14 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.010s CPU, 0.001s wall-clock]
+Computing fact groups: [0.010s CPU, 0.009s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.003s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.002s wall-clock]
+Translating task: [0.030s CPU, 0.032s wall-clock]
+54 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+Removed false proposition: 13 = <none of those>
+Removed false proposition: 14 = <none of those>
+Removed false proposition: 15 = <none of those>
+Removed false proposition: 16 = <none of those>
+Removed false proposition: 17 = <none of those>
+Removed false proposition: 18 = <none of those>
+Removed false proposition: 19 = <none of those>
+Removed false proposition: 20 = <none of those>
+Removed false proposition: 21 = <none of those>
+Removed false proposition: 22 = <none of those>
+Removed false proposition: 23 = <none of those>
+Removed false proposition: 24 = <none of those>
+Removed false proposition: 25 = <none of those>
+Removed false proposition: 26 = <none of those>
+Removed false proposition: 28 = <none of those>
+0 operators removed
+15 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.005s wall-clock]
+Translator variables: 29
+Translator derived variables: 0
+Translator facts: 955
+Translator goal facts: 2
+Translator mutex groups: 17
+Translator total mutex groups size: 932
+Translator operators: 1944
+Translator axioms: 0
+Translator task size: 11572
+Translator peak memory: 26428 KB
+Writing output... [0.000s CPU, 0.007s wall-clock]
+Done! [0.110s CPU, 0.579s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+29 variables of 29 necessary
+0 of 17 mutex groups necessary.
+1944 of 1944 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 955
+Preprocessor derived variables: 0
+Preprocessor task size: 10640
+Writing output...
+done
+
+
+3. Running search
+./planner_prp/src/search/downward ipc policy-repair --dump-policy 2
+This is a unit task.
+./planner_prp/src/search/downward-release --heuristic "h=ff(cost_type=1)" --search "lazy_greedy([h],preferred=[h])" --random-seed 814102613 --dump-policy 2 < output
+Simplifying transitions... done!
+Variables: 29
+Bytes per state: 16
+
+Total allotted time (s): 1800
+Max time for core JIC (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+ !! Warning: Disabling the simplification of unary operators !!
+ !!           to keep the non-deterministic planning sound.  !!
+Generated 38 state(s).
+Dead ends: 0 state(s). (0 recorded)
+move-person l11 l21 (1)
+move-person l21 l31 (1)
+pick-bad-gold-1_DETDUP_0 l31 (1)
+move-person l31 l32 (1)
+pick-bad-gold-2_DETDUP_0 l32 (1)
+move-person l32 l33 (1)
+pick-bad-gold-3_DETDUP_0 l33 (1)
+Plan length: 7 step(s).
+Plan cost: 7
+Initial search time: 0s
+Initial total time: 0.03s
+
+
+Creating the simulator...
+
+
+Regressing the plan...
+
+
+Generating an initial policy...
+
+
+Computing just-in-time repairs...
+Generated 8 state(s).
+Dead ends: 0 state(s).
+
+Could not close 0 of 1 open leaf states.
+Investigated 5 states for the strong cyclic plan.
+Went through another policy of score 0
+Generated 538 state(s).
+Dead ends: 2 state(s).
+Failed to allocate memory. Released memory buffer.
+Memory limit has been reached.
+Peak memory: 7812500 KB
+no_file

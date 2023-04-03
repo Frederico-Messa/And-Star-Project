@@ -1,0 +1,17 @@
+New f: 2
+New f: 3
+
+Termination: Solved.
+Final Memory Usage: 0.0166011
+Total Elapsed Time: 0.228244
+Number of considered policies: 6550
+Number of inserted policies: 6404
+Number of removed policies: 82
+Number of expanded policies: 81
+Number of removed policies with f<f*: 2
+
+An Optimal-Size Policy:
+[var0 = Atom nfire(l5), var1 = Atom fire-unit-at(f1, l6), var2 = Atom fire-unit-at(f2, l4), var3 = Atom victim-at(v1, l6), var4 = NegatedAtom have-water(f1), var5 = NegatedAtom have-water(f2), var6 = Atom medical-unit-at(m1, l3), var7 = Atom medical-unit-at(m10, l3), var8 = Atom medical-unit-at(m2, l2), var9 = Atom medical-unit-at(m3, l10), var10 = Atom medical-unit-at(m4, l9), var11 = Atom medical-unit-at(m5, l8), var12 = Atom medical-unit-at(m6, l6), var13 = Atom medical-unit-at(m7, l5), var14 = Atom medical-unit-at(m8, l3), var15 = Atom medical-unit-at(m9, l2), var16 = NegatedAtom victim-status(v1, healthy), var17 = Atom victim-status(v1, hurt)] -> treat-victim-at-hospital v1 l6
+[var0 = Atom fire(l5), var1 = Atom fire-unit-at(f1, l6), var2 = Atom fire-unit-at(f2, l4), var3 = Atom victim-at(v1, l6), var4 = NegatedAtom have-water(f1), var5 = Atom have-water(f2), var6 = Atom medical-unit-at(m1, l3), var7 = Atom medical-unit-at(m10, l3), var8 = Atom medical-unit-at(m2, l2), var9 = Atom medical-unit-at(m3, l10), var10 = Atom medical-unit-at(m4, l9), var11 = Atom medical-unit-at(m5, l8), var12 = Atom medical-unit-at(m6, l6), var13 = Atom medical-unit-at(m7, l5), var14 = Atom medical-unit-at(m8, l3), var15 = Atom medical-unit-at(m9, l2), var16 = NegatedAtom victim-status(v1, healthy), var17 = Atom victim-status(v1, hurt)] -> unload-fire-unit f2 l4 l5
+[var0 = Atom fire(l5), var1 = Atom fire-unit-at(f1, l6), var2 = Atom fire-unit-at(f2, l4), var3 = Atom victim-at(v1, l6), var4 = NegatedAtom have-water(f1), var5 = NegatedAtom have-water(f2), var6 = Atom medical-unit-at(m1, l3), var7 = Atom medical-unit-at(m10, l3), var8 = Atom medical-unit-at(m2, l2), var9 = Atom medical-unit-at(m3, l10), var10 = Atom medical-unit-at(m4, l9), var11 = Atom medical-unit-at(m5, l8), var12 = Atom medical-unit-at(m6, l6), var13 = Atom medical-unit-at(m7, l5), var14 = Atom medical-unit-at(m8, l3), var15 = Atom medical-unit-at(m9, l2), var16 = NegatedAtom victim-status(v1, healthy), var17 = Atom victim-status(v1, hurt)] -> load-fire-unit f2 l4
+Optimal Size: 3

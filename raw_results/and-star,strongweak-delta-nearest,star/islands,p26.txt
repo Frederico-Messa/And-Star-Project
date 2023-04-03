@@ -1,0 +1,26 @@
+New f: 1
+New f: 2
+New f: 3
+New f: 4
+New f: 5
+New f: 6
+New f: 7
+
+Termination: Solved.
+Final Memory Usage: 0.0773939
+Total Elapsed Time: 0.119663
+Number of considered policies: 76078
+Number of inserted policies: 54989
+Number of removed policies: 10620
+Number of expanded policies: 10619
+Number of removed policies with f<f*: 2125
+
+An Optimal-Size Policy:
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l14-1), var2 = Atom person-alive(), var3 = Atom person-at(l42-2)] -> move-person l42-2 l41-2
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l14-1), var2 = Atom person-alive(), var3 = Atom person-at(l43-2)] -> move-person l43-2 l42-2
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l14-1), var2 = Atom person-alive(), var3 = Atom person-at(l44-2)] -> move-person l44-2 l43-2
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l14-1), var2 = Atom person-alive(), var3 = Atom person-at(l42-1)] -> move-person l42-1 l41-1
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l14-1), var2 = Atom person-alive(), var3 = Atom person-at(l43-1)] -> move-person l43-1 l42-1
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l14-1), var2 = Atom person-alive(), var3 = Atom person-at(l41-1)] -> walk-on-bridge l41-1 l44-2
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l14-1), var2 = Atom person-alive(), var3 = Atom person-at(l44-1)] -> move-person l44-1 l43-1
+Optimal Size: 7

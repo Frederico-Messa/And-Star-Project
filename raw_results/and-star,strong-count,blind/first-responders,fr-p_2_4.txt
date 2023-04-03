@@ -1,0 +1,40 @@
+New f: 1
+New f: 2
+New f: 3
+New f: 4
+New f: 5
+New f: 6
+New f: 7
+Clearing cache... (4.70915)
+Cache cleared.
+Clearing cache... (6.00123)
+Cache cleared.
+Clearing cache... (6.01569)
+Cache cleared.
+New f: 8
+Clearing cache... (6.52893)
+Cache cleared.
+Clearing cache... (6.72877)
+Cache cleared.
+Clearing cache... (6.72877)
+Cache cleared.
+
+Termination: Solved.
+Final Memory Usage: 7.13142
+Total Elapsed Time: 80.774
+Number of considered policies: 18306828
+Number of inserted policies: 13674438
+Number of removed policies: 1562618
+Number of expanded policies: 1562617
+Number of removed policies with f<f*: 1132845
+
+An Optimal-Size Policy:
+[var0 = Atom nfire(l1), var1 = Atom nfire(l2), var2 = Atom fire-unit-at(f1, l2), var3 = Atom fire-unit-at(f2, l1), var4 = Atom victim-at(v1, l2), var5 = Atom victim-at(v2, l1), var6 = Atom victim-at(v3, l1), var7 = Atom victim-at(v4, l2), var8 = NegatedAtom have-water(f1), var9 = NegatedAtom have-water(f2), var10 = Atom medical-unit-at(m1, l1), var11 = Atom medical-unit-at(m2, l2), var12 = Atom victim-status(v1, healthy), var13 = NegatedAtom victim-status(v1, hurt), var14 = Atom victim-status(v2, healthy), var15 = NegatedAtom victim-status(v2, hurt), var16 = NegatedAtom victim-status(v3, dying), var17 = Atom victim-status(v3, healthy), var18 = Atom victim-status(v4, dying), var19 = NegatedAtom victim-status(v4, healthy)] -> treat-victim-at-hospital v4 l2
+[var0 = Atom nfire(l1), var1 = Atom nfire(l2), var2 = Atom fire-unit-at(f1, l2), var3 = Atom fire-unit-at(f2, l1), var4 = Atom victim-at(v1, l2), var5 = Atom victim-at(v2, l1), var6 = Atom victim-at(v3, l1), var7 = Atom victim-at(v4, l2), var8 = NegatedAtom have-water(f1), var9 = NegatedAtom have-water(f2), var10 = Atom medical-unit-at(m1, l1), var11 = Atom medical-unit-at(m2, l2), var12 = Atom victim-status(v1, healthy), var13 = NegatedAtom victim-status(v1, hurt), var14 = NegatedAtom victim-status(v2, healthy), var15 = Atom victim-status(v2, hurt), var16 = Atom victim-status(v3, dying), var17 = NegatedAtom victim-status(v3, healthy), var18 = Atom victim-status(v4, dying), var19 = NegatedAtom victim-status(v4, healthy)] -> treat-victim-at-hospital v2 l1
+[var0 = Atom nfire(l1), var1 = Atom fire(l2), var2 = Atom fire-unit-at(f1, l2), var3 = Atom fire-unit-at(f2, l1), var4 = Atom victim-at(v1, l2), var5 = Atom victim-at(v2, l1), var6 = Atom victim-at(v3, l1), var7 = Atom victim-at(v4, l2), var8 = Atom have-water(f1), var9 = NegatedAtom have-water(f2), var10 = Atom medical-unit-at(m1, l1), var11 = Atom medical-unit-at(m2, l2), var12 = NegatedAtom victim-status(v1, healthy), var13 = Atom victim-status(v1, hurt), var14 = NegatedAtom victim-status(v2, healthy), var15 = Atom victim-status(v2, hurt), var16 = Atom victim-status(v3, dying), var17 = NegatedAtom victim-status(v3, healthy), var18 = Atom victim-status(v4, dying), var19 = NegatedAtom victim-status(v4, healthy)] -> unload-fire-unit f1 l2 l2
+[var0 = Atom nfire(l1), var1 = Atom nfire(l2), var2 = Atom fire-unit-at(f1, l2), var3 = Atom fire-unit-at(f2, l1), var4 = Atom victim-at(v1, l2), var5 = Atom victim-at(v2, l1), var6 = Atom victim-at(v3, l1), var7 = Atom victim-at(v4, l2), var8 = NegatedAtom have-water(f1), var9 = NegatedAtom have-water(f2), var10 = Atom medical-unit-at(m1, l1), var11 = Atom medical-unit-at(m2, l2), var12 = Atom victim-status(v1, healthy), var13 = NegatedAtom victim-status(v1, hurt), var14 = Atom victim-status(v2, healthy), var15 = NegatedAtom victim-status(v2, hurt), var16 = Atom victim-status(v3, dying), var17 = NegatedAtom victim-status(v3, healthy), var18 = Atom victim-status(v4, dying), var19 = NegatedAtom victim-status(v4, healthy)] -> treat-victim-at-hospital v3 l1
+[var0 = Atom nfire(l1), var1 = Atom fire(l2), var2 = Atom fire-unit-at(f1, l2), var3 = Atom fire-unit-at(f2, l1), var4 = Atom victim-at(v1, l2), var5 = Atom victim-at(v2, l1), var6 = Atom victim-at(v3, l1), var7 = Atom victim-at(v4, l2), var8 = NegatedAtom have-water(f1), var9 = NegatedAtom have-water(f2), var10 = Atom medical-unit-at(m1, l1), var11 = Atom medical-unit-at(m2, l2), var12 = NegatedAtom victim-status(v1, healthy), var13 = Atom victim-status(v1, hurt), var14 = NegatedAtom victim-status(v2, healthy), var15 = Atom victim-status(v2, hurt), var16 = Atom victim-status(v3, dying), var17 = NegatedAtom victim-status(v3, healthy), var18 = Atom victim-status(v4, dying), var19 = NegatedAtom victim-status(v4, healthy)] -> load-fire-unit f1 l2
+[var0 = Atom nfire(l1), var1 = Atom nfire(l2), var2 = Atom fire-unit-at(f1, l2), var3 = Atom fire-unit-at(f2, l1), var4 = Atom victim-at(v1, l2), var5 = Atom victim-at(v2, l1), var6 = Atom victim-at(v3, l1), var7 = Atom victim-at(v4, l2), var8 = NegatedAtom have-water(f1), var9 = NegatedAtom have-water(f2), var10 = Atom medical-unit-at(m1, l1), var11 = Atom medical-unit-at(m2, l2), var12 = NegatedAtom victim-status(v1, healthy), var13 = Atom victim-status(v1, hurt), var14 = NegatedAtom victim-status(v2, healthy), var15 = Atom victim-status(v2, hurt), var16 = Atom victim-status(v3, dying), var17 = NegatedAtom victim-status(v3, healthy), var18 = Atom victim-status(v4, dying), var19 = NegatedAtom victim-status(v4, healthy)] -> treat-victim-at-hospital v1 l2
+[var0 = Atom fire(l1), var1 = Atom fire(l2), var2 = Atom fire-unit-at(f1, l2), var3 = Atom fire-unit-at(f2, l1), var4 = Atom victim-at(v1, l2), var5 = Atom victim-at(v2, l1), var6 = Atom victim-at(v3, l1), var7 = Atom victim-at(v4, l2), var8 = Atom have-water(f1), var9 = NegatedAtom have-water(f2), var10 = Atom medical-unit-at(m1, l1), var11 = Atom medical-unit-at(m2, l2), var12 = NegatedAtom victim-status(v1, healthy), var13 = Atom victim-status(v1, hurt), var14 = NegatedAtom victim-status(v2, healthy), var15 = Atom victim-status(v2, hurt), var16 = Atom victim-status(v3, dying), var17 = NegatedAtom victim-status(v3, healthy), var18 = Atom victim-status(v4, dying), var19 = NegatedAtom victim-status(v4, healthy)] -> unload-fire-unit f1 l2 l1
+[var0 = Atom fire(l1), var1 = Atom fire(l2), var2 = Atom fire-unit-at(f1, l2), var3 = Atom fire-unit-at(f2, l1), var4 = Atom victim-at(v1, l2), var5 = Atom victim-at(v2, l1), var6 = Atom victim-at(v3, l1), var7 = Atom victim-at(v4, l2), var8 = NegatedAtom have-water(f1), var9 = NegatedAtom have-water(f2), var10 = Atom medical-unit-at(m1, l1), var11 = Atom medical-unit-at(m2, l2), var12 = NegatedAtom victim-status(v1, healthy), var13 = Atom victim-status(v1, hurt), var14 = NegatedAtom victim-status(v2, healthy), var15 = Atom victim-status(v2, hurt), var16 = Atom victim-status(v3, dying), var17 = NegatedAtom victim-status(v3, healthy), var18 = Atom victim-status(v4, dying), var19 = NegatedAtom victim-status(v4, healthy)] -> load-fire-unit f1 l2
+Optimal Size: 8

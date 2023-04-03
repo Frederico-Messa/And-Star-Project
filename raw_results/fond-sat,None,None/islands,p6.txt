@@ -1,0 +1,150 @@
+{'path_domain': './benchmarks/islands/domain.pddl', 'path_instance': './benchmarks/islands/p6.pddl', 'solver': 'minisat', 'time_limit': 1800, 'mem_limit': 8000, 'strong': False, 'start': 1, 'inc': 1, 'gen_info': False, 'show_policy': True, 'draw_policy': False, 'name_tmp': 'islands,p6', 'tmp': False}
+WARNING: variable not Atom nor NegatedAtom; <none of those>
+Setting atoms
+# Atoms: 58
+Setting initial
+Setting goal
+Setting actions
+# Actions: 158
+	Setting other actions
+0 / 158
+	Setting action card
+Setting mutexes
+Setting relevant actions
+Setting splitting
+Setting compatible actions
+0 / 158
+0.008184805512428284
+#######################################################################################
+Trying with 3 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 58
+# Actions: 158
+SAT formula generation time = 0.046491
+# Clauses = 24517
+# Variables = 765
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1799 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1799 /home/messa/And-Star-Project/tmp_islands,p6/formula.txt /home/messa/And-Star-Project/tmp_islands,p6/outsat.txt
+Done solver. Round time: 0.025686
+Cumulated solver time: 0.025686435401439667
+UNSATISFIABLE
+#######################################################################################
+Trying with 4 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 58
+# Actions: 158
+SAT formula generation time = 0.067202
+# Clauses = 34123
+# Variables = 1076
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1799 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1799 /home/messa/And-Star-Project/tmp_islands,p6/formula.txt /home/messa/And-Star-Project/tmp_islands,p6/outsat.txt
+Done solver. Round time: 0.036507
+Cumulated solver time: 0.062193889170885086
+============================================================================
+Controller -- CS = Controller State - START
+============================================================================
+===================
+===================
+Atom (CS)
+___________________
+----------
+Atom person-at(l22-1) (n0)
+Atom bridge-clear() (n0)
+Atom person-alive() (n0)
+----------
+Atom bridge-clear() (n1)
+Atom person-at(l21-1) (n1)
+Atom person-alive() (n1)
+----------
+Atom person-alive() (n2)
+Atom person-at(l22-2) (n2)
+----------
+Atom person-at(l21-2) (ng)
+Atom person-alive() (ng)
+===================
+===================
+(CS, Action with arguments)
+___________________
+(n0,move-person)
+(n0,move-person(l22-1,l21-1))
+(n1,walk-on-bridge)
+(n1,walk-on-bridge(l21-1,l22-2))
+(n2,move-person)
+(n2,move-person(l22-2,l21-2))
+===================
+===================
+(CS, Action name, CS)
+___________________
+(n0,move-person,n1)
+(n1,walk-on-bridge,n2)
+(n2,move-person,ng)
+===================
+(CS, CS)
+___________________
+(n0,n1)
+(n2,ng)
+(n1,n2)
+===================
+Solved with 4 states
+============================================================================
+Controller -- CS = Controller State - END
+============================================================================
+
+Elapsed total time (s): 0.235869
+Elapsed solver time (s): 0.062194
+Elapsed solver time (s): [0.025686435401439667, 0.03650745376944542]
+Looking for strong plans: False
+Fair actions: True
+Done
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:           765                                         |
+|  Number of clauses:           16209                                         |
+|  Parse time:                   0.02 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+===============================================================================
+restarts              : 1
+conflicts             : 8              (318 /sec)
+decisions             : 31             (0.00 % random) (1234 /sec)
+propagations          : 1344           (53486 /sec)
+conflict literals     : 11             (0.00 % deleted)
+Memory used           : 12.00 MB
+CPU time              : 0.025128 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:          1076                                         |
+|  Number of clauses:           25304                                         |
+|  Parse time:                   0.03 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+===============================================================================
+restarts              : 1
+conflicts             : 43             (1200 /sec)
+decisions             : 107            (0.00 % random) (2986 /sec)
+propagations          : 4966           (138599 /sec)
+conflict literals     : 185            (10.63 % deleted)
+Memory used           : 12.00 MB
+CPU time              : 0.03583 s
+
+SATISFIABLE

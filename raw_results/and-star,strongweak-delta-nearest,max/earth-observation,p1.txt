@@ -1,0 +1,47 @@
+New f: 4
+New f: 5
+New f: 6
+New f: 7
+New f: 8
+New f: 9
+New f: 10
+New f: 11
+New f: 12
+New f: 13
+New f: 14
+New f: 15
+New f: 16
+New f: 17
+New f: 18
+New f: 19
+
+Termination: Solved.
+Final Memory Usage: 0.286814
+Total Elapsed Time: 0.587249
+Number of considered policies: 202111
+Number of inserted policies: 152440
+Number of removed policies: 73126
+Number of expanded policies: 73125
+Number of removed policies with f<f*: 73123
+
+An Optimal-Size Policy:
+[var0 = Atom is-focal-point(p11), var1 = Atom is-target(p11), var2 = Atom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = Atom is-target(p31), var6 = Atom is-target(p33)] -> slew p11 p21
+[var0 = Atom is-focal-point(p31), var1 = Atom is-target(p11), var2 = Atom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> slew p31 p11
+[var0 = Atom is-focal-point(p21), var1 = Atom is-target(p11), var2 = Atom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> slew p21 p31
+[var0 = Atom is-focal-point(p23), var1 = NegatedAtom is-target(p11), var2 = Atom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> slew p23 p32 south-east
+[var0 = Atom is-focal-point(p21), var1 = Atom is-target(p11), var2 = Atom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = Atom is-target(p31), var6 = Atom is-target(p33)] -> slew p21 p31
+[var0 = Atom is-focal-point(p21), var1 = Atom is-target(p11), var2 = Atom is-target(p13), var3 = Atom is-target(p21), var4 = Atom is-target(p23), var5 = Atom is-target(p31), var6 = Atom is-target(p33)] -> take-image p21 p31
+[var0 = Atom is-focal-point(p23), var1 = NegatedAtom is-target(p11), var2 = NegatedAtom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> take-image p23 p33
+[var0 = Atom is-focal-point(p31), var1 = Atom is-target(p11), var2 = Atom is-target(p13), var3 = Atom is-target(p21), var4 = Atom is-target(p23), var5 = Atom is-target(p31), var6 = Atom is-target(p33)] -> slew p31 p12 north-east
+[var0 = Atom is-focal-point(p12), var1 = NegatedAtom is-target(p11), var2 = NegatedAtom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> slew p12 p23 north-east
+[var0 = Atom is-focal-point(p31), var1 = Atom is-target(p11), var2 = Atom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = Atom is-target(p31), var6 = Atom is-target(p33)] -> take-image p31 p11
+[var0 = Atom is-focal-point(p33), var1 = NegatedAtom is-target(p11), var2 = NegatedAtom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = NegatedAtom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> take-image p33 p13
+[var0 = Atom is-focal-point(p11), var1 = Atom is-target(p11), var2 = Atom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> take-image p11 p21
+[var0 = Atom is-focal-point(p12), var1 = Atom is-target(p11), var2 = Atom is-target(p13), var3 = Atom is-target(p21), var4 = Atom is-target(p23), var5 = Atom is-target(p31), var6 = Atom is-target(p33)] -> slew p12 p21 south-east
+[var0 = Atom is-focal-point(p21), var1 = NegatedAtom is-target(p11), var2 = Atom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> slew p21 p32 north-east
+[var0 = Atom is-focal-point(p22), var1 = NegatedAtom is-target(p11), var2 = NegatedAtom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = NegatedAtom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> slew p22 p33 north-east
+[var0 = Atom is-focal-point(p33), var1 = NegatedAtom is-target(p11), var2 = NegatedAtom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> slew p33 p12 south-east
+[var0 = Atom is-focal-point(p32), var1 = NegatedAtom is-target(p11), var2 = Atom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> slew p32 p13 north-east
+[var0 = Atom is-focal-point(p13), var1 = NegatedAtom is-target(p11), var2 = Atom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = Atom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> take-image p13 p23
+[var0 = Atom is-focal-point(p13), var1 = NegatedAtom is-target(p11), var2 = NegatedAtom is-target(p13), var3 = NegatedAtom is-target(p21), var4 = NegatedAtom is-target(p23), var5 = NegatedAtom is-target(p31), var6 = Atom is-target(p33)] -> slew p13 p22 south-east
+Optimal Size: 19

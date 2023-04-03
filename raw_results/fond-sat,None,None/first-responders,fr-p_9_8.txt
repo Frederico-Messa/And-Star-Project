@@ -1,0 +1,650 @@
+{'path_domain': './benchmarks/first-responders/domain.pddl', 'path_instance': './benchmarks/first-responders/fr-p_9_8.pddl', 'solver': 'minisat', 'time_limit': 1800, 'mem_limit': 8000, 'strong': False, 'start': 1, 'inc': 1, 'gen_info': False, 'show_policy': True, 'draw_policy': False, 'name_tmp': 'first-responders,fr-p_9_8', 'tmp': False}
+Setting atoms
+# Atoms: 349
+Setting initial
+Setting goal
+Setting actions
+# Actions: 3059
+	Setting other actions
+0 / 3059
+1000 / 3059
+2000 / 3059
+3000 / 3059
+	Setting action card
+Setting mutexes
+Setting relevant actions
+Setting splitting
+Setting compatible actions
+0 / 3059
+1000 / 3059
+2000 / 3059
+3000 / 3059
+4.195039659738541
+#######################################################################################
+Trying with 3 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 5.088547
+# Clauses = 3091255
+# Variables = 10377
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1788 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1788 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 2.961414
+Cumulated solver time: 2.961414212360978
+UNSATISFIABLE
+#######################################################################################
+Trying with 4 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 6.924293
+# Clauses = 4140286
+# Variables = 13904
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1777 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1777 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 4.269147
+Cumulated solver time: 7.230561178177595
+UNSATISFIABLE
+#######################################################################################
+Trying with 5 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 8.611565
+# Clauses = 5198815
+# Variables = 17475
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1762 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1762 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 5.497575
+Cumulated solver time: 12.728136125952005
+UNSATISFIABLE
+#######################################################################################
+Trying with 6 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 10.536858
+# Clauses = 6266926
+# Variables = 21096
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1744 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1744 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 6.761268
+Cumulated solver time: 19.48940376378596
+UNSATISFIABLE
+#######################################################################################
+Trying with 7 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 12.388208
+# Clauses = 7344703
+# Variables = 24773
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1722 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1722 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 8.197889
+Cumulated solver time: 27.687292892485857
+UNSATISFIABLE
+#######################################################################################
+Trying with 8 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 14.304294
+# Clauses = 8432230
+# Variables = 28512
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1696 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1696 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 9.924182
+Cumulated solver time: 37.61147475987673
+UNSATISFIABLE
+#######################################################################################
+Trying with 9 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 16.517558
+# Clauses = 9529591
+# Variables = 32319
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1667 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1667 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 12.037364
+Cumulated solver time: 49.64883879944682
+UNSATISFIABLE
+#######################################################################################
+Trying with 10 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 18.844998
+# Clauses = 10636870
+# Variables = 36200
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1632 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1632 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 18.917067
+Cumulated solver time: 68.56590580195189
+UNSATISFIABLE
+#######################################################################################
+Trying with 11 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 20.500527
+# Clauses = 11754151
+# Variables = 40161
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1589 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1589 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 30.494215
+Cumulated solver time: 99.06012067757547
+UNSATISFIABLE
+#######################################################################################
+Trying with 12 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 23.104766
+# Clauses = 12881518
+# Variables = 44208
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1531 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1531 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 94.105096
+Cumulated solver time: 193.1652170661837
+UNSATISFIABLE
+#######################################################################################
+Trying with 13 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 23.847803
+# Clauses = 14019055
+# Variables = 48347
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1408 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1408 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 182.670357
+Cumulated solver time: 375.83557437360287
+UNSATISFIABLE
+#######################################################################################
+Trying with 14 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 25.782682
+# Clauses = 15166846
+# Variables = 52584
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 1195 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=1195 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 688.868210
+Cumulated solver time: 1064.7037840373814
+UNSATISFIABLE
+#######################################################################################
+Trying with 15 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 28.692991
+# Clauses = 16324975
+# Variables = 56925
+Creating formula...
+	 Done creating formula. Calling solver...
+Will now call SAT solver with 8000MB and 471 seconds limits
+./minisat -mem-lim=8000 -cpu-lim=471 /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt /home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt
+Done solver. Round time: 471.050739
+Cumulated solver time: 1535.7545232512057
+-> OUT OF TIME/MEM
+UNSATISFIABLE
+-> OUT OF TIME
+#######################################################################################
+Trying with 16 states
+Looking for strong plans: False
+Fair actions: True
+# Atoms: 349
+# Actions: 3059
+SAT formula generation time = 30.521158
+# Clauses = 17493526
+# Variables = 61376
+-> OUT OF TIME
+Creating formula...
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         10377                                         |
+|  Number of clauses:         2052588                                         |
+|  Parse time:                   2.93 s                                       |
+|                                                                             |
+===============================================================================
+Solved by unit propagation
+restarts              : 0
+conflicts             : 0              (0 /sec)
+decisions             : 0              (-nan % random) (0 /sec)
+propagations          : 6345           (2163 /sec)
+conflict literals     : 0              (-nan % deleted)
+Memory used           : 85.00 MB
+CPU time              : 2.93402 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         13904                                         |
+|  Number of clauses:         3097172                                         |
+|  Parse time:                   4.12 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+===============================================================================
+restarts              : 1
+conflicts             : 6              (1 /sec)
+decisions             : 8              (0.00 % random) (2 /sec)
+propagations          : 15016          (3533 /sec)
+conflict literals     : 13             (0.00 % deleted)
+Memory used           : 128.00 MB
+CPU time              : 4.25077 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         17475                                         |
+|  Number of clauses:         4147836                                         |
+|  Parse time:                   5.27 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+===============================================================================
+restarts              : 1
+conflicts             : 19             (3 /sec)
+decisions             : 25             (0.00 % random) (5 /sec)
+propagations          : 52670          (9681 /sec)
+conflict literals     : 138            (6.76 % deleted)
+Memory used           : 155.00 MB
+CPU time              : 5.44068 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         21096                                         |
+|  Number of clauses:         5208074                                         |
+|  Parse time:                   6.44 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+===============================================================================
+restarts              : 1
+conflicts             : 83             (12 /sec)
+decisions             : 200            (0.00 % random) (30 /sec)
+propagations          : 255591         (38221 /sec)
+conflict literals     : 1163           (26.39 % deleted)
+Memory used           : 205.00 MB
+CPU time              : 6.6872 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         24773                                         |
+|  Number of clauses:         6277970                                         |
+|  Parse time:                   7.61 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+|       100 |   20835  6145256 12598418 |  2253260       99     31 | 15.896 % |
+|       250 |   20835  6145256 12598418 |  2478586      249     43 | 15.896 % |
+===============================================================================
+restarts              : 4
+conflicts             : 465            (57 /sec)
+decisions             : 2825           (0.00 % random) (348 /sec)
+propagations          : 1533751        (188866 /sec)
+conflict literals     : 16163          (23.99 % deleted)
+Memory used           : 234.00 MB
+CPU time              : 8.12085 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         28512                                         |
+|  Number of clauses:         7357608                                         |
+|  Parse time:                   8.91 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+|       100 |   24553  7223741 14868455 |  2648705      100     43 | 13.885 % |
+|       250 |   24527  7223741 14868455 |  2913575      249     33 | 13.977 % |
+|       475 |   24526  7223741 14868455 |  3204933      473     39 | 13.980 % |
+|       812 |   24524  7223741 14868455 |  3525426      808     43 | 13.987 % |
+===============================================================================
+restarts              : 7
+conflicts             : 1187           (121 /sec)
+decisions             : 5789           (0.00 % random) (589 /sec)
+propagations          : 3361435        (341823 /sec)
+conflict literals     : 48309          (39.60 % deleted)
+Memory used           : 303.00 MB
+CPU time              : 9.83385 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         32319                                         |
+|  Number of clauses:         8447072                                         |
+|  Parse time:                  10.05 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+|       100 |   28336  8312040 17175856 |  3047748      100     73 | 12.324 % |
+|       250 |   28335  8312040 17175856 |  3352522      249     64 | 12.327 % |
+|       475 |   28335  8312040 17175856 |  3687775      474     57 | 12.327 % |
+|       812 |   28208  8312040 17175856 |  4056552      809     55 | 12.720 % |
+|      1318 |   22780  8312040 17175856 |  4462207     1313     48 | 29.515 % |
+|      2077 |   22780  8312040 17175856 |  4908428     2072     46 | 29.515 % |
+===============================================================================
+restarts              : 15
+conflicts             : 3032           (254 /sec)
+decisions             : 13392          (0.00 % random) (1123 /sec)
+propagations          : 7862105        (659126 /sec)
+conflict literals     : 121643         (38.35 % deleted)
+Memory used           : 345.00 MB
+CPU time              : 11.9281 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         36200                                         |
+|  Number of clauses:         9546446                                         |
+|  Parse time:                  11.39 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+|       100 |   32191  9410237 19520804 |  3450420      100    100 | 11.075 % |
+|       250 |   32191  9410237 19520804 |  3795462      250     91 | 11.075 % |
+|       475 |   32191  9410237 19520804 |  4175008      475    101 | 11.075 % |
+|       812 |   32190  9410237 19520804 |  4592509      811    103 | 11.077 % |
+|      1318 |   32190  9410237 19520804 |  5051760     1317     88 | 11.077 % |
+|      2077 |   32174  9410237 19520804 |  5556936     2069     79 | 11.122 % |
+|      3216 |   29133  9410237 19520804 |  6112629     3206     75 | 19.522 % |
+|      4924 |   29062  9410237 19520804 |  6723892     4907     70 | 19.718 % |
+|      7486 |   29012  9410237 19520804 |  7396282     7463     77 | 19.856 % |
+===============================================================================
+restarts              : 41
+conflicts             : 9649           (512 /sec)
+decisions             : 39778          (0.00 % random) (2112 /sec)
+propagations          : 28318943       (1503664 /sec)
+conflict literals     : 713949         (48.85 % deleted)
+Memory used           : 366.00 MB
+CPU time              : 18.8333 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         40161                                         |
+|  Number of clauses:        10655814                                         |
+|  Parse time:                  12.56 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+|       100 |   36124 10518416 21903482 |  3856752      100    125 | 10.052 % |
+|       250 |   36124 10518416 21903482 |  4242427      250     71 | 10.052 % |
+|       475 |   36124 10518416 21903482 |  4666670      475    111 | 10.052 % |
+|       812 |   36121 10518416 21903482 |  5133337      809    101 | 10.060 % |
+|      1318 |   36120 10518416 21903482 |  5646671     1314     98 | 10.062 % |
+|      2077 |   30476 10518416 21903482 |  6211338     2063     89 | 24.115 % |
+|      3216 |   30475 10518416 21903482 |  6832472     3201     90 | 24.118 % |
+|      4924 |   30438 10518416 21903482 |  7515719     4898    105 | 24.210 % |
+|      7486 |   30322 10518416 21903482 |  8267291     7457    106 | 24.499 % |
+|     11330 |   30318  8471037 17626830 |  9094020    10487     96 | 24.509 % |
+|     17096 |   30318  8470185 17625059 | 10003422    16251     90 | 24.509 % |
+===============================================================================
+restarts              : 72
+conflicts             : 20564          (678 /sec)
+decisions             : 90961          (0.00 % random) (2998 /sec)
+propagations          : 68044839       (2242656 /sec)
+conflict literals     : 1756908        (45.40 % deleted)
+Memory used           : 591.00 MB
+CPU time              : 30.3412 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         44208                                         |
+|  Number of clauses:        11775260                                         |
+|  Parse time:                  13.76 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+|       100 |   40141 11636661 24324073 |  4266775      100    177 |  9.200 % |
+|       250 |   40141 11636661 24324073 |  4693453      250    115 |  9.200 % |
+|       475 |   40141 11636661 24324073 |  5162798      475     93 |  9.200 % |
+|       812 |   40140 11636661 24324073 |  5679078      811     87 |  9.202 % |
+|      1318 |   40139 11636661 24324073 |  6246986     1316     80 |  9.204 % |
+|      2077 |   40139 11636661 24324073 |  6871684     2075     90 |  9.204 % |
+|      3216 |   40139 11636661 24324073 |  7558853     3214    106 |  9.204 % |
+|      4924 |   40138 11636661 24324073 |  8314738     4921    119 |  9.206 % |
+|      7486 |   40138 11636661 24324073 |  9146212     7483    136 |  9.206 % |
+|     11330 |   37098 10567376 22095352 | 10060833    11269    142 | 16.083 % |
+|     17096 |   37098 10567376 22095352 | 11066917    17035    158 | 16.083 % |
+|     25745 |   37098 10567367 22095334 | 12173609    25683    152 | 16.083 % |
+|     38719 |   37073 10562498 22076775 | 13390969    38416    144 | 16.140 % |
+|     58180 |   37024 10557808 22059086 | 14730066    57856    139 | 16.250 % |
+===============================================================================
+restarts              : 236
+conflicts             : 75153          (800 /sec)
+decisions             : 269247         (0.00 % random) (2865 /sec)
+propagations          : 251004270      (2670820 /sec)
+conflict literals     : 9814051        (55.58 % deleted)
+Memory used           : 490.00 MB
+CPU time              : 93.9802 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         48347                                         |
+|  Number of clauses:        12904868                                         |
+|  Parse time:                  15.21 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+|       100 |   44248 12765056 26782760 |  4680520      100    213 |  8.478 % |
+|       250 |   44247 12765056 26782760 |  5148572      249    128 |  8.480 % |
+|       475 |   44247 12765056 26782760 |  5663429      474    112 |  8.480 % |
+|       812 |   44246 12765056 26782760 |  6229772      810    100 |  8.482 % |
+|      1318 |   44244 12765056 26782760 |  6852750     1314     98 |  8.487 % |
+|      2077 |   38400 12765056 26782760 |  7538025     2070     93 | 20.574 % |
+|      3216 |   38397 12765056 26782760 |  8291827     3206     97 | 20.580 % |
+|      4924 |   38386 12765056 26782760 |  9121010     4912     96 | 20.603 % |
+|      7486 |   38385 12765056 26782760 | 10033111     7473     97 | 20.605 % |
+|     11330 |   38363 10701730 22445514 | 11036422    10993    108 | 20.651 % |
+|     17096 |   38319 10670967 22383238 | 12140064    16714    117 | 20.742 % |
+|     25745 |   38286 10655409 22350848 | 13354071    25329    126 | 20.810 % |
+|     38719 |   38272 10652004 22343865 | 14689478    38256    128 | 20.839 % |
+|     58180 |   38257 10649928 22339683 | 16158426    57699    122 | 20.870 % |
+|     87372 |   38201 10611019 22260158 | 17774268    86863    124 | 20.986 % |
+|    131161 |   38162 10591480 22220578 | 19551695   130642    119 | 21.066 % |
+===============================================================================
+restarts              : 381
+conflicts             : 140058         (767 /sec)
+decisions             : 453541         (0.00 % random) (2485 /sec)
+propagations          : 517894713      (2837561 /sec)
+conflict literals     : 16205582       (57.63 % deleted)
+Memory used           : 669.00 MB
+CPU time              : 182.514 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         52584                                         |
+|  Number of clauses:        14044722                                         |
+|  Parse time:                  16.57 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+|       100 |   48451 13903685 29279726 |  5098017      100    272 |  7.860 % |
+|       250 |   48449 13903685 29279726 |  5607819      248    147 |  7.864 % |
+|       475 |   48448 13903685 29279726 |  6168601      472    124 |  7.866 % |
+|       812 |   48448 13903685 29279726 |  6785461      809    129 |  7.866 % |
+|      1318 |   45180 13903685 29279726 |  7464007     1313    115 | 14.080 % |
+|      2077 |   42370 13903685 29279726 |  8210408     2069    110 | 19.424 % |
+|      3216 |   42368 13903685 29279726 |  9031449     3206    114 | 19.428 % |
+|      4924 |   42150 13903685 29279726 |  9934594     4909    115 | 19.843 % |
+|      7486 |   42141 13903685 29279726 | 10928053     7462    161 | 19.860 % |
+|     11330 |   42052 11741328 24623372 | 12020859    10900    143 | 20.029 % |
+|     17096 |   42013 11741328 24623372 | 13222945    16658    134 | 20.103 % |
+|     25745 |   41913 11708472 24556847 | 14545239    25272    122 | 20.293 % |
+|     38719 |   41853 11610752 24358400 | 15999763    38168    137 | 20.407 % |
+|     58180 |   41827 11597789 24323404 | 17599740    57031    150 | 20.457 % |
+|     87372 |   41660 11519414 24164993 | 19359714    86041    142 | 20.774 % |
+|    131161 |   41625 11514487 24146854 | 21295685   129788    147 | 20.841 % |
+|    196845 |   41604 11503139 24123721 | 23425254   195460    147 | 20.881 % |
+|    295371 |   41531 11475623 24053908 | 25767779   293277    144 | 21.020 % |
+===============================================================================
+restarts              : 909
+conflicts             : 381882         (555 /sec)
+decisions             : 1194219        (0.00 % random) (1735 /sec)
+propagations          : 1454135409     (2112306 /sec)
+conflict literals     : 52485857       (63.55 % deleted)
+Memory used           : 923.00 MB
+CPU time              : 688.411 s
+
+UNSATISFIABLE
+WARNING: for repeatability, setting FPU to use double precision
+============================[ Problem Statistics ]=============================
+|                                                                             |
+WARNING! DIMACS header mismatch: wrong number of variables.
+WARNING! DIMACS header mismatch: wrong number of clauses.
+|  Number of variables:         56925                                         |
+|  Number of clauses:        15194906                                         |
+|  Parse time:                  17.89 s                                       |
+|                                                                             |
+============================[ Search Statistics ]==============================
+| Conflicts |          ORIGINAL         |          LEARNT          | Progress |
+|           |    Vars  Clauses Literals |    Limit  Clauses Lit/Cl |          |
+===============================================================================
+|       100 |   52756 15052632 31815154 |  5519298      100    334 |  7.324 % |
+|       250 |   52756 15052632 31815154 |  6071228      250    152 |  7.324 % |
+|       475 |   52756 15052632 31815154 |  6678351      475    125 |  7.324 % |
+|       812 |   52754 15052632 31815154 |  7346186      810    124 |  7.327 % |
+|      1318 |   52752 15052632 31815154 |  8080804     1314    115 |  7.331 % |
+|      2077 |   52751 15052632 31815154 |  8888885     2072    109 |  7.332 % |
+|      3216 |   52751 15052632 31815154 |  9777773     3211    133 |  7.332 % |
+|      4924 |   52751 15052632 31815154 | 10755551     4919    134 |  7.332 % |
+|      7486 |   52751 15052632 31815154 | 11831106     7481    144 |  7.332 % |
+|     11330 |   52739 15045029 31799585 | 13014216    11279    157 |  7.354 % |
+|     17096 |   52739 15045029 31799585 | 14315638    17045    194 |  7.354 % |
+|     25745 |   46649 12950368 27359880 | 15747202    23786    224 | 18.052 % |
+|     38719 |   46646 12948737 27356516 | 17321922    36738    219 | 18.057 % |
+|     58180 |   46634 12945105 27349102 | 19054114    56178    222 | 18.078 % |
+|     87372 |   46633 12944849 27348577 | 20959526    85368    208 | 18.080 % |
+|    131161 |   46624 12942330 27343426 | 23055479   129142    192 | 18.096 % |
+|    196845 |   46597 12935865 27321611 | 25361027   194524    187 | 18.143 % |
+===============================================================================
+restarts              : 700
+conflicts             : 291902         (620 /sec)
+decisions             : 1133539        (0.00 % random) (2408 /sec)
+propagations          : 1059937935     (2251911 /sec)
+conflict literals     : 52397207       (56.43 % deleted)
+Memory used           : 927.00 MB
+CPU time              : 470.684 s
+
+INDETERMINATE
+rm: cannot remove '/home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt': No such file or directory
+rm: cannot remove '/home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt': No such file or directory
+rm: cannot remove '/home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/output-sas.txt': No such file or directory
+rm: cannot remove '/home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula-extra.txt': No such file or directory
+rm: cannot remove '/home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txtheader': No such file or directory
+rm: cannot remove '/home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/outsat.txt': No such file or directory
+rm: cannot remove '/home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/output-sas.txt': No such file or directory
+rm: cannot remove '/home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txtheader': No such file or directory
+Traceback (most recent call last):
+  File "./planner_fondsat/src/main.py", line 161, in <module>
+    name_final = cnf.generateInputSat(name_formula_file)
+  File "/home/messa/And-Star-Project/planner_fondsat/src/CNF.py", line 159, in generateInputSat
+    with open(nameFile, 'r') as formula:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/messa/And-Star-Project/tmp_first-responders,fr-p_9_8/formula.txt'

@@ -1,0 +1,756 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.014s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 23 rules.
+Computing model... [0.000s CPU, 0.006s wall-clock]
+692 relevant atoms
+444 auxiliary atoms
+1136 final queue length
+1332 total queue pushes
+Completing instantiation... [0.010s CPU, 0.003s wall-clock]
+Instantiating: [0.010s CPU, 0.011s wall-clock]
+Computing fact groups...
+Finding invariants...
+10 initial candidates
+Finding invariants: [0.000s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+99 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.003s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.010s CPU, 0.004s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+Removed false proposition: 0 = <none of those>
+Removed false proposition: 50 = <none of those>
+Removed false proposition: 51 = <none of those>
+Removed false proposition: 52 = <none of those>
+Removed false proposition: 53 = <none of those>
+Removed false proposition: 54 = <none of those>
+Removed false proposition: 55 = <none of those>
+Removed false proposition: 56 = <none of those>
+Removed false proposition: 57 = <none of those>
+Removed false proposition: 58 = <none of those>
+Removed false proposition: 59 = <none of those>
+Removed false proposition: 60 = <none of those>
+Removed false proposition: 61 = <none of those>
+Removed false proposition: 62 = <none of those>
+Removed false proposition: 63 = <none of those>
+Removed false proposition: 64 = <none of those>
+Removed false proposition: 65 = <none of those>
+Removed false proposition: 66 = <none of those>
+Removed false proposition: 67 = <none of those>
+Removed false proposition: 68 = <none of those>
+Removed false proposition: 69 = <none of those>
+Removed false proposition: 70 = <none of those>
+Removed false proposition: 71 = <none of those>
+Removed false proposition: 72 = <none of those>
+Removed false proposition: 73 = <none of those>
+Removed false proposition: 74 = <none of those>
+Removed false proposition: 75 = <none of those>
+Removed false proposition: 76 = <none of those>
+Removed false proposition: 77 = <none of those>
+Removed false proposition: 78 = <none of those>
+Removed false proposition: 79 = <none of those>
+Removed false proposition: 80 = <none of those>
+Removed false proposition: 81 = <none of those>
+Removed false proposition: 82 = <none of those>
+Removed false proposition: 83 = <none of those>
+Removed false proposition: 84 = <none of those>
+Removed false proposition: 85 = <none of those>
+Removed false proposition: 86 = <none of those>
+Removed false proposition: 87 = <none of those>
+Removed false proposition: 88 = <none of those>
+Removed false proposition: 89 = <none of those>
+Removed false proposition: 90 = <none of those>
+Removed false proposition: 91 = <none of those>
+Removed false proposition: 92 = <none of those>
+Removed false proposition: 93 = <none of those>
+Removed false proposition: 94 = <none of those>
+Removed false proposition: 95 = <none of those>
+Removed false proposition: 96 = <none of those>
+Removed false proposition: 97 = <none of those>
+Removed false proposition: 98 = <none of those>
+Removed true proposition: None = Atom visited(r1)
+Removed false proposition: None = NegatedAtom visited(r1)
+0 operators removed
+52 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.002s wall-clock]
+Translator variables: 148
+Translator derived variables: 0
+Translator facts: 344
+Translator goal facts: 49
+Translator mutex groups: 50
+Translator total mutex groups size: 148
+Translator operators: 245
+Translator axioms: 0
+Translator task size: 1815
+Translator peak memory: 20360 KB
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.020s CPU, 0.036s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+148 variables of 148 necessary
+0 of 50 mutex groups necessary.
+245 of 245 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 344
+Preprocessor derived variables: 0
+Preprocessor task size: 1667
+Writing output...
+done
+
+
+3. Running search
+./planner_prp/src/search/downward ipc policy-repair --dump-policy 2
+This is a unit task.
+./planner_prp/src/search/downward-release --heuristic "h=ff(cost_type=1)" --search "lazy_greedy([h],preferred=[h])" --random-seed 814102613 --dump-policy 2 < output
+Simplifying transitions... done!
+Variables: 148
+Bytes per state: 20
+
+Total allotted time (s): 1800
+Max time for core JIC (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+ !! Warning: Disabling the simplification of unary operators !!
+ !!           to keep the non-deterministic planning sound.  !!
+Switch from bucket-based to heap-based queue at key = 254, num_pushes = 174
+WARNING: overflow on h^add! Costs clamped to 100000000
+Generated 292 state(s).
+Dead ends: 0 state(s). (0 recorded)
+turn_light_on_DETDUP_0 r1 (1)
+move_left_right r1 r2 (1)
+turn_light_on_DETDUP_0 r2 (1)
+move_left_right r2 r3 (1)
+turn_light_on_DETDUP_0 r3 (1)
+move_left_right r3 r4 (1)
+turn_light_on_DETDUP_0 r4 (1)
+move_left_right r4 r5 (1)
+turn_light_on_DETDUP_0 r5 (1)
+move_left_right r5 r6 (1)
+turn_light_on_DETDUP_0 r6 (1)
+move_left_right r6 r7 (1)
+turn_light_on_DETDUP_0 r7 (1)
+move_left_right r7 r8 (1)
+turn_light_on_DETDUP_0 r8 (1)
+move_left_right r8 r9 (1)
+turn_light_on_DETDUP_0 r9 (1)
+move_left_right r9 r10 (1)
+turn_light_on_DETDUP_0 r10 (1)
+move_left_right r10 r11 (1)
+turn_light_on_DETDUP_0 r11 (1)
+move_left_right r11 r12 (1)
+turn_light_on_DETDUP_0 r12 (1)
+move_left_right r12 r13 (1)
+turn_light_on_DETDUP_0 r13 (1)
+move_left_right r13 r14 (1)
+turn_light_on_DETDUP_0 r14 (1)
+move_left_right r14 r15 (1)
+turn_light_on_DETDUP_0 r15 (1)
+move_left_right r15 r16 (1)
+turn_light_on_DETDUP_0 r16 (1)
+move_left_right r16 r17 (1)
+turn_light_on_DETDUP_0 r17 (1)
+move_left_right r17 r18 (1)
+turn_light_on_DETDUP_0 r18 (1)
+move_left_right r18 r19 (1)
+turn_light_on_DETDUP_0 r19 (1)
+move_left_right r19 r20 (1)
+turn_light_on_DETDUP_0 r20 (1)
+move_left_right r20 r21 (1)
+turn_light_on_DETDUP_0 r21 (1)
+move_left_right r21 r22 (1)
+turn_light_on_DETDUP_0 r22 (1)
+move_left_right r22 r23 (1)
+turn_light_on_DETDUP_0 r23 (1)
+move_left_right r23 r24 (1)
+turn_light_on_DETDUP_0 r24 (1)
+move_left_right r24 r25 (1)
+turn_light_on_DETDUP_0 r25 (1)
+move_left_right r25 r26 (1)
+turn_light_on_DETDUP_0 r26 (1)
+move_left_right r26 r27 (1)
+turn_light_on_DETDUP_0 r27 (1)
+move_left_right r27 r28 (1)
+turn_light_on_DETDUP_0 r28 (1)
+move_left_right r28 r29 (1)
+turn_light_on_DETDUP_0 r29 (1)
+move_left_right r29 r30 (1)
+turn_light_on_DETDUP_0 r30 (1)
+move_left_right r30 r31 (1)
+turn_light_on_DETDUP_0 r31 (1)
+move_left_right r31 r32 (1)
+turn_light_on_DETDUP_0 r32 (1)
+move_left_right r32 r33 (1)
+turn_light_on_DETDUP_0 r33 (1)
+move_left_right r33 r34 (1)
+turn_light_on_DETDUP_0 r34 (1)
+move_left_right r34 r35 (1)
+turn_light_on_DETDUP_0 r35 (1)
+move_left_right r35 r36 (1)
+turn_light_on_DETDUP_0 r36 (1)
+move_left_right r36 r37 (1)
+turn_light_on_DETDUP_0 r37 (1)
+move_left_right r37 r38 (1)
+turn_light_on_DETDUP_0 r38 (1)
+move_left_right r38 r39 (1)
+turn_light_on_DETDUP_0 r39 (1)
+move_left_right r39 r40 (1)
+turn_light_on_DETDUP_0 r40 (1)
+move_left_right r40 r41 (1)
+turn_light_on_DETDUP_0 r41 (1)
+move_left_right r41 r42 (1)
+turn_light_on_DETDUP_0 r42 (1)
+move_left_right r42 r43 (1)
+turn_light_on_DETDUP_0 r43 (1)
+move_left_right r43 r44 (1)
+turn_light_on_DETDUP_0 r44 (1)
+move_left_right r44 r45 (1)
+turn_light_on_DETDUP_0 r45 (1)
+move_left_right r45 r46 (1)
+turn_light_on_DETDUP_0 r46 (1)
+move_left_right r46 r47 (1)
+turn_light_on_DETDUP_0 r47 (1)
+move_left_right r47 r48 (1)
+turn_light_on_DETDUP_0 r48 (1)
+move_left_right r48 r49 (1)
+turn_light_on_DETDUP_0 r49 (1)
+move_left_right r49 r50 (1)
+Plan length: 98 step(s).
+Plan cost: 98
+Initial search time: 0s
+Initial total time: 0s
+
+
+Creating the simulator...
+
+
+Regressing the plan...
+
+
+Generating an initial policy...
+
+
+Computing just-in-time repairs...
+
+Could not close 0 of 49 open leaf states.
+Investigated 273 states for the strong cyclic plan.
+Went through another policy of score 1
+
+Could not close 0 of 0 open leaf states.
+Investigated 5 states for the strong cyclic plan.
+Marking policy strong cyclic.
+Went through another policy of score 1
+
+
+Running a final SCD check...
+
+
+Running the simulation...
+...achieved the goal!
+
+
+
+                  -{ General Statistics }-
+
+        FSAP Combination Count: 0
+       Monotonicity violations: 0
+             Successful states: 120 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 120 +/- 0
+             Recorded Deadends: 0
+            State-Action Pairs: 148
+  Forbidden State-Action Pairs: 0
+               Strongly Cyclic: True
+                  Policy Score: 1
+                     Succeeded: 1 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0s
+                   Search Time: 0s
+           Policy Construction: 0.03s
+ Evaluating the policy quality: 0.12s
+              Using the policy: 0.08s
+          Just-in-case Repairs: 0.17s
+                Simulator time: 0s
+                    Total time: 0.17s
+
+
+
+Dumping the policy and fsaps...
+Strong cyclic plan found.
+Peak memory: 8936 KB
+WARNING: overflow on h^add! Costs clamped to 100000000
+
+If holds: var147:0 var146:0 var145:0 var144:0 var143:0 var141:0 var140:0 var139:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: goal / SC / d=0
+
+If holds: var44:0 var0:43 var147:0 var146:0 var145:0 var144:0 var141:0 var140:0 var139:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r49 r50 / SC / d=1
+
+If holds: var93:0 var0:43 var147:0 var146:0 var145:0 var144:0 var141:0 var140:0 var139:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r49 / SC / d=2
+
+If holds: var93:1 var0:43 var147:0 var146:0 var145:0 var144:0 var141:0 var140:0 var139:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r49 / SC / d=2
+
+If holds: var93:0 var43:0 var0:42 var147:0 var146:0 var145:0 var144:0 var140:0 var139:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r48 r49 / SC / d=3
+
+If holds: var92:0 var93:0 var0:42 var147:0 var146:0 var145:0 var144:0 var140:0 var139:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r48 / SC / d=4
+
+If holds: var92:1 var93:0 var0:42 var147:0 var146:0 var145:0 var144:0 var140:0 var139:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r48 / SC / d=4
+
+If holds: var92:0 var93:0 var42:0 var0:41 var147:0 var146:0 var145:0 var144:0 var139:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r47 r48 / SC / d=5
+
+If holds: var91:0 var92:0 var93:0 var0:41 var147:0 var146:0 var145:0 var144:0 var139:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r47 / SC / d=6
+
+If holds: var91:1 var92:0 var93:0 var0:41 var147:0 var146:0 var145:0 var144:0 var139:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r47 / SC / d=6
+
+If holds: var91:0 var92:0 var93:0 var41:0 var0:40 var147:0 var146:0 var145:0 var144:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r46 r47 / SC / d=7
+
+If holds: var90:0 var91:0 var92:0 var93:0 var0:40 var147:0 var146:0 var145:0 var144:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r46 / SC / d=8
+
+If holds: var90:1 var91:0 var92:0 var93:0 var0:40 var147:0 var146:0 var145:0 var144:0 var138:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r46 / SC / d=8
+
+If holds: var90:0 var91:0 var92:0 var93:0 var40:0 var0:39 var147:0 var146:0 var145:0 var144:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r45 r46 / SC / d=9
+
+If holds: var89:0 var90:0 var91:0 var92:0 var93:0 var0:39 var147:0 var146:0 var145:0 var144:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r45 / SC / d=10
+
+If holds: var89:1 var90:0 var91:0 var92:0 var93:0 var0:39 var147:0 var146:0 var145:0 var144:0 var137:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r45 / SC / d=10
+
+If holds: var89:0 var90:0 var91:0 var92:0 var93:0 var39:0 var0:38 var147:0 var146:0 var145:0 var144:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r44 r45 / SC / d=11
+
+If holds: var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:38 var147:0 var146:0 var145:0 var144:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r44 / SC / d=12
+
+If holds: var88:1 var89:0 var90:0 var91:0 var92:0 var93:0 var0:38 var147:0 var146:0 var145:0 var144:0 var136:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r44 / SC / d=12
+
+If holds: var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var38:0 var0:37 var147:0 var146:0 var145:0 var144:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r43 r44 / SC / d=13
+
+If holds: var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:37 var147:0 var146:0 var145:0 var144:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r43 / SC / d=14
+
+If holds: var87:1 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:37 var147:0 var146:0 var145:0 var144:0 var135:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r43 / SC / d=14
+
+If holds: var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var37:0 var0:36 var147:0 var146:0 var145:0 var144:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r42 r43 / SC / d=15
+
+If holds: var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:36 var147:0 var146:0 var145:0 var144:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r42 / SC / d=16
+
+If holds: var86:1 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:36 var147:0 var146:0 var145:0 var144:0 var134:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r42 / SC / d=16
+
+If holds: var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var36:0 var0:35 var147:0 var146:0 var145:0 var144:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r41 r42 / SC / d=17
+
+If holds: var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:35 var147:0 var146:0 var145:0 var144:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r41 / SC / d=18
+
+If holds: var85:1 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:35 var147:0 var146:0 var145:0 var144:0 var133:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r41 / SC / d=18
+
+If holds: var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var35:0 var0:34 var147:0 var146:0 var145:0 var144:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r40 r41 / SC / d=19
+
+If holds: var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:34 var147:0 var146:0 var145:0 var144:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r40 / SC / d=20
+
+If holds: var84:1 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:34 var147:0 var146:0 var145:0 var144:0 var142:0 var132:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r40 / SC / d=20
+
+If holds: var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var33:0 var0:32 var147:0 var146:0 var145:0 var144:0 var142:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r39 r40 / SC / d=21
+
+If holds: var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:32 var147:0 var146:0 var145:0 var144:0 var142:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r39 / SC / d=22
+
+If holds: var82:1 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:32 var147:0 var146:0 var145:0 var144:0 var142:0 var130:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r39 / SC / d=22
+
+If holds: var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var32:0 var0:31 var147:0 var146:0 var145:0 var144:0 var142:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r38 r39 / SC / d=23
+
+If holds: var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:31 var147:0 var146:0 var145:0 var144:0 var142:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r38 / SC / d=24
+
+If holds: var81:1 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:31 var147:0 var146:0 var145:0 var144:0 var142:0 var129:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r38 / SC / d=24
+
+If holds: var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var31:0 var0:30 var147:0 var146:0 var145:0 var144:0 var142:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r37 r38 / SC / d=25
+
+If holds: var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:30 var147:0 var146:0 var145:0 var144:0 var142:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r37 / SC / d=26
+
+If holds: var80:1 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:30 var147:0 var146:0 var145:0 var144:0 var142:0 var128:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r37 / SC / d=26
+
+If holds: var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var30:0 var0:29 var147:0 var146:0 var145:0 var144:0 var142:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r36 r37 / SC / d=27
+
+If holds: var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:29 var147:0 var146:0 var145:0 var144:0 var142:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r36 / SC / d=28
+
+If holds: var79:1 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:29 var147:0 var146:0 var145:0 var144:0 var142:0 var127:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r36 / SC / d=28
+
+If holds: var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var29:0 var0:28 var147:0 var146:0 var145:0 var144:0 var142:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r35 r36 / SC / d=29
+
+If holds: var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:28 var147:0 var146:0 var145:0 var144:0 var142:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r35 / SC / d=30
+
+If holds: var78:1 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:28 var147:0 var146:0 var145:0 var144:0 var142:0 var126:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r35 / SC / d=30
+
+If holds: var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var28:0 var0:27 var147:0 var146:0 var145:0 var144:0 var142:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r34 r35 / SC / d=31
+
+If holds: var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:27 var147:0 var146:0 var145:0 var144:0 var142:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r34 / SC / d=32
+
+If holds: var77:1 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:27 var147:0 var146:0 var145:0 var144:0 var142:0 var125:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r34 / SC / d=32
+
+If holds: var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var27:0 var0:26 var147:0 var146:0 var145:0 var144:0 var142:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r33 r34 / SC / d=33
+
+If holds: var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:26 var147:0 var146:0 var145:0 var144:0 var142:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r33 / SC / d=34
+
+If holds: var76:1 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:26 var147:0 var146:0 var145:0 var144:0 var142:0 var124:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r33 / SC / d=34
+
+If holds: var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var26:0 var0:25 var147:0 var146:0 var145:0 var144:0 var142:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r32 r33 / SC / d=35
+
+If holds: var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:25 var147:0 var146:0 var145:0 var144:0 var142:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r32 / SC / d=36
+
+If holds: var75:1 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:25 var147:0 var146:0 var145:0 var144:0 var142:0 var123:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r32 / SC / d=36
+
+If holds: var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var25:0 var0:24 var147:0 var146:0 var145:0 var144:0 var142:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r31 r32 / SC / d=37
+
+If holds: var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:24 var147:0 var146:0 var145:0 var144:0 var142:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r31 / SC / d=38
+
+If holds: var74:1 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:24 var147:0 var146:0 var145:0 var144:0 var142:0 var122:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r31 / SC / d=38
+
+If holds: var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var24:0 var0:23 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r30 r31 / SC / d=39
+
+If holds: var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:23 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r30 / SC / d=40
+
+If holds: var73:1 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:23 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var121:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r30 / SC / d=40
+
+If holds: var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var22:0 var0:21 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r29 r30 / SC / d=41
+
+If holds: var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:21 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r29 / SC / d=42
+
+If holds: var71:1 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:21 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var119:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r29 / SC / d=42
+
+If holds: var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var21:0 var0:20 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r28 r29 / SC / d=43
+
+If holds: var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:20 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r28 / SC / d=44
+
+If holds: var70:1 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:20 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var118:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r28 / SC / d=44
+
+If holds: var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var20:0 var0:19 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r27 r28 / SC / d=45
+
+If holds: var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:19 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r27 / SC / d=46
+
+If holds: var69:1 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:19 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var117:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r27 / SC / d=46
+
+If holds: var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var19:0 var0:18 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r26 r27 / SC / d=47
+
+If holds: var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:18 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r26 / SC / d=48
+
+If holds: var68:1 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:18 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var116:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r26 / SC / d=48
+
+If holds: var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var18:0 var0:17 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r25 r26 / SC / d=49
+
+If holds: var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:17 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r25 / SC / d=50
+
+If holds: var67:1 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:17 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var115:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r25 / SC / d=50
+
+If holds: var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var17:0 var0:16 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r24 r25 / SC / d=51
+
+If holds: var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:16 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r24 / SC / d=52
+
+If holds: var66:1 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:16 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var114:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r24 / SC / d=52
+
+If holds: var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var16:0 var0:15 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r23 r24 / SC / d=53
+
+If holds: var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:15 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r23 / SC / d=54
+
+If holds: var65:1 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:15 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var113:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r23 / SC / d=54
+
+If holds: var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var15:0 var0:14 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r22 r23 / SC / d=55
+
+If holds: var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:14 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r22 / SC / d=56
+
+If holds: var64:1 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:14 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var112:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r22 / SC / d=56
+
+If holds: var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var14:0 var0:13 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r21 r22 / SC / d=57
+
+If holds: var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:13 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r21 / SC / d=58
+
+If holds: var63:1 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:13 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var111:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r21 / SC / d=58
+
+If holds: var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var13:0 var0:12 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r20 r21 / SC / d=59
+
+If holds: var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:12 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r20 / SC / d=60
+
+If holds: var62:1 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:12 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var110:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r20 / SC / d=60
+
+If holds: var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var11:0 var0:10 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r19 r20 / SC / d=61
+
+If holds: var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:10 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r19 / SC / d=62
+
+If holds: var60:1 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:10 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var108:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r19 / SC / d=62
+
+If holds: var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var10:0 var0:9 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r18 r19 / SC / d=63
+
+If holds: var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:9 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r18 / SC / d=64
+
+If holds: var59:1 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:9 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var107:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r18 / SC / d=64
+
+If holds: var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var9:0 var0:8 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r17 r18 / SC / d=65
+
+If holds: var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:8 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r17 / SC / d=66
+
+If holds: var58:1 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:8 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var106:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r17 / SC / d=66
+
+If holds: var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var8:0 var0:7 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r16 r17 / SC / d=67
+
+If holds: var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:7 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r16 / SC / d=68
+
+If holds: var57:1 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:7 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var105:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r16 / SC / d=68
+
+If holds: var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var7:0 var0:6 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r15 r16 / SC / d=69
+
+If holds: var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:6 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r15 / SC / d=70
+
+If holds: var56:1 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:6 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var104:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r15 / SC / d=70
+
+If holds: var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var6:0 var0:5 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r14 r15 / SC / d=71
+
+If holds: var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:5 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r14 / SC / d=72
+
+If holds: var55:1 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:5 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var103:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r14 / SC / d=72
+
+If holds: var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var5:0 var0:4 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r13 r14 / SC / d=73
+
+If holds: var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:4 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r13 / SC / d=74
+
+If holds: var54:1 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:4 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var102:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r13 / SC / d=74
+
+If holds: var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var4:0 var0:3 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var101:0 var100:0 var99:0 var109:0
+Execute: move_left_right r12 r13 / SC / d=75
+
+If holds: var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:3 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var101:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r12 / SC / d=76
+
+If holds: var53:1 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:3 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var101:0 var100:0 var99:0 var109:0
+Execute: unlock_door r12 / SC / d=76
+
+If holds: var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var3:0 var0:2 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var100:0 var99:0 var109:0
+Execute: move_left_right r11 r12 / SC / d=77
+
+If holds: var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:2 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var100:0 var99:0 var109:0
+Execute: turn_light_on r11 / SC / d=78
+
+If holds: var52:1 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:2 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var100:0 var99:0 var109:0
+Execute: unlock_door r11 / SC / d=78
+
+If holds: var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var2:0 var0:1 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var99:0 var109:0
+Execute: move_left_right r10 r11 / SC / d=79
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:1 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var99:0 var109:0
+Execute: turn_light_on r10 / SC / d=80
+
+If holds: var51:1 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var0:1 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var99:0 var109:0
+Execute: unlock_door r10 / SC / d=80
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var49:0 var0:49 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var109:0
+Execute: move_left_right r9 r10 / SC / d=81
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var98:0 var0:49 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var109:0
+Execute: turn_light_on r9 / SC / d=82
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var98:1 var0:49 var147:0 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var109:0
+Execute: unlock_door r9 / SC / d=82
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var98:0 var48:0 var0:48 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var109:0
+Execute: move_left_right r8 r9 / SC / d=83
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var97:0 var98:0 var0:48 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var109:0
+Execute: turn_light_on r8 / SC / d=84
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var97:1 var98:0 var0:48 var146:0 var145:0 var144:0 var142:0 var131:0 var120:0 var109:0
+Execute: unlock_door r8 / SC / d=84
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var97:0 var98:0 var47:0 var0:47 var145:0 var144:0 var142:0 var131:0 var120:0 var109:0
+Execute: move_left_right r7 r8 / SC / d=85
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var96:0 var97:0 var98:0 var0:47 var145:0 var144:0 var142:0 var131:0 var120:0 var109:0
+Execute: turn_light_on r7 / SC / d=86
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var96:1 var97:0 var98:0 var0:47 var145:0 var144:0 var142:0 var131:0 var120:0 var109:0
+Execute: unlock_door r7 / SC / d=86
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var96:0 var97:0 var98:0 var46:0 var0:46 var144:0 var142:0 var131:0 var120:0 var109:0
+Execute: move_left_right r6 r7 / SC / d=87
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var95:0 var96:0 var97:0 var98:0 var0:46 var144:0 var142:0 var131:0 var120:0 var109:0
+Execute: turn_light_on r6 / SC / d=88
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var95:1 var96:0 var97:0 var98:0 var0:46 var144:0 var142:0 var131:0 var120:0 var109:0
+Execute: unlock_door r6 / SC / d=88
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var95:0 var96:0 var97:0 var98:0 var45:0 var0:44 var142:0 var131:0 var120:0 var109:0
+Execute: move_left_right r5 r6 / SC / d=89
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var0:44 var142:0 var131:0 var120:0 var109:0
+Execute: turn_light_on r5 / SC / d=90
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:1 var95:0 var96:0 var97:0 var98:0 var0:44 var142:0 var131:0 var120:0 var109:0
+Execute: unlock_door r5 / SC / d=90
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var34:0 var0:33 var131:0 var120:0 var109:0
+Execute: move_left_right r4 r5 / SC / d=91
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var83:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var0:33 var131:0 var120:0 var109:0
+Execute: turn_light_on r4 / SC / d=92
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var83:1 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var0:33 var131:0 var120:0 var109:0
+Execute: unlock_door r4 / SC / d=92
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var83:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var23:0 var0:22 var120:0 var109:0
+Execute: move_left_right r3 r4 / SC / d=93
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var72:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var83:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var0:22 var120:0 var109:0
+Execute: turn_light_on r3 / SC / d=94
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var72:1 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var83:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var0:22 var120:0 var109:0
+Execute: unlock_door r3 / SC / d=94
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var72:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var83:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var12:0 var0:11 var109:0
+Execute: move_left_right r2 r3 / SC / d=95
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var61:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var72:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var83:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var0:11 var109:0
+Execute: turn_light_on r2 / SC / d=96
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var61:1 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var72:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var83:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var0:11 var109:0
+Execute: unlock_door r2 / SC / d=96
+
+If holds: var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var61:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var72:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var83:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var1:0 var0:0
+Execute: move_left_right r1 r2 / SC / d=97
+
+If holds: var50:0 var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var61:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var72:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var83:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var0:0
+Execute: turn_light_on r1 / SC / d=98
+
+If holds: var50:1 var51:0 var52:0 var53:0 var54:0 var55:0 var56:0 var57:0 var58:0 var59:0 var60:0 var61:0 var62:0 var63:0 var64:0 var65:0 var66:0 var67:0 var68:0 var69:0 var70:0 var71:0 var72:0 var73:0 var74:0 var75:0 var76:0 var77:0 var78:0 var79:0 var80:0 var81:0 var82:0 var83:0 var84:0 var85:0 var86:0 var87:0 var88:0 var89:0 var90:0 var91:0 var92:0 var93:0 var94:0 var95:0 var96:0 var97:0 var98:0 var0:0
+Execute: unlock_door r1 / SC / d=98

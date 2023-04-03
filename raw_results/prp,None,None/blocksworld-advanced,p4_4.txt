@@ -1,0 +1,196 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 67 rules.
+Computing model... [0.000s CPU, 0.004s wall-clock]
+390 relevant atoms
+428 auxiliary atoms
+818 final queue length
+1388 total queue pushes
+Completing instantiation... [0.000s CPU, 0.005s wall-clock]
+Instantiating: [0.000s CPU, 0.012s wall-clock]
+Computing fact groups...
+Finding invariants...
+10 initial candidates
+Finding invariants: [0.010s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+5 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.002s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.006s wall-clock]
+140 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+Removed false proposition: 5 = <none of those>
+Removed false proposition: 6 = <none of those>
+Removed false proposition: 7 = <none of those>
+Removed false proposition: 8 = <none of those>
+0 operators removed
+4 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Translator variables: 9
+Translator derived variables: 0
+Translator facts: 34
+Translator goal facts: 7
+Translator mutex groups: 5
+Translator total mutex groups size: 29
+Translator operators: 224
+Translator axioms: 0
+Translator task size: 1531
+Translator peak memory: 20340 KB
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.010s CPU, 0.028s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+9 variables of 9 necessary
+1 of 5 mutex groups necessary.
+224 of 224 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 34
+Preprocessor derived variables: 0
+Preprocessor task size: 1507
+Writing output...
+done
+
+
+3. Running search
+./planner_prp/src/search/downward ipc policy-repair --dump-policy 2
+This is a unit task.
+./planner_prp/src/search/downward-release --heuristic "h=ff(cost_type=1)" --search "lazy_greedy([h],preferred=[h])" --random-seed 814102613 --dump-policy 2 < output
+Simplifying transitions... done!
+Variables: 9
+Bytes per state: 4
+
+Total allotted time (s): 1800
+Max time for core JIC (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+ !! Warning: Disabling the simplification of unary operators !!
+ !!           to keep the non-deterministic planning sound.  !!
+Generated 37 state(s).
+Dead ends: 0 state(s). (0 recorded)
+pick-up_DETDUP_1 b1 b3 (1)
+pick-up_DETDUP_0 b3 b4 (1)
+put-on-block_DETDUP_0 b3 b1 (1)
+pick-up-from-table_DETDUP_1 b2 (1)
+put-on-block_DETDUP_0 b2 b4 (1)
+Plan length: 5 step(s).
+Plan cost: 5
+Initial search time: 0s
+Initial total time: 0s
+
+
+Creating the simulator...
+
+
+Regressing the plan...
+
+
+Generating an initial policy...
+
+
+Computing just-in-time repairs...
+Generated 4 state(s).
+Dead ends: 0 state(s).
+Generated 5 state(s).
+Dead ends: 0 state(s).
+
+Could not close 0 of 2 open leaf states.
+Investigated 10 states for the strong cyclic plan.
+Went through another policy of score 1
+
+Could not close 0 of 0 open leaf states.
+Investigated 1 states for the strong cyclic plan.
+Marking policy strong cyclic.
+Went through another policy of score 1
+
+
+Running a final SCD check...
+
+
+Running the simulation...
+...achieved the goal!
+
+
+
+                  -{ General Statistics }-
+
+        FSAP Combination Count: 0
+       Monotonicity violations: 0
+             Successful states: 11 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 11 +/- 0
+             Recorded Deadends: 0
+            State-Action Pairs: 8
+  Forbidden State-Action Pairs: 0
+               Strongly Cyclic: True
+                  Policy Score: 1
+                     Succeeded: 1 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0s
+                   Search Time: 0s
+           Policy Construction: 0s
+ Evaluating the policy quality: 0s
+              Using the policy: 0s
+          Just-in-case Repairs: 0s
+                Simulator time: 0s
+                    Total time: 0s
+
+
+
+Dumping the policy and fsaps...
+Strong cyclic plan found.
+Peak memory: 5100 KB
+
+If holds: var5:5 var8:5 var6:4 var1:0 var7:1 var2:0 var4:0
+Execute: goal / SC / d=0
+
+If holds: var3:0 var5:5 var8:5 var6:0 var7:1 var2:0
+Execute: put-on-block b2 b4 / SC / d=1
+
+If holds: var3:0 var5:5 var8:5 var6:5 var1:0 var7:1 var2:0 var4:0
+Execute: pick-up-from-table b2 / SC / d=2
+
+If holds: var0:0 var3:0 var5:5 var8:5 var6:5 var1:0 var7:0
+Execute: put-on-block b3 b1 / SC / d=3
+
+If holds: var0:0 var5:5 var8:5 var6:5 var1:0 var7:4 var2:0 var4:0
+Execute: pick-up b3 b4 / SC / d=4
+
+If holds: var0:0 var3:0 var5:5 var8:5 var6:5 var1:0 var7:5 var2:0 var4:0
+Execute: pick-up-from-table b3 / SC / d=4
+
+If holds: var0:0 var5:3 var8:5 var6:5 var1:0 var7:4 var4:0
+Execute: pick-up b1 b3 / SC / d=5
+
+If holds: var5:0 var8:5 var6:5 var1:0 var7:4 var2:0
+Execute: put-down b1 / SC / d=5

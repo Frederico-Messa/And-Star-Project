@@ -1,0 +1,18 @@
+New f: 1
+New f: 2
+New f: 3
+
+Termination: Solved.
+Final Memory Usage: 0.00793805
+Total Elapsed Time: 0.0180552
+Number of considered policies: 1036
+Number of inserted policies: 859
+Number of removed policies: 97
+Number of expanded policies: 96
+Number of removed policies with f<f*: 11
+
+An Optimal-Size Policy:
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l12-2), var2 = Atom monkey-at(m2, l12-2), var3 = Atom monkey-at(m3, l11-2), var4 = Atom person-alive(), var5 = Atom person-at(l21-1)] -> walk-on-bridge l21-1 l22-2
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l12-2), var2 = Atom monkey-at(m2, l12-2), var3 = Atom monkey-at(m3, l11-2), var4 = Atom person-alive(), var5 = Atom person-at(l22-2)] -> move-person l22-2 l21-2
+[var0 = Atom bridge-clear(), var1 = Atom monkey-at(m1, l12-2), var2 = Atom monkey-at(m2, l12-2), var3 = Atom monkey-at(m3, l11-2), var4 = Atom person-alive(), var5 = Atom person-at(l22-1)] -> move-person l22-1 l21-1
+Optimal Size: 3

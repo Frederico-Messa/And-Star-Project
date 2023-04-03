@@ -1,0 +1,26 @@
+New f: 1
+New f: 2
+New f: 3
+New f: 4
+New f: 5
+New f: 6
+New f: 7
+
+Termination: Solved.
+Final Memory Usage: 0.00752435
+Total Elapsed Time: 0.00447835
+Number of considered policies: 738
+Number of inserted policies: 453
+Number of removed policies: 208
+Number of expanded policies: 207
+Number of removed policies with f<f*: 94
+
+An Optimal-Size Policy:
+[var0 = Atom person-alive(), var1 = Atom person-at(l43-2)] -> move-person l43-2 l42-2
+[var0 = Atom person-alive(), var1 = Atom person-at(l44-2)] -> move-person l44-2 l43-2
+[var0 = Atom person-alive(), var1 = Atom person-at(l42-1)] -> move-person l42-1 l41-1
+[var0 = Atom person-alive(), var1 = Atom person-at(l41-1)] -> walk-on-bridge l41-1 l44-2
+[var0 = Atom person-alive(), var1 = Atom person-at(l43-1)] -> move-person l43-1 l42-1
+[var0 = Atom person-alive(), var1 = Atom person-at(l42-2)] -> move-person l42-2 l41-2
+[var0 = Atom person-alive(), var1 = Atom person-at(l44-1)] -> move-person l44-1 l43-1
+Optimal Size: 7

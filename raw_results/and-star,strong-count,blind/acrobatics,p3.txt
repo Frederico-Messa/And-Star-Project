@@ -1,0 +1,42 @@
+New f: 1
+New f: 2
+New f: 3
+New f: 4
+New f: 5
+New f: 6
+New f: 7
+New f: 8
+New f: 9
+New f: 10
+New f: 11
+New f: 12
+New f: 13
+New f: 14
+New f: 15
+
+Termination: Solved.
+Final Memory Usage: 0.00684851
+Total Elapsed Time: 0.000367207
+Number of considered policies: 84
+Number of inserted policies: 50
+Number of removed policies: 47
+Number of expanded policies: 46
+Number of removed policies with f<f*: 45
+
+An Optimal-Size Policy:
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p7), var2 = NegatedAtom up()] -> walk-left p7 p6
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p0), var2 = NegatedAtom up()] -> climb p0
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p0), var2 = Atom up()] -> walk-on-beam p0 p1
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p1), var2 = NegatedAtom up()] -> walk-left p1 p0
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p3), var2 = Atom up()] -> walk-on-beam p3 p4
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p1), var2 = Atom up()] -> walk-on-beam p1 p2
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p2), var2 = NegatedAtom up()] -> walk-left p2 p1
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p6), var2 = NegatedAtom up()] -> walk-left p6 p5
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p2), var2 = Atom up()] -> walk-on-beam p2 p3
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p3), var2 = NegatedAtom up()] -> walk-left p3 p2
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p6), var2 = Atom up()] -> walk-on-beam p6 p7
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p4), var2 = Atom up()] -> walk-on-beam p4 p5
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p4), var2 = NegatedAtom up()] -> walk-left p4 p3
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p5), var2 = NegatedAtom up()] -> walk-left p5 p4
+[var0 = NegatedAtom broken-leg(), var1 = Atom position(p5), var2 = Atom up()] -> walk-on-beam p5 p6
+Optimal Size: 15

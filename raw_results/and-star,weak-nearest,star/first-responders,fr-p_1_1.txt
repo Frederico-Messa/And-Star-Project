@@ -1,0 +1,16 @@
+New f: 3
+
+Termination: Solved.
+Final Memory Usage: 0.00684851
+Total Elapsed Time: 0.000214789
+Number of considered policies: 38
+Number of inserted policies: 28
+Number of removed policies: 10
+Number of expanded policies: 9
+Number of removed policies with f<f*: 0
+
+An Optimal-Size Policy:
+[var0 = Atom nfire(l1), var1 = Atom victim-at(v1, l1), var2 = NegatedAtom have-water(f1), var3 = NegatedAtom victim-status(v1, healthy), var4 = Atom victim-status(v1, hurt)] -> treat-victim-at-hospital v1 l1
+[var0 = Atom fire(l1), var1 = Atom victim-at(v1, l1), var2 = Atom have-water(f1), var3 = NegatedAtom victim-status(v1, healthy), var4 = Atom victim-status(v1, hurt)] -> unload-fire-unit f1 l1 l1
+[var0 = Atom fire(l1), var1 = Atom victim-at(v1, l1), var2 = NegatedAtom have-water(f1), var3 = NegatedAtom victim-status(v1, healthy), var4 = Atom victim-status(v1, hurt)] -> load-fire-unit f1 l1
+Optimal Size: 3

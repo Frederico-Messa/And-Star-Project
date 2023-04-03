@@ -1,0 +1,20 @@
+New f: 3
+New f: 4
+New f: 5
+
+Termination: Solved.
+Final Memory Usage: 0.00684851
+Total Elapsed Time: 0.000294268
+Number of considered policies: 29
+Number of inserted policies: 24
+Number of removed policies: 12
+Number of expanded policies: 11
+Number of removed policies with f<f*: 6
+
+An Optimal-Size Policy:
+[var0 = Atom is-focal-point(p11), var1 = Atom is-target(p31)] -> slew p11 p22 north-east
+[var0 = Atom is-focal-point(p41), var1 = Atom is-target(p31)] -> slew p41 p11
+[var0 = Atom is-focal-point(p31), var1 = Atom is-target(p31)] -> take-image p31 p41
+[var0 = Atom is-focal-point(p22), var1 = Atom is-target(p31)] -> slew p22 p31 south-east
+[var0 = Atom is-focal-point(p13), var1 = Atom is-target(p31)] -> slew p13 p22 south-east
+Optimal Size: 5

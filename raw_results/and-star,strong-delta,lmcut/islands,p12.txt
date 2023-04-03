@@ -1,0 +1,18 @@
+New f: 1
+New f: 2
+New f: 3
+
+Termination: Solved.
+Final Memory Usage: 0.043819
+Total Elapsed Time: 1.69312
+Number of considered policies: 34396
+Number of inserted policies: 32431
+Number of removed policies: 1115
+Number of expanded policies: 1114
+Number of removed policies with f<f*: 36
+
+An Optimal-Size Policy:
+[var0 = Atom bridge-clear(), var1 = NegatedAtom bridge-occupied(), var2 = Atom monkey-at(m1, l22-2), var3 = Atom monkey-at(m10, l11-1), var4 = Atom monkey-at(m11, l12-1), var5 = Atom monkey-at(m2, l22-1), var6 = Atom monkey-at(m3, l11-1), var7 = Atom monkey-at(m4, l21-2), var8 = Atom monkey-at(m5, l11-1), var9 = Atom monkey-at(m6, l22-1), var10 = Atom monkey-at(m7, l22-1), var11 = Atom monkey-at(m8, l21-1), var12 = Atom monkey-at(m9, l21-2), var13 = Atom person-alive(), var14 = Atom person-at(l22-2)] -> move-person l22-2 l21-2
+[var0 = Atom bridge-clear(), var1 = NegatedAtom bridge-occupied(), var2 = Atom monkey-at(m1, l22-2), var3 = Atom monkey-at(m10, l11-1), var4 = Atom monkey-at(m11, l12-1), var5 = Atom monkey-at(m2, l22-1), var6 = Atom monkey-at(m3, l11-1), var7 = Atom monkey-at(m4, l21-2), var8 = Atom monkey-at(m5, l11-1), var9 = Atom monkey-at(m6, l22-1), var10 = Atom monkey-at(m7, l22-1), var11 = Atom monkey-at(m8, l21-1), var12 = Atom monkey-at(m9, l21-2), var13 = Atom person-alive(), var14 = Atom person-at(l21-1)] -> walk-on-bridge l21-1 l22-2
+[var0 = Atom bridge-clear(), var1 = NegatedAtom bridge-occupied(), var2 = Atom monkey-at(m1, l22-2), var3 = Atom monkey-at(m10, l11-1), var4 = Atom monkey-at(m11, l12-1), var5 = Atom monkey-at(m2, l22-1), var6 = Atom monkey-at(m3, l11-1), var7 = Atom monkey-at(m4, l21-2), var8 = Atom monkey-at(m5, l11-1), var9 = Atom monkey-at(m6, l22-1), var10 = Atom monkey-at(m7, l22-1), var11 = Atom monkey-at(m8, l21-1), var12 = Atom monkey-at(m9, l21-2), var13 = Atom person-alive(), var14 = Atom person-at(l22-1)] -> move-person l22-1 l21-1
+Optimal Size: 3

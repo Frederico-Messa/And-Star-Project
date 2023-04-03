@@ -1,0 +1,245 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.001s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.002s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 70 rules.
+Computing model... [0.010s CPU, 0.011s wall-clock]
+1728 relevant atoms
+1097 auxiliary atoms
+2825 final queue length
+3863 total queue pushes
+Completing instantiation... [0.020s CPU, 0.017s wall-clock]
+Instantiating: [0.030s CPU, 0.032s wall-clock]
+Computing fact groups...
+Finding invariants...
+21 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+14 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.003s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.020s CPU, 0.021s wall-clock]
+302 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+Removed false proposition: 0 = <none of those>
+Removed false proposition: None = Atom fire(l2)
+Removed true proposition: None = Atom nfire(l2)
+Removed false proposition: None = <none of those>
+Removed false proposition: None = Atom fire(l3)
+Removed true proposition: None = Atom nfire(l3)
+Removed false proposition: None = <none of those>
+Removed false proposition: None = Atom fire(l4)
+Removed true proposition: None = Atom nfire(l4)
+Removed false proposition: None = <none of those>
+Removed false proposition: None = Atom fire(l5)
+Removed true proposition: None = Atom nfire(l5)
+Removed false proposition: None = <none of those>
+Removed false proposition: None = Atom fire(l6)
+Removed true proposition: None = Atom nfire(l6)
+Removed false proposition: None = <none of those>
+Removed false proposition: None = Atom fire(l7)
+Removed true proposition: None = Atom nfire(l7)
+Removed false proposition: None = <none of those>
+Removed false proposition: 1 = <none of those>
+Removed false proposition: 2 = <none of those>
+Removed false proposition: 3 = <none of those>
+Removed false proposition: 4 = <none of those>
+Removed false proposition: 5 = <none of those>
+Removed false proposition: 6 = <none of those>
+Removed false proposition: 7 = <none of those>
+Removed false proposition: 8 = <none of those>
+Removed false proposition: 9 = <none of those>
+Removed false proposition: 14 = <none of those>
+Removed false proposition: 15 = <none of those>
+Removed false proposition: 16 = <none of those>
+Removed false proposition: 17 = <none of those>
+Removed false proposition: 18 = <none of those>
+Removed false proposition: 19 = <none of those>
+Removed false proposition: 20 = <none of those>
+0 operators removed
+35 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.003s wall-clock]
+Translator variables: 31
+Translator derived variables: 0
+Translator facts: 177
+Translator goal facts: 6
+Translator mutex groups: 17
+Translator total mutex groups size: 149
+Translator operators: 1130
+Translator axioms: 0
+Translator task size: 5157
+Translator peak memory: 23160 KB
+Writing output... [0.000s CPU, 0.004s wall-clock]
+Done! [0.060s CPU, 0.065s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+31 variables of 31 necessary
+0 of 17 mutex groups necessary.
+1130 of 1130 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 177
+Preprocessor derived variables: 0
+Preprocessor task size: 5008
+Writing output...
+done
+
+
+3. Running search
+./planner_prp/src/search/downward ipc policy-repair --dump-policy 2
+This is a unit task.
+./planner_prp/src/search/downward-release --heuristic "h=ff(cost_type=1)" --search "lazy_greedy([h],preferred=[h])" --random-seed 814102613 --dump-policy 2 < output
+Simplifying transitions... done!
+Variables: 31
+Bytes per state: 12
+
+Total allotted time (s): 1800
+Max time for core JIC (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+ !! Warning: Disabling the simplification of unary operators !!
+ !!           to keep the non-deterministic planning sound.  !!
+Generated 849 state(s).
+Dead ends: 0 state(s). (0 recorded)
+load-fire-unit f3 l4 (1)
+unload-fire-unit_DETDUP_1 f3 l4 l1 (1)
+treat-victim-on-scene-fire_DETDUP_1 f1 l7 v5 (1)
+treat-victim-on-scene-fire_DETDUP_1 f1 l7 v4 (1)
+treat-victim-on-scene-fire_DETDUP_1 f1 l7 v1 (1)
+drive-medical-unit m4 l3 l7 (1)
+load-medical-unit m4 l7 v3 (1)
+load-medical-unit m4 l7 v2 (1)
+drive-medical-unit m4 l7 l3 (1)
+unload-medical-unit m4 l3 v3 (1)
+treat-victim-at-hospital v3 l3 (1)
+unload-medical-unit m4 l3 v2 (1)
+treat-victim-at-hospital v2 l3 (1)
+Plan length: 13 step(s).
+Plan cost: 13
+Initial search time: 0s
+Initial total time: 0s
+
+
+Creating the simulator...
+
+
+Regressing the plan...
+
+
+Generating an initial policy...
+
+
+Computing just-in-time repairs...
+
+Could not close 0 of 0 open leaf states.
+Investigated 1 states for the strong cyclic plan.
+Marking policy strong cyclic.
+Went through another policy of score 1
+
+
+Running a final SCD check...
+
+
+Running the simulation...
+...achieved the goal!
+
+
+
+                  -{ General Statistics }-
+
+        FSAP Combination Count: 0
+       Monotonicity violations: 0
+             Successful states: 18 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 18 +/- 0
+             Recorded Deadends: 0
+            State-Action Pairs: 14
+  Forbidden State-Action Pairs: 0
+               Strongly Cyclic: True
+                  Policy Score: 1
+                     Succeeded: 1 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0s
+                   Search Time: 0s
+           Policy Construction: 0s
+ Evaluating the policy quality: 0.01s
+              Using the policy: 0.01s
+          Just-in-case Repairs: 0.01s
+                Simulator time: 0s
+                    Total time: 0.01s
+
+
+
+Dumping the policy and fsaps...
+Strong cyclic plan found.
+Peak memory: 7196 KB
+
+If holds: var0:1 var26:0 var24:0 var29:0 var27:0 var21:0
+Execute: goal / SC / d=0
+
+If holds: var0:1 var26:0 var6:9 var29:0 var27:0 var21:0
+Execute: treat-victim-at-hospital v2 l3 / SC / d=1
+
+If holds: var0:1 var17:2 var26:0 var6:3 var29:0 var27:0 var21:0
+Execute: unload-medical-unit m4 l3 v2 / SC / d=2
+
+If holds: var0:1 var17:2 var7:9 var6:3 var29:0 var27:0 var21:0
+Execute: treat-victim-at-hospital v3 l3 / SC / d=3
+
+If holds: var0:1 var17:2 var7:3 var6:3 var29:0 var27:0 var21:0
+Execute: unload-medical-unit m4 l3 v3 / SC / d=4
+
+If holds: var0:1 var17:6 var7:3 var6:3 var29:0 var27:0 var21:0
+Execute: drive-medical-unit m4 l7 l3 / SC / d=5
+
+If holds: var0:1 var17:6 var7:3 var6:13 var29:0 var27:0 var21:0
+Execute: load-medical-unit m4 l7 v2 / SC / d=6
+
+If holds: var0:1 var17:6 var7:13 var6:13 var29:0 var27:0 var21:0
+Execute: load-medical-unit m4 l7 v3 / SC / d=7
+
+If holds: var0:1 var17:2 var7:13 var6:13 var29:0 var27:0 var21:0
+Execute: drive-medical-unit m4 l3 l7 / SC / d=8
+
+If holds: var1:6 var0:1 var17:2 var7:13 var6:13 var5:13 var29:0 var27:0 var22:0
+Execute: treat-victim-on-scene-fire f1 l7 v1 / SC / d=9
+
+If holds: var1:6 var0:1 var17:2 var8:13 var7:13 var6:13 var5:13 var29:0 var28:0 var22:0
+Execute: treat-victim-on-scene-fire f1 l7 v4 / SC / d=10
+
+If holds: var1:6 var0:1 var17:2 var9:13 var8:13 var7:13 var6:13 var5:13 var30:0 var28:0 var22:0
+Execute: treat-victim-on-scene-fire f1 l7 v5 / SC / d=11
+
+If holds: var1:6 var3:3 var12:0 var0:0 var17:2 var9:13 var8:13 var7:13 var6:13 var5:13 var30:0 var28:0 var22:0
+Execute: unload-fire-unit f3 l4 l1 / SC / d=12
+
+If holds: var1:6 var3:3 var0:0 var17:2 var9:13 var8:13 var7:13 var6:13 var5:13 var30:0 var28:0 var22:0
+Execute: load-fire-unit f3 l4 / SC / d=13

@@ -1,0 +1,18 @@
+New f: 3
+New f: 4
+
+Termination: Solved.
+Final Memory Usage: 0.00725402
+Total Elapsed Time: 0.00208777
+Number of considered policies: 13
+Number of inserted policies: 12
+Number of removed policies: 5
+Number of expanded policies: 4
+Number of removed policies with f<f*: 1
+
+An Optimal-Size Policy:
+[var0 = Atom clear(b1), var1 = Atom clear(b2), var2 = Atom clear(b3), var3 = Atom emptyhand(), var4 = Atom on-table(b1), var5 = Atom on-table(b2), var6 = Atom on-table(b3)] -> pick-up-from-table b1
+[var0 = Atom clear(b1), var1 = Atom clear(b2), var2 = Atom clear(b3), var3 = NegatedAtom emptyhand(), var4 = Atom holding(b1), var5 = Atom on-table(b2), var6 = Atom on-table(b3)] -> put-on-block b1 b2
+[var0 = Atom clear(b1), var1 = NegatedAtom clear(b2), var2 = Atom clear(b3), var3 = NegatedAtom emptyhand(), var4 = Atom on-table(b1), var5 = Atom holding(b2), var6 = Atom on-table(b3)] -> put-down b2
+[var0 = Atom clear(b1), var1 = Atom clear(b2), var2 = NegatedAtom clear(b3), var3 = Atom emptyhand(), var4 = Atom on-table(b1), var5 = Atom on(b2, b3), var6 = Atom on-table(b3)] -> pick-up b2 b3
+Optimal Size: 4

@@ -1,0 +1,642 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.013s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 67 rules.
+Computing model... [2.070s CPU, 2.064s wall-clock]
+246755 relevant atoms
+142038 auxiliary atoms
+388793 final queue length
+761523 total queue pushes
+Completing instantiation... [7.240s CPU, 7.243s wall-clock]
+Instantiating: [9.380s CPU, 9.385s wall-clock]
+Computing fact groups...
+Finding invariants...
+10 initial candidates
+Finding invariants: [0.010s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.002s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.001s wall-clock]
+Choosing groups...
+40 uncovered facts
+Choosing groups: [0.000s CPU, 0.002s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.020s CPU, 0.013s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.001s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.270s CPU, 0.269s wall-clock]
+Translating task: [6.830s CPU, 6.833s wall-clock]
+120120 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+Removed false proposition: 40 = <none of those>
+Removed false proposition: 41 = <none of those>
+Removed false proposition: 42 = <none of those>
+Removed false proposition: 43 = <none of those>
+Removed false proposition: 44 = <none of those>
+Removed false proposition: 45 = <none of those>
+Removed false proposition: 46 = <none of those>
+Removed false proposition: 47 = <none of those>
+Removed false proposition: 48 = <none of those>
+Removed false proposition: 49 = <none of those>
+Removed false proposition: 50 = <none of those>
+Removed false proposition: 51 = <none of those>
+Removed false proposition: 52 = <none of those>
+Removed false proposition: 53 = <none of those>
+Removed false proposition: 54 = <none of those>
+Removed false proposition: 55 = <none of those>
+Removed false proposition: 56 = <none of those>
+Removed false proposition: 57 = <none of those>
+Removed false proposition: 58 = <none of those>
+Removed false proposition: 59 = <none of those>
+Removed false proposition: 60 = <none of those>
+Removed false proposition: 61 = <none of those>
+Removed false proposition: 62 = <none of those>
+Removed false proposition: 63 = <none of those>
+Removed false proposition: 64 = <none of those>
+Removed false proposition: 65 = <none of those>
+Removed false proposition: 66 = <none of those>
+Removed false proposition: 67 = <none of those>
+Removed false proposition: 68 = <none of those>
+Removed false proposition: 69 = <none of those>
+Removed false proposition: 70 = <none of those>
+Removed false proposition: 71 = <none of those>
+Removed false proposition: 72 = <none of those>
+Removed false proposition: 73 = <none of those>
+Removed false proposition: 74 = <none of those>
+Removed false proposition: 75 = <none of those>
+Removed false proposition: 76 = <none of those>
+Removed false proposition: 77 = <none of those>
+Removed false proposition: 78 = <none of those>
+0 operators removed
+39 propositions removed
+Detecting unreachable propositions: [0.820s CPU, 0.819s wall-clock]
+Translator variables: 79
+Translator derived variables: 0
+Translator facts: 1679
+Translator goal facts: 49
+Translator mutex groups: 40
+Translator total mutex groups size: 1639
+Translator operators: 180999
+Translator axioms: 0
+Translator task size: 1207883
+Translator peak memory: 793444 KB
+Writing output... [0.880s CPU, 0.977s wall-clock]
+Done! [18.360s CPU, 18.476s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+79 variables of 79 necessary
+1 of 40 mutex groups necessary.
+180999 of 180999 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 1679
+Preprocessor derived variables: 0
+Preprocessor task size: 1206284
+Writing output...
+done
+
+
+3. Running search
+./planner_prp/src/search/downward ipc policy-repair --dump-policy 2
+This is a unit task.
+./planner_prp/src/search/downward-release --heuristic "h=ff(cost_type=1)" --search "lazy_greedy([h],preferred=[h])" --random-seed 814102613 --dump-policy 2 < output
+Simplifying transitions... done!
+Variables: 79
+Bytes per state: 36
+
+Total allotted time (s): 1800
+Max time for core JIC (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+ !! Warning: Disabling the simplification of unary operators !!
+ !!           to keep the non-deterministic planning sound.  !!
+Generated 37090 state(s).
+Dead ends: 0 state(s). (0 recorded)
+pick-tower_DETDUP_1 b33 b37 b12 (1)
+put-down b37 (1)
+pick-tower_DETDUP_1 b8 b38 b17 (1)
+put-on-block_DETDUP_0 b38 b4 (1)
+pick-tower_DETDUP_1 b18 b19 b13 (1)
+put-down b19 (1)
+pick-tower_DETDUP_1 b31 b23 b16 (1)
+put-down b23 (1)
+pick-up_DETDUP_1 b8 b38 (1)
+pick-tower_DETDUP_1 b21 b36 b10 (1)
+put-down b36 (1)
+pick-tower_DETDUP_1 b3 b34 b21 (1)
+put-down b34 (1)
+pick-tower_DETDUP_1 b9 b28 b33 (1)
+put-down b28 (1)
+pick-tower_DETDUP_1 b38 b4 b15 (1)
+put-on-block_DETDUP_0 b4 b12 (1)
+pick-up_DETDUP_0 b1 b35 (1)
+put-on-block_DETDUP_0 b1 b15 (1)
+pick-tower_DETDUP_1 b14 b30 b27 (1)
+put-on-block_DETDUP_0 b30 b16 (1)
+pick-tower_DETDUP_1 b15 b11 b6 (1)
+put-on-block_DETDUP_0 b11 b27 (1)
+pick-up_DETDUP_0 b2 b26 (1)
+put-on-block_DETDUP_0 b2 b23 (1)
+pick-tower_DETDUP_1 b29 b14 b30 (1)
+put-on-block_DETDUP_0 b14 b37 (1)
+pick-tower_DETDUP_1 b1 b15 b11 (1)
+put-on-block_DETDUP_0 b15 b17 (1)
+pick-tower_DETDUP_1 b30 b16 b24 (1)
+put-on-block_DETDUP_0 b16 b38 (1)
+pick-tower_DETDUP_1 b15 b17 b32 (1)
+put-on-block_DETDUP_0 b17 b6 (1)
+pick-tower_DETDUP_1 b22 b39 b3 (1)
+put-on-block_DETDUP_0 b39 b8 (1)
+pick-tower_DETDUP_1 b10 b18 b19 (1)
+put-on-block_DETDUP_0 b18 b3 (1)
+pick-tower_DETDUP_1 b26 b20 b7 (1)
+put-on-block_DETDUP_0 b20 b14 (1)
+pick-tower_DETDUP_1 b17 b6 b29 (1)
+put-on-block_DETDUP_0 b6 b34 (1)
+pick-up_DETDUP_0 b21 b36 (1)
+put-on-block_DETDUP_0 b21 b29 (1)
+pick-up_DETDUP_0 b26 b20 (1)
+put-on-block_DETDUP_0 b26 b32 (1)
+pick-tower_DETDUP_1 b21 b29 b14 (1)
+put-on-block_DETDUP_0 b29 b9 (1)
+pick-tower_DETDUP_1 b18 b3 b34 (1)
+put-on-block_DETDUP_0 b3 b11 (1)
+pick-up_DETDUP_0 b10 b18 (1)
+put-on-block_DETDUP_0 b10 b21 (1)
+pick-tower_DETDUP_1 b29 b9 b28 (1)
+put-on-block_DETDUP_0 b9 b1 (1)
+pick-up-from-table_DETDUP_1 b13 (1)
+put-on-block_DETDUP_0 b13 b30 (1)
+pick-up_DETDUP_0 b5 b22 (1)
+put-on-block_DETDUP_0 b5 b20 (1)
+pick-up_DETDUP_0 b24 b25 (1)
+put-on-block_DETDUP_0 b24 b2 (1)
+pick-up-from-table_DETDUP_1 b25 (1)
+put-on-block_DETDUP_0 b25 b18 (1)
+pick-up_DETDUP_0 b31 b23 (1)
+put-on-block_DETDUP_0 b31 b36 (1)
+pick-up_DETDUP_0 b33 b37 (1)
+put-on-block_DETDUP_0 b33 b35 (1)
+pick-up-from-table_DETDUP_1 b7 (1)
+put-on-block_DETDUP_0 b7 b19 (1)
+pick-tower_DETDUP_1 b38 b4 b12 (1)
+put-down b4 (1)
+pick-up-from-table_DETDUP_1 b12 (1)
+put-on-block_DETDUP_0 b12 b26 (1)
+pick-up-from-table_DETDUP_1 b4 (1)
+put-on-block_DETDUP_0 b4 b12 (1)
+pick-tower_DETDUP_1 b3 b11 b27 (1)
+put-down b11 (1)
+pick-up-from-table_DETDUP_1 b27 (1)
+put-on-block_DETDUP_0 b27 b28 (1)
+pick-up-from-table_DETDUP_1 b11 (1)
+put-on-block_DETDUP_0 b11 b27 (1)
+Plan length: 79 step(s).
+Plan cost: 79
+Initial search time: 7.94s
+Initial total time: 11.36s
+
+
+Creating the simulator...
+
+
+Regressing the plan...
+
+
+Generating an initial policy...
+
+
+Computing just-in-time repairs...
+Generated 62 state(s).
+Dead ends: 0 state(s).
+Generated 62 state(s).
+Dead ends: 0 state(s).
+Generated 62 state(s).
+Dead ends: 0 state(s).
+Generated 62 state(s).
+Dead ends: 0 state(s).
+Generated 61 state(s).
+Dead ends: 0 state(s).
+Generated 61 state(s).
+Dead ends: 0 state(s).
+Generated 62 state(s).
+Dead ends: 0 state(s).
+Generated 60 state(s).
+Dead ends: 0 state(s).
+Generated 59 state(s).
+Dead ends: 0 state(s).
+Generated 61 state(s).
+Dead ends: 0 state(s).
+Generated 61 state(s).
+Dead ends: 0 state(s).
+Generated 59 state(s).
+Dead ends: 0 state(s).
+Generated 57 state(s).
+Dead ends: 0 state(s).
+Generated 56 state(s).
+Dead ends: 0 state(s).
+Generated 54 state(s).
+Dead ends: 0 state(s).
+Generated 52 state(s).
+Dead ends: 0 state(s).
+Generated 50 state(s).
+Dead ends: 0 state(s).
+Generated 50 state(s).
+Dead ends: 0 state(s).
+Generated 51 state(s).
+Dead ends: 0 state(s).
+Generated 50 state(s).
+Dead ends: 0 state(s).
+Generated 48 state(s).
+Dead ends: 0 state(s).
+Generated 47 state(s).
+Dead ends: 0 state(s).
+Generated 46 state(s).
+Dead ends: 0 state(s).
+Generated 27 state(s).
+Dead ends: 0 state(s).
+Generated 41 state(s).
+Dead ends: 0 state(s).
+
+Could not close 0 of 25 open leaf states.
+Investigated 205 states for the strong cyclic plan.
+Went through another policy of score 1
+
+Could not close 0 of 0 open leaf states.
+Investigated 1 states for the strong cyclic plan.
+Marking policy strong cyclic.
+Went through another policy of score 1
+
+
+Running a final SCD check...
+
+
+Running the simulation...
+...achieved the goal!
+
+
+
+                  -{ General Statistics }-
+
+        FSAP Combination Count: 0
+       Monotonicity violations: 0
+             Successful states: 130 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 130 +/- 0
+             Recorded Deadends: 0
+            State-Action Pairs: 105
+  Forbidden State-Action Pairs: 0
+               Strongly Cyclic: True
+                  Policy Score: 1
+                     Succeeded: 1 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0.01s
+                   Search Time: 8.36s
+           Policy Construction: 1.3s
+ Evaluating the policy quality: 0.24s
+              Using the policy: 0.21s
+          Just-in-case Repairs: 10.58s
+                Simulator time: 0s
+                    Total time: 14s
+
+
+
+Dumping the policy and fsaps...
+Strong cyclic plan found.
+Peak memory: 712624 KB
+
+If holds: var40:7 var42:20 var43:19 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:21 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0 var39:0
+Execute: goal / SC / d=0
+
+If holds: var19:0 var40:7 var42:0 var43:19 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:21 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0
+Execute: put-on-block b11 b27 / SC / d=1
+
+If holds: var2:0 var19:0 var40:7 var42:40 var43:19 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:21 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0 var39:0
+Execute: pick-up-from-table b11 / SC / d=2
+
+If holds: var2:0 var20:0 var40:7 var42:40 var43:19 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:0 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0
+Execute: put-on-block b27 b28 / SC / d=3
+
+If holds: var2:0 var19:0 var20:0 var40:7 var42:40 var43:19 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0 var39:0
+Execute: pick-up-from-table b27 / SC / d=4
+
+If holds: var19:0 var20:0 var40:7 var42:0 var43:19 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0
+Execute: put-down b11 / SC / d=5
+
+If holds: var20:0 var40:7 var42:20 var43:19 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0 var39:0
+Execute: pick-tower b3 b11 b27 / SC / d=6
+
+If holds: var3:0 var20:0 var40:7 var42:20 var43:19 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:0 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0
+Execute: put-on-block b4 b12 / SC / d=7
+
+If holds: var3:0 var20:0 var33:0 var40:7 var42:20 var43:19 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:40 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0 var39:0
+Execute: pick-up-from-table b4 / SC / d=8
+
+If holds: var18:0 var20:0 var33:0 var40:7 var42:20 var43:0 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:40 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0
+Execute: put-on-block b12 b26 / SC / d=9
+
+If holds: var3:0 var18:0 var20:0 var33:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:40 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0 var39:0
+Execute: pick-up-from-table b12 / SC / d=10
+
+If holds: var3:0 var18:0 var20:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:0 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0
+Execute: put-down b4 / SC / d=11
+
+If holds: var18:0 var20:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:11 var36:0 var39:0
+Execute: pick-tower b38 b4 b12 / SC / d=12
+
+If holds: var10:0 var18:0 var20:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:0
+Execute: put-on-block b7 b19 / SC / d=13
+
+If holds: var10:0 var18:0 var20:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:29 var26:0 var74:13 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b7 / SC / d=14
+
+If holds: var10:0 var18:0 var20:0 var28:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:0 var74:13 var34:0 var76:40 var36:0
+Execute: put-on-block b33 b35 / SC / d=15
+
+If holds: var10:0 var18:0 var20:0 var28:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:31 var26:0 var74:13 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up b33 b37 / SC / d=16
+
+If holds: var10:0 var18:0 var20:0 var28:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:30 var24:0 var66:40 var26:0 var74:13 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b33 / SC / d=16
+
+If holds: var10:0 var18:0 var20:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:0 var66:31 var26:0 var74:13 var34:0 var76:40 var36:0
+Execute: put-on-block b31 b36 / SC / d=17
+
+If holds: var10:0 var18:0 var20:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:16 var24:0 var66:31 var26:0 var74:13 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up b31 b23 / SC / d=18
+
+If holds: var10:0 var18:0 var20:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:10 var17:0 var64:40 var24:0 var66:31 var26:0 var74:13 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b31 / SC / d=18
+
+If holds: var9:0 var10:0 var18:0 var20:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:0 var64:16 var24:0 var66:31 var26:0 var74:13 var34:0 var76:40 var36:0
+Execute: put-on-block b25 b18 / SC / d=19
+
+If holds: var9:0 var10:0 var18:0 var20:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:12 var57:40 var17:0 var64:16 var24:0 var66:31 var26:0 var74:13 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b25 / SC / d=20
+
+If holds: var9:0 var10:0 var11:0 var18:0 var20:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var56:0 var57:40 var17:0 var64:16 var24:0 var66:31 var26:0 var74:13 var34:0 var76:40 var36:0
+Execute: put-on-block b24 b2 / SC / d=21
+
+If holds: var9:0 var10:0 var11:0 var18:0 var20:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:13 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up b24 b25 / SC / d=22
+
+If holds: var9:0 var10:0 var11:0 var18:0 var20:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:40 var57:40 var17:0 var64:16 var24:0 var66:31 var26:0 var74:13 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b24 / SC / d=22
+
+If holds: var9:0 var10:0 var11:0 var12:0 var18:0 var20:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:0 var76:40 var36:0
+Execute: put-on-block b5 b20 / SC / d=23
+
+If holds: var9:0 var10:0 var11:0 var12:0 var18:0 var20:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up b5 b22 / SC / d=24
+
+If holds: var9:0 var10:0 var11:0 var12:0 var18:0 var20:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:24 var14:0 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:40 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b5 / SC / d=24
+
+If holds: var9:0 var10:0 var11:0 var12:0 var18:0 var20:0 var23:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var44:0 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0
+Execute: put-on-block b13 b30 / SC / d=25
+
+If holds: var9:0 var10:0 var11:0 var12:0 var18:0 var20:0 var23:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:1 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b13 / SC / d=26
+
+If holds: var0:0 var9:0 var10:0 var11:0 var12:0 var18:0 var20:0 var23:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:0 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0
+Execute: put-on-block b9 b1 / SC / d=27
+
+If holds: var0:0 var9:0 var10:0 var11:0 var12:0 var18:0 var23:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-tower b29 b9 b28 / SC / d=28
+
+If holds: var0:0 var9:0 var10:0 var11:0 var12:0 var18:0 var20:0 var23:0 var28:0 var29:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:14 var78:40 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b9 / SC / d=28
+
+If holds: var0:0 var9:0 var10:0 var11:0 var12:0 var13:0 var18:0 var23:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var41:0 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0
+Execute: put-on-block b10 b21 / SC / d=29
+
+If holds: var0:0 var10:0 var11:0 var12:0 var13:0 var18:0 var23:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up b10 b18 / SC / d=30
+
+If holds: var0:0 var9:0 var10:0 var11:0 var12:0 var13:0 var18:0 var23:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:3 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:40 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b10 / SC / d=30
+
+If holds: var0:0 var2:0 var10:0 var11:0 var12:0 var13:0 var18:0 var23:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:0 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0
+Execute: put-on-block b3 b11 / SC / d=31
+
+If holds: var0:0 var2:0 var10:0 var11:0 var12:0 var13:0 var18:0 var23:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-tower b18 b3 b34 / SC / d=32
+
+If holds: var0:0 var2:0 var10:0 var11:0 var12:0 var13:0 var18:0 var22:0 var23:0 var28:0 var29:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:39 var62:40 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b3 / SC / d=32
+
+If holds: var0:0 var2:0 var10:0 var11:0 var12:0 var13:0 var18:0 var23:0 var28:0 var29:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:0 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0
+Execute: put-on-block b29 b9 / SC / d=33
+
+If holds: var0:0 var2:0 var10:0 var11:0 var12:0 var13:0 var18:0 var23:0 var28:0 var29:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-tower b21 b29 b14 / SC / d=34
+
+If holds: var0:0 var2:0 var10:0 var11:0 var12:0 var13:0 var18:0 var21:0 var23:0 var28:0 var29:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:26 var59:40 var60:40 var61:40 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b29 / SC / d=34
+
+If holds: var0:0 var2:0 var10:0 var11:0 var12:0 var13:0 var23:0 var25:0 var28:0 var29:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:0 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0
+Execute: put-on-block b26 b32 / SC / d=35
+
+If holds: var0:0 var2:0 var10:0 var11:0 var13:0 var18:0 var23:0 var25:0 var28:0 var29:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up b26 b20 / SC / d=36
+
+If holds: var0:0 var2:0 var10:0 var11:0 var12:0 var13:0 var18:0 var23:0 var25:0 var28:0 var29:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:22 var55:40 var58:40 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b26 / SC / d=36
+
+If holds: var0:0 var2:0 var10:0 var11:0 var18:0 var21:0 var23:0 var25:0 var28:0 var29:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:0 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0
+Execute: put-on-block b21 b29 / SC / d=37
+
+If holds: var0:0 var2:0 var10:0 var11:0 var13:0 var18:0 var21:0 var23:0 var25:0 var28:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up b21 b36 / SC / d=38
+
+If holds: var0:0 var2:0 var10:0 var11:0 var13:0 var18:0 var21:0 var23:0 var25:0 var28:0 var29:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:40 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:28 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b21 / SC / d=38
+
+If holds: var0:0 var2:0 var10:0 var11:0 var13:0 var18:0 var21:0 var23:0 var25:0 var27:0 var28:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:0 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0
+Execute: put-on-block b6 b34 / SC / d=39
+
+If holds: var0:0 var2:0 var10:0 var11:0 var13:0 var18:0 var23:0 var25:0 var27:0 var28:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-tower b17 b6 b29 / SC / d=40
+
+If holds: var0:0 var2:0 var10:0 var11:0 var13:0 var18:0 var21:0 var23:0 var25:0 var27:0 var28:0 var35:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:6 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:40 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b6 / SC / d=40
+
+If holds: var0:0 var2:0 var5:0 var10:0 var11:0 var13:0 var18:0 var23:0 var25:0 var27:0 var28:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:0 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0
+Execute: put-on-block b20 b14 / SC / d=41
+
+If holds: var0:0 var2:0 var5:0 var10:0 var11:0 var13:0 var18:0 var23:0 var25:0 var27:0 var28:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b26 b20 b7 / SC / d=42
+
+If holds: var0:0 var2:0 var5:0 var10:0 var11:0 var12:0 var13:0 var18:0 var23:0 var25:0 var27:0 var28:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:23 var50:40 var51:16 var52:40 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var36:0 var39:0
+Execute: pick-up-from-table b20 / SC / d=42
+
+If holds: var0:0 var2:0 var5:0 var10:0 var11:0 var13:0 var18:0 var22:0 var23:0 var25:0 var27:0 var28:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:0 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40
+Execute: put-on-block b18 b3 / SC / d=43
+
+If holds: var0:0 var2:0 var5:0 var11:0 var13:0 var18:0 var22:0 var23:0 var25:0 var27:0 var28:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b10 b18 b19 / SC / d=44
+
+If holds: var0:0 var2:0 var5:0 var9:0 var10:0 var11:0 var13:0 var18:0 var22:0 var23:0 var25:0 var27:0 var28:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:40 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:38 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up-from-table b18 / SC / d=44
+
+If holds: var0:0 var2:0 var5:0 var11:0 var13:0 var18:0 var22:0 var23:0 var25:0 var27:0 var28:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:0 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40
+Execute: put-on-block b39 b8 / SC / d=45
+
+If holds: var0:0 var2:0 var5:0 var11:0 var13:0 var18:0 var23:0 var25:0 var27:0 var28:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b22 b39 b3 / SC / d=46
+
+If holds: var0:0 var2:0 var5:0 var11:0 var13:0 var18:0 var22:0 var23:0 var25:0 var27:0 var28:0 var32:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:36 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:40 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up-from-table b39 / SC / d=46
+
+If holds: var0:0 var2:0 var5:0 var11:0 var13:0 var18:0 var23:0 var25:0 var27:0 var28:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:0 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40
+Execute: put-on-block b17 b6 / SC / d=47
+
+If holds: var0:0 var2:0 var5:0 var11:0 var13:0 var18:0 var23:0 var27:0 var28:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:26 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b15 b17 b32 / SC / d=48
+
+If holds: var0:0 var2:0 var5:0 var8:0 var11:0 var13:0 var18:0 var23:0 var25:0 var27:0 var28:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:32 var48:40 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up-from-table b17 / SC / d=48
+
+If holds: var0:0 var2:0 var5:0 var11:0 var13:0 var18:0 var23:0 var27:0 var28:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:0 var48:26 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40
+Execute: put-on-block b16 b38 / SC / d=49
+
+If holds: var0:0 var2:0 var5:0 var11:0 var13:0 var18:0 var23:0 var27:0 var28:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:17 var48:26 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b30 b16 b24 / SC / d=50
+
+If holds: var0:0 var2:0 var5:0 var7:0 var11:0 var13:0 var18:0 var23:0 var27:0 var28:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:9 var47:40 var48:26 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var16:0 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up-from-table b16 / SC / d=50
+
+If holds: var0:0 var2:0 var5:0 var8:0 var11:0 var13:0 var18:0 var23:0 var27:0 var28:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:0 var47:17 var48:26 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40
+Execute: put-on-block b15 b17 / SC / d=51
+
+If holds: var0:0 var5:0 var8:0 var11:0 var13:0 var18:0 var23:0 var27:0 var28:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:3 var47:17 var48:26 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b1 b15 b11 / SC / d=52
+
+If holds: var0:0 var2:0 var5:0 var6:0 var8:0 var11:0 var13:0 var18:0 var23:0 var27:0 var28:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:31 var46:40 var47:17 var48:26 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up-from-table b15 / SC / d=52
+
+If holds: var0:0 var8:0 var11:0 var13:0 var18:0 var23:0 var27:0 var28:0 var30:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:0 var46:3 var47:17 var48:26 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40
+Execute: put-on-block b14 b37 / SC / d=53
+
+If holds: var0:0 var8:0 var11:0 var13:0 var18:0 var27:0 var28:0 var30:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b29 b14 b30 / SC / d=54
+
+If holds: var0:0 var5:0 var8:0 var11:0 var13:0 var18:0 var23:0 var27:0 var28:0 var30:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:40 var46:3 var47:17 var48:26 var49:11 var50:40 var51:16 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up-from-table b14 / SC / d=54
+
+If holds: var0:0 var8:0 var13:0 var15:0 var18:0 var27:0 var28:0 var30:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:0 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40
+Execute: put-on-block b2 b23 / SC / d=55
+
+If holds: var0:0 var8:0 var11:0 var13:0 var15:0 var27:0 var28:0 var30:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up b2 b26 / SC / d=56
+
+If holds: var0:0 var8:0 var11:0 var13:0 var15:0 var18:0 var27:0 var28:0 var30:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:20 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:40 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up-from-table b2 / SC / d=56
+
+If holds: var0:0 var8:0 var11:0 var13:0 var15:0 var19:0 var27:0 var28:0 var30:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:0 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40
+Execute: put-on-block b11 b27 / SC / d=57
+
+If holds: var0:0 var8:0 var11:0 var13:0 var15:0 var19:0 var27:0 var28:0 var30:0 var31:0 var37:0 var38:0 var40:7 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b15 b11 b6 / SC / d=58
+
+If holds: var0:0 var2:0 var8:0 var11:0 var13:0 var15:0 var19:0 var27:0 var28:0 var30:0 var31:0 var35:0 var37:0 var38:0 var40:7 var42:40 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:8 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up-from-table b11 / SC / d=58
+
+If holds: var0:0 var7:0 var8:0 var11:0 var13:0 var15:0 var19:0 var27:0 var28:0 var30:0 var31:0 var37:0 var38:0 var40:7 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:0 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40
+Execute: put-on-block b30 b16 / SC / d=59
+
+If holds: var0:0 var7:0 var8:0 var11:0 var13:0 var15:0 var27:0 var28:0 var30:0 var31:0 var37:0 var38:0 var40:7 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:20 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b14 b30 b27 / SC / d=60
+
+If holds: var0:0 var7:0 var8:0 var11:0 var13:0 var15:0 var19:0 var23:0 var27:0 var28:0 var30:0 var31:0 var37:0 var38:0 var40:7 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:40 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up-from-table b30 / SC / d=60
+
+If holds: var6:0 var7:0 var8:0 var11:0 var13:0 var15:0 var27:0 var28:0 var30:0 var31:0 var37:0 var38:0 var40:0 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:20 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40
+Execute: put-on-block b1 b15 / SC / d=61
+
+If holds: var0:0 var6:0 var7:0 var8:0 var11:0 var13:0 var15:0 var27:0 var30:0 var31:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:20 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up b1 b35 / SC / d=62
+
+If holds: var0:0 var6:0 var7:0 var8:0 var11:0 var13:0 var15:0 var27:0 var28:0 var30:0 var31:0 var37:0 var38:0 var40:40 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:20 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:4 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up-from-table b1 / SC / d=62
+
+If holds: var0:0 var3:0 var6:0 var7:0 var8:0 var11:0 var13:0 var15:0 var27:0 var30:0 var31:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:20 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:0 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40
+Execute: put-on-block b4 b12 / SC / d=63
+
+If holds: var0:0 var3:0 var7:0 var8:0 var11:0 var13:0 var15:0 var27:0 var30:0 var31:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:20 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:7 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b38 b4 b15 / SC / d=64
+
+If holds: var0:0 var3:0 var6:0 var7:0 var8:0 var11:0 var13:0 var15:0 var27:0 var30:0 var31:0 var33:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:40 var61:6 var62:28 var63:20 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:40 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up-from-table b4 / SC / d=64
+
+If holds: var0:0 var3:0 var7:0 var8:0 var11:0 var13:0 var15:0 var27:0 var30:0 var31:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:0 var61:6 var62:28 var63:20 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:7 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var26:0 var74:15 var34:0 var76:40
+Execute: put-down b28 / SC / d=65
+
+If holds: var0:0 var3:0 var7:0 var8:0 var11:0 var13:0 var15:0 var27:0 var30:0 var31:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:40 var68:40 var69:40 var70:40 var71:34 var72:23 var73:7 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b9 b28 b33 / SC / d=66
+
+If holds: var0:0 var3:0 var7:0 var8:0 var11:0 var13:0 var15:0 var30:0 var31:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:0 var68:40 var69:40 var70:40 var71:34 var72:23 var73:7 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40
+Execute: put-down b34 / SC / d=67
+
+If holds: var0:0 var3:0 var7:0 var8:0 var11:0 var15:0 var30:0 var31:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:40 var70:40 var71:34 var72:23 var73:7 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b3 b34 b21 / SC / d=68
+
+If holds: var0:0 var3:0 var7:0 var8:0 var11:0 var15:0 var30:0 var31:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:0 var70:40 var71:34 var72:23 var73:7 var75:22 var77:40 var1:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40
+Execute: put-down b36 / SC / d=69
+
+If holds: var0:0 var3:0 var7:0 var8:0 var11:0 var15:0 var30:0 var31:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:2 var70:40 var71:34 var72:23 var73:7 var75:22 var77:40 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b21 b36 b10 / SC / d=70
+
+If holds: var0:0 var3:0 var7:0 var8:0 var11:0 var15:0 var30:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:2 var70:40 var71:34 var72:23 var73:7 var75:22 var77:32 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up b8 b38 / SC / d=71
+
+If holds: var0:0 var3:0 var7:0 var8:0 var11:0 var15:0 var30:0 var31:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:40 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:2 var70:40 var71:34 var72:23 var73:7 var75:22 var77:0 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40
+Execute: put-down b8 / SC / d=71
+
+If holds: var0:0 var3:0 var7:0 var8:0 var11:0 var30:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:0 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:2 var70:40 var71:34 var72:23 var73:7 var75:22 var77:32 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40
+Execute: put-down b23 / SC / d=72
+
+If holds: var0:0 var3:0 var8:0 var11:0 var30:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:40 var51:19 var52:37 var53:30 var55:8 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:2 var70:40 var71:34 var72:23 var73:7 var75:22 var77:32 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b31 b23 b16 / SC / d=73
+
+If holds: var0:0 var3:0 var8:0 var11:0 var30:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:0 var51:19 var52:37 var53:30 var55:8 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:2 var70:40 var71:34 var72:23 var73:7 var75:22 var77:32 var41:10 var78:21 var4:0 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40
+Execute: put-down b19 / SC / d=74
+
+If holds: var0:0 var3:0 var8:0 var11:0 var30:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:5 var51:19 var52:37 var53:30 var55:8 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:2 var70:40 var71:34 var72:23 var73:7 var75:22 var77:32 var41:10 var78:21 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b18 b19 b13 / SC / d=75
+
+If holds: var0:0 var3:0 var8:0 var11:0 var30:0 var33:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:5 var51:19 var52:37 var53:30 var55:8 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:2 var70:40 var71:0 var72:23 var73:7 var75:22 var77:32 var41:10 var78:21 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40
+Execute: put-on-block b38 b4 / SC / d=76
+
+If holds: var0:0 var3:0 var11:0 var30:0 var33:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:5 var51:19 var52:37 var53:30 var55:8 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:2 var70:40 var71:9 var72:23 var73:7 var75:22 var77:32 var41:10 var78:21 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b8 b38 b17 / SC / d=77
+
+If holds: var0:0 var3:0 var8:0 var11:0 var30:0 var31:0 var33:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:5 var51:19 var52:37 var53:30 var55:8 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:2 var70:40 var71:40 var72:23 var73:7 var75:22 var77:32 var41:10 var78:21 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40 var39:0
+Execute: pick-up-from-table b38 / SC / d=77
+
+If holds: var0:0 var3:0 var11:0 var33:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:5 var51:19 var52:37 var53:30 var55:8 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:2 var70:0 var71:9 var72:23 var73:7 var75:22 var77:32 var41:10 var78:21 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40
+Execute: put-down b37 / SC / d=78
+
+If holds: var0:0 var11:0 var33:0 var37:0 var38:0 var40:29 var42:36 var43:40 var45:24 var46:3 var47:17 var48:26 var49:11 var50:5 var51:19 var52:37 var53:30 var55:8 var58:13 var59:40 var60:27 var61:6 var62:28 var63:20 var65:40 var67:14 var68:40 var69:2 var70:4 var71:9 var72:23 var73:7 var75:22 var77:32 var41:10 var78:21 var44:40 var54:33 var56:18 var57:40 var64:16 var24:0 var66:31 var74:15 var34:0 var76:40 var39:0
+Execute: pick-tower b33 b37 b12 / SC / d=79

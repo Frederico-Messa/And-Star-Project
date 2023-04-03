@@ -1,0 +1,522 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.010s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 105 rules.
+Computing model... [0.110s CPU, 0.114s wall-clock]
+20979 relevant atoms
+4568 auxiliary atoms
+25547 final queue length
+45019 total queue pushes
+Completing instantiation... [1.110s CPU, 1.107s wall-clock]
+Instantiating: [1.220s CPU, 1.229s wall-clock]
+Computing fact groups...
+Finding invariants...
+32 initial candidates
+Finding invariants: [0.010s CPU, 0.013s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.010s CPU, 0.002s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+20 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.020s CPU, 0.018s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.060s CPU, 0.054s wall-clock]
+Translating task: [0.940s CPU, 0.933s wall-clock]
+2040 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+Removed false proposition: 0 = <none of those>
+Removed false proposition: 1 = <none of those>
+Removed false proposition: 2 = <none of those>
+Removed false proposition: 3 = <none of those>
+Removed false proposition: 4 = <none of those>
+Removed false proposition: 5 = <none of those>
+Removed false proposition: 6 = <none of those>
+Removed false proposition: 7 = <none of those>
+Removed false proposition: 8 = <none of those>
+Removed false proposition: 9 = <none of those>
+Removed false proposition: 10 = <none of those>
+Removed false proposition: 11 = <none of those>
+Removed false proposition: 12 = <none of those>
+Removed false proposition: 13 = <none of those>
+Removed false proposition: 14 = <none of those>
+Removed false proposition: 15 = <none of those>
+Removed false proposition: 16 = <none of those>
+Removed false proposition: 17 = <none of those>
+Removed false proposition: 18 = <none of those>
+Removed false proposition: 19 = <none of those>
+Removed false proposition: 20 = <none of those>
+Removed false proposition: 21 = <none of those>
+Removed false proposition: 42 = <none of those>
+Removed false proposition: 43 = <none of those>
+Removed false proposition: 44 = <none of those>
+Removed false proposition: 45 = <none of those>
+Removed false proposition: 46 = <none of those>
+Removed false proposition: 47 = <none of those>
+0 operators removed
+28 propositions removed
+Detecting unreachable propositions: [0.100s CPU, 0.101s wall-clock]
+Translator variables: 48
+Translator derived variables: 0
+Translator facts: 738
+Translator goal facts: 10
+Translator mutex groups: 28
+Translator total mutex groups size: 698
+Translator operators: 17364
+Translator axioms: 0
+Translator task size: 331074
+Translator peak memory: 158432 KB
+Writing output... [0.160s CPU, 0.156s wall-clock]
+Done! [2.490s CPU, 2.489s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+48 variables of 48 necessary
+0 of 28 mutex groups necessary.
+17364 of 17364 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 738
+Preprocessor derived variables: 0
+Preprocessor task size: 330376
+Writing output...
+done
+
+
+3. Running search
+./planner_prp/src/search/downward ipc policy-repair --dump-policy 2
+This is a unit task.
+./planner_prp/src/search/downward-release --heuristic "h=ff(cost_type=1)" --search "lazy_greedy([h],preferred=[h])" --random-seed 814102613 --dump-policy 2 < output
+Simplifying transitions... done!
+Variables: 48
+Bytes per state: 20
+
+Total allotted time (s): 1800
+Max time for core JIC (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+ !! Warning: Disabling the simplification of unary operators !!
+ !!           to keep the non-deterministic planning sound.  !!
+Generated 16574 state(s).
+Dead ends: 0 state(s). (0 recorded)
+start-boarding p1 a1 c12 (1)
+complete-boarding_DETDUP_1 p1 a1 c12 (1)
+start-zooming a1 c12 c13 f4 f3 f2 (1)
+complete-zooming_DETDUP_1 a1 c13 f4 f3 f2 (1)
+start-debarking p1 a1 c13 (1)
+complete-debarking_DETDUP_1 p1 a1 c13 (1)
+start-boarding p2 a3 c6 (1)
+complete-boarding_DETDUP_1 p2 a3 c6 (1)
+start-zooming a3 c6 c13 f2 f1 f0 (1)
+complete-zooming_DETDUP_1 a3 c13 f2 f1 f0 (1)
+start-debarking p2 a3 c13 (1)
+complete-debarking_DETDUP_1 p2 a3 c13 (1)
+start-boarding p3 a0 c11 (1)
+complete-boarding_DETDUP_1 p3 a0 c11 (1)
+start-flying a0 c11 c16 f1 f0 (1)
+complete-flying_DETDUP_1 a0 c16 f1 f0 (1)
+start-debarking p3 a0 c16 (1)
+complete-debarking_DETDUP_1 p3 a0 c16 (1)
+start-zooming a5 c14 c4 f4 f3 f2 (1)
+start-zooming a4 c6 c3 f4 f3 f2 (1)
+start-zooming a1 c13 c16 f2 f1 f0 (1)
+complete-zooming_DETDUP_1 a5 c4 f4 f3 f2 (1)
+start-zooming a5 c4 c6 f2 f1 f0 (1)
+complete-zooming_DETDUP_1 a4 c3 f4 f3 f2 (1)
+start-boarding p5 a4 c3 (1)
+complete-boarding_DETDUP_1 p5 a4 c3 (1)
+start-zooming a4 c3 c6 f2 f1 f0 (1)
+complete-zooming_DETDUP_1 a4 c6 f2 f1 f0 (1)
+start-debarking p5 a4 c6 (1)
+complete-debarking_DETDUP_1 p5 a4 c6 (1)
+complete-zooming_DETDUP_1 a1 c16 f2 f1 f0 (1)
+start-refueling a2 c16 f0 f1 (1)
+complete-zooming_DETDUP_1 a5 c6 f2 f1 f0 (1)
+complete-refuling_DETDUP_1 a2 f0 f1 (1)
+start-boarding p8 a2 c16 (1)
+complete-boarding_DETDUP_1 p8 a2 c16 (1)
+start-flying a2 c16 c2 f1 f0 (1)
+start-refueling a1 c16 f0 f1 (1)
+complete-refuling_DETDUP_1 a1 f0 f1 (1)
+complete-flying_DETDUP_1 a2 c2 f1 f0 (1)
+start-refueling a2 c2 f0 f1 (1)
+complete-refuling_DETDUP_1 a2 f0 f1 (1)
+start-boarding p6 a2 c2 (1)
+complete-boarding_DETDUP_1 p6 a2 c2 (1)
+start-flying a1 c16 c1 f1 f0 (1)
+start-flying a2 c2 c4 f1 f0 (1)
+complete-flying_DETDUP_1 a1 c1 f1 f0 (1)
+start-refueling a1 c1 f0 f1 (1)
+start-boarding p0 a1 c1 (1)
+complete-boarding_DETDUP_1 p0 a1 c1 (1)
+start-boarding p7 a1 c1 (1)
+complete-boarding_DETDUP_1 p7 a1 c1 (1)
+complete-refuling_DETDUP_1 a1 f0 f1 (1)
+start-flying a1 c1 c2 f1 f0 (1)
+complete-flying_DETDUP_1 a1 c2 f1 f0 (1)
+start-debarking p0 a1 c2 (1)
+complete-debarking_DETDUP_1 p0 a1 c2 (1)
+start-refueling a1 c2 f0 f1 (1)
+complete-flying_DETDUP_1 a2 c4 f1 f0 (1)
+start-refueling a2 c4 f0 f1 (1)
+complete-refuling_DETDUP_1 a2 f0 f1 (1)
+start-debarking p6 a2 c4 (1)
+complete-debarking_DETDUP_1 p6 a2 c4 (1)
+complete-refuling_DETDUP_1 a1 f0 f1 (1)
+start-flying a1 c2 c16 f1 f0 (1)
+complete-flying_DETDUP_1 a1 c16 f1 f0 (1)
+start-debarking p7 a1 c16 (1)
+complete-debarking_DETDUP_1 p7 a1 c16 (1)
+start-flying a2 c4 c11 f1 f0 (1)
+complete-flying_DETDUP_1 a2 c11 f1 f0 (1)
+start-refueling a2 c11 f0 f1 (1)
+complete-refuling_DETDUP_1 a2 f0 f1 (1)
+start-boarding p4 a2 c11 (1)
+complete-boarding_DETDUP_1 p4 a2 c11 (1)
+start-flying a2 c11 c4 f1 f0 (1)
+complete-flying_DETDUP_1 a2 c4 f1 f0 (1)
+start-debarking p4 a2 c4 (1)
+complete-debarking_DETDUP_1 p4 a2 c4 (1)
+start-refueling a2 c4 f0 f1 (1)
+complete-refuling_DETDUP_1 a2 f0 f1 (1)
+start-flying a2 c4 c8 f1 f0 (1)
+complete-flying_DETDUP_1 a2 c8 f1 f0 (1)
+start-debarking p8 a2 c8 (1)
+complete-debarking_DETDUP_1 p8 a2 c8 (1)
+Plan length: 84 step(s).
+Plan cost: 84
+Initial search time: 0.58s
+Initial total time: 0.83s
+
+
+Creating the simulator...
+
+
+Regressing the plan...
+
+
+Generating an initial policy...
+
+
+Computing just-in-time repairs...
+
+Could not close 0 of 0 open leaf states.
+Investigated 1 states for the strong cyclic plan.
+Marking policy strong cyclic.
+Went through another policy of score 1
+
+
+Running a final SCD check...
+
+
+Running the simulation...
+...achieved the goal!
+
+
+
+                  -{ General Statistics }-
+
+        FSAP Combination Count: 0
+       Monotonicity violations: 0
+             Successful states: 84 +/- 0
+                       Replans: 0 +/- 0
+                       Actions: 84 +/- 0
+             Recorded Deadends: 0
+            State-Action Pairs: 85
+  Forbidden State-Action Pairs: 0
+               Strongly Cyclic: True
+                  Policy Score: 1
+                     Succeeded: 1 / 1
+ Depth limit (of 1000) reached: 0 / 1
+
+
+                  -{ Timing Statistics }-
+
+        Regression Computation: 0s
+         Engine Initialization: 0s
+                   Search Time: 0.58s
+           Policy Construction: 0.04s
+ Evaluating the policy quality: 0.07s
+              Using the policy: 0.04s
+          Just-in-case Repairs: 0.74s
+                Simulator time: 0s
+                    Total time: 0.99s
+
+
+
+Dumping the policy and fsaps...
+Strong cyclic plan found.
+Peak memory: 52700 KB
+
+If holds: var6:9 var7:5 var8:5 var9:8 var10:11 var11:13 var12:11 var13:8 var14:15 var15:4
+Execute: goal / SC / d=0
+
+If holds: var2:15 var6:9 var7:5 var8:5 var9:8 var10:11 var11:13 var12:11 var13:8 var14:25 var15:4
+Execute: complete-debarking p8 a2 c8 / SC / d=1
+
+If holds: var2:15 var6:9 var7:5 var8:5 var9:8 var10:11 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: start-debarking p8 a2 c8 / SC / d=2
+
+If holds: var18:1 var2:32 var6:9 var7:5 var8:5 var9:8 var10:11 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: complete-flying a2 c8 f1 f0 / SC / d=3
+
+If holds: var18:1 var44:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var2:11 var6:9 var7:5 var8:5 var9:8 var10:11 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: start-flying a2 c4 c8 f1 f0 / SC / d=4
+
+If holds: var18:0 var44:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var2:11 var6:9 var7:5 var8:5 var9:8 var10:11 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: complete-refuling a2 f0 f1 / SC / d=5
+
+If holds: var18:0 var44:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var2:11 var6:9 var7:5 var8:5 var9:8 var10:11 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: start-refueling a2 c4 f0 f1 / SC / d=6
+
+If holds: var18:0 var44:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var2:11 var6:9 var7:5 var8:5 var9:8 var10:25 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: complete-debarking p4 a2 c4 / SC / d=7
+
+If holds: var18:0 var44:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var2:11 var6:9 var7:5 var8:5 var9:8 var10:31 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: start-debarking p4 a2 c4 / SC / d=8
+
+If holds: var18:1 var44:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var2:28 var6:9 var7:5 var8:5 var9:8 var10:31 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: complete-flying a2 c4 f1 f0 / SC / d=9
+
+If holds: var18:1 var44:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var2:3 var6:9 var7:5 var8:5 var9:8 var10:31 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: start-flying a2 c11 c4 f1 f0 / SC / d=10
+
+If holds: var18:1 var44:0 var22:0 var23:0 var24:0 var25:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var2:3 var6:9 var7:5 var8:5 var9:8 var10:19 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: complete-boarding p4 a2 c11 / SC / d=11
+
+If holds: var18:1 var44:0 var22:0 var23:0 var24:0 var25:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var2:3 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: start-boarding p4 a2 c11 / SC / d=12
+
+If holds: var18:0 var44:1 var22:0 var23:0 var24:0 var25:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var2:3 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: complete-refuling a2 f0 f1 / SC / d=13
+
+If holds: var18:0 var44:0 var22:0 var23:0 var24:0 var25:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var2:3 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: start-refueling a2 c11 f0 f1 / SC / d=14
+
+If holds: var18:1 var44:0 var22:0 var23:0 var24:0 var25:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var2:20 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: complete-flying a2 c11 f1 f0 / SC / d=15
+
+If holds: var18:1 var44:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var2:11 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:11 var13:8 var14:31 var15:4
+Execute: start-flying a2 c4 c11 f1 f0 / SC / d=16
+
+If holds: var18:1 var44:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:11 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:11 var13:24 var14:31 var15:4
+Execute: complete-debarking p7 a1 c16 / SC / d=17
+
+If holds: var18:1 var44:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:11 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:11 var13:30 var14:31 var15:4
+Execute: start-debarking p7 a1 c16 / SC / d=18
+
+If holds: var18:1 var44:0 var17:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:25 var2:11 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:11 var13:30 var14:31 var15:4
+Execute: complete-flying a1 c16 f1 f0 / SC / d=19
+
+If holds: var18:1 var44:0 var17:1 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:9 var2:11 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:11 var13:30 var14:31 var15:4
+Execute: start-flying a1 c2 c16 f1 f0 / SC / d=20
+
+If holds: var18:1 var44:0 var17:0 var43:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:9 var2:11 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:11 var13:30 var14:31 var15:4
+Execute: complete-refuling a1 f0 f1 / SC / d=21
+
+If holds: var18:1 var44:0 var17:0 var43:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:9 var2:11 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:25 var13:30 var14:31 var15:4
+Execute: complete-debarking p6 a2 c4 / SC / d=22
+
+If holds: var18:1 var44:0 var17:0 var43:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:9 var2:11 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:30 var14:31 var15:4
+Execute: start-debarking p6 a2 c4 / SC / d=23
+
+If holds: var18:0 var44:1 var17:0 var43:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:9 var2:11 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:30 var14:31 var15:4
+Execute: complete-refuling a2 f0 f1 / SC / d=24
+
+If holds: var18:0 var44:0 var17:0 var43:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:9 var2:11 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:30 var14:31 var15:4
+Execute: start-refueling a2 c4 f0 f1 / SC / d=25
+
+If holds: var18:1 var44:0 var17:0 var43:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:9 var2:28 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:30 var14:31 var15:4
+Execute: complete-flying a2 c4 f1 f0 / SC / d=26
+
+If holds: var18:1 var44:0 var17:0 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:9 var2:28 var6:9 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:30 var14:31 var15:4
+Execute: start-refueling a1 c2 f0 f1 / SC / d=27
+
+If holds: var18:1 var44:0 var17:0 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var33:0 var34:0 var35:0 var36:0 var1:9 var2:28 var6:24 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:30 var14:31 var15:4
+Execute: complete-debarking p0 a1 c2 / SC / d=28
+
+If holds: var18:1 var44:0 var17:0 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var33:0 var34:0 var35:0 var36:0 var1:9 var2:28 var6:30 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:30 var14:31 var15:4
+Execute: start-debarking p0 a1 c2 / SC / d=29
+
+If holds: var18:1 var44:0 var17:1 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var33:0 var34:0 var35:0 var36:0 var1:26 var2:28 var6:30 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:30 var14:31 var15:4
+Execute: complete-flying a1 c2 f1 f0 / SC / d=30
+
+If holds: var18:1 var44:0 var17:1 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:1 var2:28 var6:30 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:30 var14:31 var15:4
+Execute: start-flying a1 c1 c2 f1 f0 / SC / d=31
+
+If holds: var18:1 var44:0 var17:0 var43:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:1 var2:28 var6:30 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:30 var14:31 var15:4
+Execute: complete-refuling a1 f0 f1 / SC / d=32
+
+If holds: var18:1 var44:0 var17:0 var43:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:1 var2:28 var6:30 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:18 var14:31 var15:4
+Execute: complete-boarding p7 a1 c1 / SC / d=33
+
+If holds: var18:1 var44:0 var17:0 var43:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:1 var2:28 var6:30 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:1 var14:31 var15:4
+Execute: start-boarding p7 a1 c1 / SC / d=34
+
+If holds: var18:1 var44:0 var17:0 var43:1 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:1 var2:28 var6:18 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:1 var14:31 var15:4
+Execute: complete-boarding p0 a1 c1 / SC / d=35
+
+If holds: var18:1 var44:0 var17:0 var43:1 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:1 var2:28 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:1 var14:31 var15:4
+Execute: start-boarding p0 a1 c1 / SC / d=36
+
+If holds: var18:1 var44:0 var17:0 var43:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:1 var2:28 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:1 var14:31 var15:4
+Execute: start-refueling a1 c1 f0 f1 / SC / d=37
+
+If holds: var18:1 var44:0 var17:1 var43:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:18 var2:28 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:1 var14:31 var15:4
+Execute: complete-flying a1 c1 f1 f0 / SC / d=38
+
+If holds: var18:1 var44:0 var17:1 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:18 var2:9 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:1 var14:31 var15:4
+Execute: start-flying a2 c2 c4 f1 f0 / SC / d=39
+
+If holds: var18:1 var44:0 var17:1 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:9 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:31 var13:1 var14:31 var15:4
+Execute: start-flying a1 c16 c1 f1 f0 / SC / d=40
+
+If holds: var18:1 var44:0 var17:1 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:9 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:19 var13:1 var14:31 var15:4
+Execute: complete-boarding p6 a2 c2 / SC / d=41
+
+If holds: var18:1 var44:0 var17:1 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:9 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:31 var15:4
+Execute: start-boarding p6 a2 c2 / SC / d=42
+
+If holds: var18:0 var44:1 var17:1 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:9 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:31 var15:4
+Execute: complete-refuling a2 f0 f1 / SC / d=43
+
+If holds: var18:0 var44:0 var17:1 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:9 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:31 var15:4
+Execute: start-refueling a2 c2 f0 f1 / SC / d=44
+
+If holds: var18:1 var44:0 var17:1 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:26 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:31 var15:4
+Execute: complete-flying a2 c2 f1 f0 / SC / d=45
+
+If holds: var18:1 var44:0 var17:0 var43:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:26 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:31 var15:4
+Execute: complete-refuling a1 f0 f1 / SC / d=46
+
+If holds: var18:1 var44:0 var17:0 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:26 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:31 var15:4
+Execute: start-refueling a1 c16 f0 f1 / SC / d=47
+
+If holds: var18:1 var44:0 var17:0 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:8 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:31 var15:4
+Execute: start-flying a2 c16 c2 f1 f0 / SC / d=48
+
+If holds: var18:1 var44:0 var17:0 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:8 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:19 var15:4
+Execute: complete-boarding p8 a2 c16 / SC / d=49
+
+If holds: var18:1 var44:0 var17:0 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:8 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:8 var15:4
+Execute: start-boarding p8 a2 c16 / SC / d=50
+
+If holds: var18:0 var44:1 var17:0 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:8 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:8 var15:4
+Execute: complete-refuling a2 f0 f1 / SC / d=51
+
+If holds: var21:2 var18:0 var44:1 var17:0 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:8 var5:47 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:8 var15:4
+Execute: complete-zooming a5 c6 f2 f1 f0 / SC / d=52
+
+If holds: var21:2 var18:0 var44:0 var17:0 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:8 var2:8 var5:47 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:8 var15:4
+Execute: start-refueling a2 c16 f0 f1 / SC / d=53
+
+If holds: var21:2 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:42 var2:8 var5:47 var6:1 var7:5 var8:5 var9:8 var10:3 var11:13 var12:9 var13:1 var14:8 var15:4
+Execute: complete-zooming a1 c16 f2 f1 f0 / SC / d=54
+
+If holds: var21:2 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var28:0 var38:0 var29:0 var39:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:42 var2:8 var4:13 var5:47 var6:1 var7:5 var8:5 var9:8 var10:3 var11:27 var12:9 var13:1 var14:8 var15:4
+Execute: complete-debarking p5 a4 c6 / SC / d=55
+
+If holds: var21:2 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var28:0 var38:0 var29:0 var39:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:42 var2:8 var4:13 var5:47 var6:1 var7:5 var8:5 var9:8 var10:3 var11:33 var12:9 var13:1 var14:8 var15:4
+Execute: start-debarking p5 a4 c6 / SC / d=56
+
+If holds: var21:2 var20:2 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var28:0 var38:0 var29:0 var39:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:42 var2:8 var4:47 var5:47 var6:1 var7:5 var8:5 var9:8 var10:3 var11:33 var12:9 var13:1 var14:8 var15:4
+Execute: complete-zooming a4 c6 f2 f1 f0 / SC / d=57
+
+If holds: var21:2 var20:2 var46:0 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:42 var2:8 var4:10 var5:47 var6:1 var7:5 var8:5 var9:8 var10:3 var11:33 var12:9 var13:1 var14:8 var15:4
+Execute: start-zooming a4 c3 c6 f2 f1 f0 / SC / d=58
+
+If holds: var21:2 var20:2 var46:0 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:42 var2:8 var4:10 var5:47 var6:1 var7:5 var8:5 var9:8 var10:3 var11:21 var12:9 var13:1 var14:8 var15:4
+Execute: complete-boarding p5 a4 c3 / SC / d=59
+
+If holds: var21:2 var20:2 var46:0 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:42 var2:8 var4:10 var5:47 var6:1 var7:5 var8:5 var9:8 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-boarding p5 a4 c3 / SC / d=60
+
+If holds: var21:2 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:42 var2:8 var4:44 var5:47 var6:1 var7:5 var8:5 var9:8 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: complete-zooming a4 c3 f4 f3 f2 / SC / d=61
+
+If holds: var21:2 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:42 var2:8 var4:44 var5:11 var6:1 var7:5 var8:5 var9:8 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-zooming a5 c4 c6 f2 f1 f0 / SC / d=62
+
+If holds: var21:4 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:42 var2:8 var4:44 var5:45 var6:1 var7:5 var8:5 var9:8 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: complete-zooming a5 c4 f4 f3 f2 / SC / d=63
+
+If holds: var21:4 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:5 var2:8 var4:44 var5:45 var6:1 var7:5 var8:5 var9:8 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-zooming a1 c13 c16 f2 f1 f0 / SC / d=64
+
+If holds: var21:4 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:5 var2:8 var4:13 var5:45 var6:1 var7:5 var8:5 var9:8 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-zooming a4 c6 c3 f4 f3 f2 / SC / d=65
+
+If holds: var21:4 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var1:5 var2:8 var4:13 var5:6 var6:1 var7:5 var8:5 var9:8 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-zooming a5 c14 c4 f4 f3 f2 / SC / d=66
+
+If holds: var21:4 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var36:0 var0:8 var1:5 var2:8 var4:13 var5:6 var6:1 var7:5 var8:5 var9:23 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: complete-debarking p3 a0 c16 / SC / d=67
+
+If holds: var21:4 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var36:0 var0:8 var1:5 var2:8 var4:13 var5:6 var6:1 var7:5 var8:5 var9:29 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-debarking p3 a0 c16 / SC / d=68
+
+If holds: var21:4 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var16:1 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var36:0 var0:25 var1:5 var2:8 var4:13 var5:6 var6:1 var7:5 var8:5 var9:29 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: complete-flying a0 c16 f1 f0 / SC / d=69
+
+If holds: var21:4 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var16:1 var42:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var0:3 var1:5 var2:8 var4:13 var5:6 var6:1 var7:5 var8:5 var9:29 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-flying a0 c11 c16 f1 f0 / SC / d=70
+
+If holds: var21:4 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var16:1 var42:0 var22:0 var23:0 var24:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var0:3 var1:5 var2:8 var4:13 var5:6 var6:1 var7:5 var8:5 var9:17 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: complete-boarding p3 a0 c11 / SC / d=71
+
+If holds: var21:4 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var16:1 var42:0 var22:0 var23:0 var24:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var0:3 var1:5 var2:8 var4:13 var5:6 var6:1 var7:5 var8:5 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-boarding p3 a0 c11 / SC / d=72
+
+If holds: var21:4 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var16:1 var42:0 var22:0 var23:0 var24:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var35:0 var36:0 var0:3 var1:5 var2:8 var3:5 var4:13 var5:6 var6:1 var7:5 var8:26 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: complete-debarking p2 a3 c13 / SC / d=73
+
+If holds: var21:4 var47:0 var20:4 var46:0 var18:0 var44:0 var17:2 var43:0 var16:1 var42:0 var22:0 var23:0 var24:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var35:0 var36:0 var0:3 var1:5 var2:8 var3:5 var4:13 var5:6 var6:1 var7:5 var8:32 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-debarking p2 a3 c13 / SC / d=74
+
+If holds: var21:4 var47:0 var20:4 var46:0 var19:2 var18:0 var44:0 var17:2 var43:0 var16:1 var42:0 var22:0 var23:0 var24:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var35:0 var36:0 var0:3 var1:5 var2:8 var3:39 var4:13 var5:6 var6:1 var7:5 var8:32 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: complete-zooming a3 c13 f2 f1 f0 / SC / d=75
+
+If holds: var21:4 var47:0 var20:4 var46:0 var19:2 var45:0 var18:0 var44:0 var17:2 var43:0 var16:1 var42:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var0:3 var1:5 var2:8 var3:13 var4:13 var5:6 var6:1 var7:5 var8:32 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-zooming a3 c6 c13 f2 f1 f0 / SC / d=76
+
+If holds: var21:4 var47:0 var20:4 var46:0 var19:2 var45:0 var18:0 var44:0 var17:2 var43:0 var16:1 var42:0 var22:0 var23:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var0:3 var1:5 var2:8 var3:13 var4:13 var5:6 var6:1 var7:5 var8:20 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: complete-boarding p2 a3 c6 / SC / d=77
+
+If holds: var21:4 var47:0 var20:4 var46:0 var19:2 var45:0 var18:0 var44:0 var17:2 var43:0 var16:1 var42:0 var22:0 var23:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var0:3 var1:5 var2:8 var3:13 var4:13 var5:6 var6:1 var7:5 var8:13 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-boarding p2 a3 c6 / SC / d=78
+
+If holds: var21:4 var47:0 var20:4 var46:0 var19:2 var45:0 var18:0 var44:0 var17:2 var43:0 var16:1 var42:0 var22:0 var23:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var34:0 var35:0 var36:0 var0:3 var1:5 var2:8 var3:13 var4:13 var5:6 var6:1 var7:24 var8:13 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: complete-debarking p1 a1 c13 / SC / d=79
+
+If holds: var21:4 var47:0 var20:4 var46:0 var19:2 var45:0 var18:0 var44:0 var17:2 var43:0 var16:1 var42:0 var22:0 var23:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var34:0 var35:0 var36:0 var0:3 var1:5 var2:8 var3:13 var4:13 var5:6 var6:1 var7:30 var8:13 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-debarking p1 a1 c13 / SC / d=80
+
+If holds: var21:4 var47:0 var20:4 var46:0 var19:2 var45:0 var18:0 var44:0 var17:4 var43:0 var16:1 var42:0 var22:0 var23:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var34:0 var35:0 var36:0 var0:3 var1:39 var2:8 var3:13 var4:13 var5:6 var6:1 var7:30 var8:13 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: complete-zooming a1 c13 f4 f3 f2 / SC / d=81
+
+If holds: var21:4 var47:0 var20:4 var46:0 var19:2 var45:0 var18:0 var44:0 var17:4 var43:0 var16:1 var42:0 var22:0 var23:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var0:3 var1:4 var2:8 var3:13 var4:13 var5:6 var6:1 var7:30 var8:13 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-zooming a1 c12 c13 f4 f3 f2 / SC / d=82
+
+If holds: var21:4 var47:0 var20:4 var46:0 var19:2 var45:0 var18:0 var44:0 var17:4 var43:0 var16:1 var42:0 var22:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var0:3 var1:4 var2:8 var3:13 var4:13 var5:6 var6:1 var7:18 var8:13 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: complete-boarding p1 a1 c12 / SC / d=83
+
+If holds: var21:4 var47:0 var20:4 var46:0 var19:2 var45:0 var18:0 var44:0 var17:4 var43:0 var16:1 var42:0 var22:0 var24:0 var25:0 var26:0 var27:0 var37:0 var28:0 var38:0 var29:0 var39:0 var30:0 var40:0 var31:0 var41:0 var32:0 var33:0 var34:0 var35:0 var36:0 var0:3 var1:4 var2:8 var3:13 var4:13 var5:6 var6:1 var7:4 var8:13 var9:3 var10:3 var11:10 var12:9 var13:1 var14:8 var15:4
+Execute: start-boarding p1 a1 c12 / SC / d=84
