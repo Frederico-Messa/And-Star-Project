@@ -1,21 +1,6 @@
-#pragma once
+#include "./blind.hpp"
 
-#include "../state_heuristic.cpp"
-
-class Blind : public StateHeuristic // Caution, get_heuristic_value here is returning a non-stable reference.
+int Blind::operator[](const State &state) const
 {
-public:
-    static int singular_cache;
-
-    Blind()
-    {
-    }
-
-    int &get_heuristic_value(const State &state, const PartialState &goal_condition) const
-    {
-        singular_cache = state.is_goal(goal_condition)? 0: 1;
-        return singular_cache;
-    };
+    return state.is_goal(this->task.goal_condition())? 0: 1;;
 };
-
-int Blind::singular_cache;

@@ -1,12 +1,6 @@
-#pragma once
+#include "./count.hpp"
 
-#include "../policy_heuristic.cpp"
-
-class StrongCount : public PolicyHeuristic
+int Count::operator[](const Policy &policy) const
 {
-public:
-    int get_heuristic_value(const Policy &policy, const PartialState &goal_condition, const StateHeuristic &state_heuristic) const
-    {
-        return policy.mappings().size() + policy.outgoing_non_goal_states(goal_condition).size();
-    };
+    return policy.size() + policy.outgoing_non_goal_states(this->task.goal_condition()).size();
 };

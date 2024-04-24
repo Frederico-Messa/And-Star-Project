@@ -1,25 +1,27 @@
-#pragma once
+#include "./delta_nearest.hpp"
 
-#include "../policy_heuristic.cpp"
+DeltaNearest::DeltaNearest(const Task &task, const State::Heuristic &state_heuristic) : Heuristic(task), state_heuristic(state_heuristic) {}
 
-class StrongDeltaNearest : public PolicyHeuristic
+int DeltaNearest::operator[](const Policy &policy) const
 {
-public:
-    int get_heuristic_value(const Policy &policy, const PartialState &goal_condition, const StateHeuristic &state_heuristic) const
+    Function this_function {&DeltaNearest::operator[], *this};
+    auto &cache = functions_cache[this_function];
+    if (not cache.contains(policy))
     {
-        int count = policy.mappings().size() + policy.outgoing_non_goal_states(goal_condition).size();
+        int count = policy.size() + policy.outgoing_non_goal_states(this->task.goal_condition()).size();
 
-        int minimal_outgoing_state_h_value = policy.does_reach_the_goal(goal_condition)? 0: +INFTY;
+        int minimal_outgoing_state_h_value = policy.does_reach_the_goal(this->task.goal_condition())? 0: +INFTY;
 
-        std::vector<int> states_heuristic_values;
-        for (const std::pair<State, Action> &pair: policy.mappings())
+        vec<int> states_heuristic_values;
+        states_heuristic_values.reserve(count);
+        for (const State &state: policy.domain_iterator())
         {
-            states_heuristic_values.push_back(state_heuristic.get_heuristic_value(pair.first, goal_condition));
+            states_heuristic_values.push_back(this->state_heuristic[state]);
         }
-        for (const State &state: policy.outgoing_non_goal_states(goal_condition))
+        for (const State &state: policy.outgoing_non_goal_states(this->task.goal_condition()))
         {
-            states_heuristic_values.push_back(state_heuristic.get_heuristic_value(state, goal_condition));
-            minimal_outgoing_state_h_value = std::min(minimal_outgoing_state_h_value, state_heuristic.get_heuristic_value(state, goal_condition));
+            states_heuristic_values.push_back(this->state_heuristic[state]);
+            minimal_outgoing_state_h_value = std::min(minimal_outgoing_state_h_value, this->state_heuristic[state]);
         }
 
         std::sort(states_heuristic_values.begin(), states_heuristic_values.end(), std::greater<int>());
@@ -31,6 +33,7 @@ public:
             delta = std::max(delta, state_heuristic_value + i++);
         }
 
-        return std::max(delta, count + std::max(0, minimal_outgoing_state_h_value - 1));
-    };
+        cache[policy] = std::max(delta, count + std::max(0, minimal_outgoing_state_h_value - 1));
+    }
+    return cache[policy];
 };

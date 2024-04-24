@@ -1,26 +1,28 @@
-#pragma once
+#include "./nearest.hpp"
 
-#include "../policy_heuristic.cpp"
+Nearest::Nearest(const Task &task, const State::Heuristic &state_heuristic) : Heuristic(task), state_heuristic(state_heuristic) {}
 
-class StrongNearest : public PolicyHeuristic
+int Nearest::operator[](const Policy &policy) const
 {
-public:
-    int get_heuristic_value(const Policy &policy, const PartialState &goal_condition, const StateHeuristic &state_heuristic) const
+    Function this_function {&Nearest::operator[], *this};
+    auto &cache = functions_cache[this_function];
+    if (not cache.contains(policy))
     {
-        int count = policy.mappings().size() + policy.outgoing_non_goal_states(goal_condition).size();
+        int count = policy.size() + policy.outgoing_non_goal_states(this->task.goal_condition()).size();
 
-        if (policy.does_reach_the_goal(goal_condition))
+        if (policy.does_reach_the_goal(this->task.goal_condition()))
         {
-            return count;
+            cache[policy] = count;
         }
         else
         {
             int minimal_outgoing_state_h_value = +INFTY;
-            for (const State &state: policy.outgoing_non_goal_states(goal_condition))
+            for (const State &state: policy.outgoing_non_goal_states(this->task.goal_condition()))
             {
-                minimal_outgoing_state_h_value = std::min(minimal_outgoing_state_h_value, state_heuristic.get_heuristic_value(state, goal_condition));
+                minimal_outgoing_state_h_value = std::min(minimal_outgoing_state_h_value, this->state_heuristic[state]);
             }
-            return count + (minimal_outgoing_state_h_value - 1);
+            cache[policy] = count + (minimal_outgoing_state_h_value - 1);
         }
-    };
+    }
+    return cache[policy];
 };

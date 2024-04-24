@@ -1,56 +1,49 @@
-#pragma once
-#include "./general.cpp"
+#include "./fact.hpp"
 
-#include "./variable.cpp"
-
-class Fact : public Object
+Fact::Fact(const Variable &variable, const str &value, const mpz_class &hash)
 {
-public:
-    using Object::Object;
+    this->id = ++last_used_id;
+    this->variable() = variable;
+    this->value() = value;
+    this->hash() = hash;
+}
 
-    // static std::unordered_map<Id, Variable> facts_variables;
-    // static std::unordered_map<Id, std::string> facts_values;
-    // static std::unordered_map<Id, mpz_class> facts_hashes;
-
-    static std::unordered_map<int64_t, Variable> facts_variables;
-    static std::unordered_map<int64_t, std::string> facts_values;
-    static std::unordered_map<int64_t, mpz_class> facts_hashes;
-
-    Fact(const Variable &variable, const std::string &value, const mpz_class &hash)
+Fact Fact::canonized(const Task &task) const
+{
+    Function this_function {&Fact::canonized, *this};
+    auto &cache = functions_cache[this_function];
+    if (not cache.contains(task))
     {
-        this->id = ++last_used_id;
-        facts_variables[this->id] = variable;
-        facts_values[this->id] = value;
-        facts_hashes[this->id] = hash;
-    };
+        cache[task] = *task.get_canonical_facts_set({*this}).begin();
+    }
+    return cache[task];
+}
 
-    Variable &variable() const
+std::ostream& operator<<(std::ostream &out, const Fact &self)
+{
+    if (self.value().starts_with("Atom "))
     {
-        return facts_variables[this->id];
-    };
-
-    std::string &value() const
+        out << self.value().substr(5);
+    }
+    else
+    if (self.value().starts_with("NegatedAtom "))
     {
-        return facts_values[this->id];
-    };
-
-    mpz_class &hash() const
+        out << "not(" << self.value().substr(12) << ")";
+    }
+    else
     {
-        return facts_hashes[this->id];
-    };
+        assert(self.value() == "<none of those>");
+        bool first = true;
+        for (const Fact &other_fact: self.variable().facts())
+        {
+            if (other_fact != self)
+            {
+                if (not first) {out << "/";} first = false;
+                assert(other_fact.value().starts_with("Atom "));
+                out << "not(" << other_fact.value().substr(5) << ")";
+            }
+        }
+    }
 
-    friend std::ostream& operator<<(std::ostream &out, const Fact &self)
-    {
-        out << self.variable() << " = " << self.value();
-        return out;
-    };
-};
-DEFINE_OBJECT_HASH(Fact);
-
-// std::unordered_map<Fact::Id, Variable> Fact::facts_variables;
-// std::unordered_map<Fact::Id, std::string> Fact::facts_values;
-// std::unordered_map<Fact::Id, mpz_class> Fact::facts_hashes;
-
-std::unordered_map<int64_t, Variable> Fact::facts_variables;
-std::unordered_map<int64_t, std::string> Fact::facts_values;
-std::unordered_map<int64_t, mpz_class> Fact::facts_hashes;
+    return out;
+}
