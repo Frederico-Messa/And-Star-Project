@@ -42,7 +42,7 @@ public:
                     actions_predecessor_facts[action].insert(fact);
                 }
             }
-            if (actions_predecessor_facts.empty())
+            if (actions_predecessor_facts[action].empty())
             {
                 facts_successor_actions[start_fact].insert(action);
                 actions_predecessor_facts[action].insert(start_fact);
@@ -78,7 +78,7 @@ public:
             facts_predecessor_actions[fact].erase(start_action);
         }
         actions_successor_facts[start_action].clear();
-        
+
         for (const Fact &fact: state.true_facts())
         {
             facts_predecessor_actions[fact].insert(start_action);
