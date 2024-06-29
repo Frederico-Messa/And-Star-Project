@@ -82,7 +82,7 @@ If it fails, try this safe setting:
 **A safe setting:** (sound and complete)
 
 ```
-./and_star domain.pddl problem.pddl lmcut delta-pathmax 2-weighted-nearest id false true
+./and_star domain.pddl problem.pddl lmcut delta-pathmax 2-weighted-first id false true
 ```
 
-For **optimality**, change `2-weighted-first` to `best-first`.
+For **optimality**, change `2-weighted-first` to `best-first` in the safe setting.
