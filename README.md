@@ -33,7 +33,7 @@ pip3 install \
 This project also uses:
 - A modified version of the [PRP's PDDL to SAS+ translator](https://github.com/QuMuLab/planner-for-relevant-policies/tree/master/src/translate), placed at `./dep/translator/`
 - A modified version of the [PRP's solution validator](https://github.com/QuMuLab/planner-for-relevant-policies/tree/master/prp-scripts/), placed at `./dep/validator/`
-- Our proposed [FOND solution compressor](https://github.com/Frederico-Messa/FOND-Compressor), placed at `/dep/compressor/`
+- Our proposed [FOND solution compressor](https://github.com/Frederico-Messa/FOND-Compressor), placed at `./dep/compressor/`
 
 More information about the modifications of the [PRP](https://github.com/QuMuLab/planner-for-relevant-policies)'s translator and validator can be found on [this page](https://github.com/Frederico-Messa/PRP-Scripts-for-And-Star).
 
@@ -59,11 +59,11 @@ make
 
 ### Low-level Interface
 ```
-./and_star domain.pddl problem.pddl stateHeuristic policyHeuristic searchEngine equivalenceDetection symmetryDetection deadlockDetection
+./and_star domain.pddl problem.pddl policyHeuristic stateHeuristic searchEngine equivalenceDetection symmetryDetection deadlockDetection
 ```
 
-- **`stateHeuristic`**: `blind`, `max`, `lmcut`, `ff`, `add`, `star`
 - **`policyHeuristic`**: `count`, `nearest`, `delta-nearest`, `delta-pathmax`
+- **`stateHeuristic`**: `blind`, `max`, `lmcut`, `ff`, `add`, `star`
 - **`searchEngine`**: `best-first`, `2-weighted-first`, `greedy-first`
 - **`equivalenceDetection`**: `id`, `lanes`, `in-out`, `out`
 - **`symmetryDetection`**: `false`, `greedy`, `true`
@@ -74,7 +74,7 @@ You can also specify an extra argument to change the IP solver used by the compr
 **Strongest setting:** (incomplete – it may incorrectly prune all solutions and fail)
 
 ```
-./and_star domain.pddl problem.pddl lmcut delta-pathmax 2-weighted-first out true true
+./and_star domain.pddl problem.pddl delta-pathmax lmcut 2-weighted-first out true true
 ```
 
 If it fails, try this safe setting:
@@ -82,7 +82,7 @@ If it fails, try this safe setting:
 **A safe setting:** (sound and complete)
 
 ```
-./and_star domain.pddl problem.pddl lmcut delta-pathmax 2-weighted-first id false true
+./and_star domain.pddl problem.pddl delta-pathmax lmcut 2-weighted-first id false true
 ```
 
 For **optimality**, change `2-weighted-first` to `best-first` in the safe setting.
