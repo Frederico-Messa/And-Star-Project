@@ -18,16 +18,19 @@ This project version was mainly tested in **Linux Mint 21.2** and **Ubuntu 22.04
 
 ```
 apt-get install -y \
+    git \
+    python3 \
     python3-pip \
+    make \
     g++ \
     libboost-all-dev \
     libgmp3-dev \
     gap \
     nauty
-pip3 install \
-    typed-argument-parser \
-    argcomplete \
-    networkx
+
+git submodule update --init --recursive
+
+python3 -m pip install -r requirements.txt
 ```
 
 This project also uses:
