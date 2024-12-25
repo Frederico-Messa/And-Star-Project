@@ -364,8 +364,9 @@ Policy AndStar::get_solution(const Task &task)
     }
 
     bool can_and_star_not_solve_solvable_task =
-        SignaturingMethod::OUT or
+        (this->signaturing_method == SignaturingMethod::OUT) or
         (this->signaturing_method == SignaturingMethod::IN_OUT and this->deadlock_handling != DeadlockHandling::TRY_TO_FIX_WHEN_CLOSED);
+
     if (can_and_star_not_solve_solvable_task)
     {
         throw std::runtime_error("Unable to solve the task. The used setting is not complete and needs a backup run in case of failure in order to be sound and complete. If you are using the high-level interface, try re-running with --sound-and-complete. If you are using the low-level interface, look at the README.md for a sound-and-complete setting.");
